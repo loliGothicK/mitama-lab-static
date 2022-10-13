@@ -37,3 +37,7 @@ next-env.d.ts
 
 # yarn berry
 .yarn
+
+# JetBrains
+.idea
+.fleet
