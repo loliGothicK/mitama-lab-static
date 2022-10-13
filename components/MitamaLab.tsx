@@ -2,24 +2,18 @@ import * as React from "react";
 import { GlobalStyles } from "@mui/system";
 import { CssVarsProvider, useColorScheme } from "@mui/joy/styles";
 import type { Theme } from "@mui/joy/styles";
-import Avatar from "@mui/joy/Avatar";
-import Box from "@mui/joy/Box";
-import Chip from "@mui/joy/Chip";
-import ChipDelete from "@mui/joy/ChipDelete";
-import Typography from "@mui/joy/Typography";
-import TextField from "@mui/joy/TextField";
-import IconButton from "@mui/joy/IconButton";
-import Button from "@mui/joy/Button";
-import List from "@mui/joy/List";
-import ListDivider from "@mui/joy/ListDivider";
-import ListItem from "@mui/joy/ListItem";
-import ListItemButton from "@mui/joy/ListItemButton";
-import ListItemDecorator from "@mui/joy/ListItemDecorator";
-import ListItemContent from "@mui/joy/ListItemContent";
-import RadioGroup from "@mui/joy/RadioGroup";
-import Radio from "@mui/joy/Radio";
-import Slider from "@mui/joy/Slider";
-import Sheet from "@mui/joy/Sheet";
+import {
+  Box,
+  Chip,
+  Typography,
+  IconButton,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemDecorator,
+  ListItemContent,
+  Divider,
+} from "@mui/joy";
 
 // Icons import
 import PeopleRoundedIcon from "@mui/icons-material/PeopleRounded";
@@ -30,10 +24,7 @@ import DarkModeRoundedIcon from "@mui/icons-material/DarkModeRounded";
 import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
 import GridViewRoundedIcon from "@mui/icons-material/GridViewRounded";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
-import KeyboardArrowUpRoundedIcon from "@mui/icons-material/KeyboardArrowUpRounded";
 import MenuIcon from "@mui/icons-material/Menu";
-import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
-import GroupRoundedIcon from "@mui/icons-material/GroupRounded";
 import BookRoundedIcon from "@mui/icons-material/BookRounded";
 
 // custom
@@ -70,7 +61,7 @@ const ColorSchemeToggle = () => {
   );
 };
 
-function TeamNav() {
+function ContentNav() {
   return (
     <List size="sm" sx={{ "--List-item-radius": "8px" }}>
       <ListItem nested sx={{ p: 0 }}>
@@ -156,7 +147,7 @@ export default function MitamaLab() {
       />
       {drawerOpen && (
         <Layout.SideDrawer onClose={() => setDrawerOpen(false)}>
-          <TeamNav />
+          <ContentNav />
         </Layout.SideDrawer>
       )}
       <Layout.Root
@@ -176,15 +167,31 @@ export default function MitamaLab() {
               gap: 1.5,
             }}
           >
-            <Link href={"/"}>
-              <img
-                src="MitamaLabLogo.svg"
-                alt={"logo"}
-                width={"100%"}
-                height={"100%"}
-              />
-            </Link>
-            <Typography component="h1" fontWeight="xl" height={"100%"}>
+            <IconButton
+              variant="outlined"
+              size="sm"
+              onClick={() => setDrawerOpen(true)}
+              sx={{ display: { sm: "none" } }}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Box sx={{ display: { xs: "none", sm: "inline-flex" } }}>
+              <Link href={"/"}>
+                <img
+                  src="MitamaLabLogo.svg"
+                  alt={"logo"}
+                  width={50}
+                  height={50}
+                />
+              </Link>
+            </Box>
+            <Divider orientation="vertical" />
+            <Typography
+              component="h1"
+              fontWeight="xl"
+              width={"100%"}
+              height={"100%"}
+            >
               {"Mitama Lab."}
             </Typography>
           </Box>
@@ -227,10 +234,12 @@ export default function MitamaLab() {
                 {
                   label: "Blog",
                   href: "/",
+                  target: "_blank",
                 },
                 {
-                  label: "Files",
-                  href: "/",
+                  label: "GitHub",
+                  href: "https://github.com/LoliGothick",
+                  target: "_blank",
                 },
               ]}
             />
@@ -238,7 +247,7 @@ export default function MitamaLab() {
           </Box>
         </Layout.Header>
         <Layout.SideNav>
-          <TeamNav />
+          <ContentNav />
         </Layout.SideNav>
         <Layout.Main></Layout.Main>
       </Layout.Root>
