@@ -118,7 +118,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/cache@npm:^11.10.0, @emotion/cache@npm:^11.10.3":
+"@emotion/cache@npm:11.10.3, @emotion/cache@npm:^11.10.0, @emotion/cache@npm:^11.10.3":
   version: 11.10.3
   resolution: "@emotion/cache@npm:11.10.3"
   dependencies:
@@ -154,7 +154,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/react@npm:^11.10.4":
+"@emotion/react@npm:11.10.4":
   version: 11.10.4
   resolution: "@emotion/react@npm:11.10.4"
   dependencies:
@@ -191,7 +191,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/server@npm:^11.10.0":
+"@emotion/server@npm:11.10.0":
   version: 11.10.0
   resolution: "@emotion/server@npm:11.10.0"
   dependencies:
@@ -215,7 +215,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/styled@npm:^11.10.4":
+"@emotion/styled@npm:11.10.4":
   version: 11.10.4
   resolution: "@emotion/styled@npm:11.10.4"
   dependencies:
@@ -285,7 +285,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fontsource/roboto@npm:^4.5.8":
+"@fontsource/roboto@npm:4.5.8":
   version: 4.5.8
   resolution: "@fontsource/roboto@npm:4.5.8"
   checksum: 460b6de2c9f7a172192c3f5bdd3aa11f78f0b6660dca9dc2b9d8207272b50c55b5a8f2da68e11e7fbaf44c7d3cf4191030eecce9def79fab75d4cc1de39754e2
@@ -316,7 +316,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@google-cloud/storage@npm:^6.5.4":
+"@google-cloud/storage@npm:6.5.4":
   version: 6.5.4
   resolution: "@google-cloud/storage@npm:6.5.4"
   dependencies:
@@ -396,7 +396,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mui/icons-material@npm:^5.10.9":
+"@mui/icons-material@npm:5.10.9":
   version: 5.10.9
   resolution: "@mui/icons-material@npm:5.10.9"
   dependencies:
@@ -412,7 +412,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mui/joy@npm:^5.0.0-alpha.49":
+"@mui/joy@npm:5.0.0-alpha.49":
   version: 5.0.0-alpha.49
   resolution: "@mui/joy@npm:5.0.0-alpha.49"
   dependencies:
@@ -443,7 +443,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mui/material@npm:^5.10.9":
+"@mui/material@npm:5.10.9":
   version: 5.10.9
   resolution: "@mui/material@npm:5.10.9"
   dependencies:
@@ -2592,15 +2592,15 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "mitama-lab-site@workspace:."
   dependencies:
-    "@emotion/cache": ^11.10.3
-    "@emotion/react": ^11.10.4
-    "@emotion/server": ^11.10.0
-    "@emotion/styled": ^11.10.4
-    "@fontsource/roboto": ^4.5.8
-    "@google-cloud/storage": ^6.5.4
-    "@mui/icons-material": ^5.10.9
-    "@mui/joy": ^5.0.0-alpha.49
-    "@mui/material": ^5.10.9
+    "@emotion/cache": 11.10.3
+    "@emotion/react": 11.10.4
+    "@emotion/server": 11.10.0
+    "@emotion/styled": 11.10.4
+    "@fontsource/roboto": 4.5.8
+    "@google-cloud/storage": 6.5.4
+    "@mui/icons-material": 5.10.9
+    "@mui/joy": 5.0.0-alpha.49
+    "@mui/material": 5.10.9
     "@types/node": 18.8.4
     "@types/react": 18.0.21
     "@types/react-dom": 18.0.6
@@ -2610,8 +2610,8 @@ __metadata:
     react: 18.2.0
     react-dom: 18.2.0
     typescript: 4.8.4
-    typescript-plugin-toml: ^0.2.0
-    zod: ^3.19.1
+    typescript-plugin-toml: 0.2.0
+    zod: 3.19.1
   languageName: unknown
   linkType: soft
 
@@ -3589,7 +3589,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript-plugin-toml@npm:^0.2.0":
+"typescript-plugin-toml@npm:0.2.0":
   version: 0.2.0
   resolution: "typescript-plugin-toml@npm:0.2.0"
   dependencies:
@@ -3758,7 +3758,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:^3.19.1":
+"zod@npm:3.19.1":
   version: 3.19.1
   resolution: "zod@npm:3.19.1"
   checksum: 56e420ea5845912324a8fc61833714a2aec84954e418b52660d76502183c6e62fef9447cbfa64349640c5ce190cf2c24267e006bb80f066183e2f3fa9fe11864
