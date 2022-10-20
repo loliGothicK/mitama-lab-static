@@ -8,6 +8,7 @@ import {
   Box,
   Stack,
   Card,
+  useColorScheme,
 } from "@mui/joy";
 import { ListItemAvatar, ListItemText } from "@mui/material";
 import WidgetsIcon from "@mui/icons-material/Widgets";
@@ -22,9 +23,14 @@ const features: [string, string][] = [
 ];
 
 const MitamatchOperations: React.FC<{}> = () => {
+  const { mode } = useColorScheme();
   return (
     <Container>
-      <img src="MO_LOGO_WHITE.png" alt={"logo"} width={"80%"} />
+      {mode == "light" ? (
+        <img src="MO_LIGHT.png" alt={"logo"} width={"80%"} />
+      ) : (
+        <img src="MO_DARK.png" alt={"logo"} width={"80%"} />
+      )}
       <Divider sx={{ margin: "5% 0" }} />
       <Typography>
         「Mitamatch Operations」は「アサルトリリィ Last Bullet

@@ -12,16 +12,10 @@ export default extendTheme({
     light: {
       palette: {
         background: {
-          appBody: "var(--joy-palette-common-black)",
-          componentBg: "var(--joy-palette-neutral-900)",
+          appBody: "var(--joy-palette-neutral-50)",
+          componentBg: "var(--joy-palette-common-white)",
         },
       },
-      // palette: {
-      //   background: {
-      //     appBody: "var(--joy-palette-neutral-50)",
-      //     componentBg: "var(--joy-palette-common-white)",
-      //   },
-      // },
     },
     dark: {
       palette: {
@@ -33,7 +27,7 @@ export default extendTheme({
     },
   },
   fontFamily: {
-    // display: "'Roboto Flex', var(--joy-fontFamily-fallback)",
-    // body: "'Roboto Flex', var(--joy-fontFamily-fallback)",
+    display: "'Roboto Flex', var(--joy-fontFamily-fallback)",
+    body: "'Roboto Flex', var(--joy-fontFamily-fallback)",
   },
 });
