@@ -13,6 +13,7 @@ import {
   ListItemDecorator,
   ListItemContent,
   Divider,
+  Container,
 } from "@mui/joy";
 
 // Icons import
@@ -31,7 +32,7 @@ import BookRoundedIcon from "@mui/icons-material/BookRounded";
 import teamTheme from "../styles/theme";
 import Menu from "./MitamaLab/Menu";
 import * as Layout from "./MitamaLab/Layout";
-import Link from "next/link";
+import { default as NextLink } from "next/link";
 
 const ColorSchemeToggle = () => {
   const { mode, setMode } = useColorScheme();
@@ -105,7 +106,9 @@ function ContentNav() {
               <ListItemDecorator sx={{ color: "inherit" }}>
                 <PeopleRoundedIcon fontSize="small" />
               </ListItemDecorator>
-              <ListItemContent>HOME</ListItemContent>
+              <NextLink href={"/"}>
+                <ListItemContent>HOME</ListItemContent>
+              </NextLink>
             </ListItemButton>
           </ListItem>
           <ListItem>
@@ -113,7 +116,9 @@ function ContentNav() {
               <ListItemDecorator sx={{ color: "neutral.500" }}>
                 <AssignmentIndRoundedIcon fontSize="small" />
               </ListItemDecorator>
-              <ListItemContent>Mitamatch Operations</ListItemContent>
+              <NextLink href={"/mitamatch-operations"}>
+                <ListItemContent>Mitamatch Operations</ListItemContent>
+              </NextLink>
             </ListItemButton>
           </ListItem>
           <ListItem>
@@ -133,7 +138,7 @@ function ContentNav() {
   );
 }
 
-export default function MitamaLab() {
+const MitamaLab: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
   return (
     <CssVarsProvider disableTransitionOnChange theme={teamTheme}>
@@ -176,14 +181,14 @@ export default function MitamaLab() {
               <MenuIcon />
             </IconButton>
             <Box sx={{ display: { xs: "none", sm: "inline-flex" } }}>
-              <Link href={"/"}>
+              <NextLink href={"/"}>
                 <img
-                  src="MitamaLabLogo.svg"
+                  src="/MitamaLabLogo.svg"
                   alt={"logo"}
                   width={50}
                   height={50}
                 />
-              </Link>
+              </NextLink>
             </Box>
             <Divider orientation="vertical" />
             <Typography
@@ -249,8 +254,10 @@ export default function MitamaLab() {
         <Layout.SideNav>
           <ContentNav />
         </Layout.SideNav>
-        <Layout.Main></Layout.Main>
+        <Layout.Main>{children}</Layout.Main>
       </Layout.Root>
     </CssVarsProvider>
   );
-}
+};
+
+export default MitamaLab;

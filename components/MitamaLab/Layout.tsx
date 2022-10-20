@@ -78,6 +78,7 @@ export const SidePane = (props: BoxProps) => (
         bgcolor: "background.componentBg",
         borderRight: "1px solid",
         borderColor: "divider",
+        width: "20vw",
         display: {
           xs: "none",
           md: "initial",
@@ -92,6 +93,7 @@ export const Main = (props: BoxProps) => (
   <Box
     component="main"
     className="Main"
+    width="80vw"
     {...props}
     sx={[{ p: 2 }, ...(Array.isArray(props.sx) ? props.sx : [props.sx])]}
   />

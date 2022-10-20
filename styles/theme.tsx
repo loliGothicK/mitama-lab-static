@@ -12,10 +12,16 @@ export default extendTheme({
     light: {
       palette: {
         background: {
-          appBody: "var(--joy-palette-neutral-50)",
-          componentBg: "var(--joy-palette-common-white)",
+          appBody: "var(--joy-palette-common-black)",
+          componentBg: "var(--joy-palette-neutral-900)",
         },
       },
+      // palette: {
+      //   background: {
+      //     appBody: "var(--joy-palette-neutral-50)",
+      //     componentBg: "var(--joy-palette-common-white)",
+      //   },
+      // },
     },
     dark: {
       palette: {
