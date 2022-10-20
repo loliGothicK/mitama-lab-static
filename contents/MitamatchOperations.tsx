@@ -27,9 +27,9 @@ const MitamatchOperations: React.FC<{}> = () => {
   return (
     <Container>
       {mode == "light" ? (
-        <img src="MO_LIGHT.png" alt={"logo"} width={"80%"} />
+        <img src="/MO_LIGHT.png" alt={"logo"} width={"80%"} />
       ) : (
-        <img src="MO_DARK.png" alt={"logo"} width={"80%"} />
+        <img src="/MO_DARK.png" alt={"logo"} width={"80%"} />
       )}
       <Divider sx={{ margin: "5% 0" }} />
       <Typography>
