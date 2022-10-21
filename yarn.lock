@@ -1014,7 +1014,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@trivago/prettier-plugin-sort-imports@npm:^3.4.0":
+"@trivago/prettier-plugin-sort-imports@npm:3.4.0":
   version: 3.4.0
   resolution: "@trivago/prettier-plugin-sort-imports@npm:3.4.0"
   dependencies:
@@ -3060,7 +3060,7 @@ __metadata:
     "@mui/icons-material": 5.10.9
     "@mui/joy": 5.0.0-alpha.50
     "@mui/material": 5.10.10
-    "@trivago/prettier-plugin-sort-imports": ^3.4.0
+    "@trivago/prettier-plugin-sort-imports": 3.4.0
     "@types/node": 18.8.4
     "@types/react": 18.0.21
     "@types/react-dom": 18.0.6
