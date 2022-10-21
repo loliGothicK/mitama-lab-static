@@ -6,7 +6,7 @@ import {
   ListItem,
   Sheet,
   Stack,
-  Typography,
+  Typography
 } from '@mui/joy';
 import React from 'react';
 import Link from '../../components/Link';
@@ -62,12 +62,12 @@ const Installation: React.FC<{}> = () => {
                     </Button>
                   </Link>
                   <Link
-                    href={ReleaseNotes[version].packages.appinstaller}
-                    download={`MitamatchOperations-${version}.appinstaller`}
+                    href={ReleaseNotes[version].packages.zip}
+                    download={`MitamatchOperations-${version}.zip`}
                   >
                     <Button sx={{ margin: '2% 1%' }}>
                       <Typography key={'appinstaller'}>
-                        {`MitamatchOperations-${version}.appinstaller`}
+                        {`MitamatchOperations-${version}.zip`}
                       </Typography>
                     </Button>
                   </Link>

@@ -6,7 +6,7 @@ const releaseNote = z.object({
   bufFix: z.array(z.string()),
   packages: z.object({
     certificate: z.string().url(),
-    appinstaller: z.string().url(),
+    zip: z.string().url(),
   }),
 });
 
@@ -19,8 +19,7 @@ const ReleaseNotes: { [K: Version]: ReleaseNote } = {
     packages: {
       certificate:
         'https://storage.cloud.google.com/mitamatch-operations-installer/v0.1.10/MitamatchOperations%20(Package)_0.1.10.0_x86_x64_arm64.cer',
-      appinstaller:
-        'https://storage.cloud.google.com/mitamatch-operations-installer/v0.1.10/MitamatchOperations%20(Package).appinstaller',
+      zip: 'https://storage.cloud.google.com/mitamatch-operations-installer/v0.1.10/MitamatchOperations.zip',
     },
   }),
 };
