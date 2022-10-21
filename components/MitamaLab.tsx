@@ -1,38 +1,37 @@
-import * as React from "react";
-import { GlobalStyles } from "@mui/system";
-import { CssVarsProvider, useColorScheme } from "@mui/joy/styles";
-import type { Theme } from "@mui/joy/styles";
 import {
   Box,
   Chip,
-  Typography,
+  Divider,
   IconButton,
   List,
   ListItem,
   ListItemButton,
-  ListItemDecorator,
   ListItemContent,
-  Divider,
-  Container,
-} from "@mui/joy";
+  ListItemDecorator,
+  Typography,
+} from '@mui/joy';
+import type { Theme } from '@mui/joy/styles';
+import { CssVarsProvider, useColorScheme } from '@mui/joy/styles';
+import { GlobalStyles } from '@mui/system';
+import * as React from 'react';
 
 // Icons import
-import PeopleRoundedIcon from "@mui/icons-material/PeopleRounded";
-import AssignmentIndRoundedIcon from "@mui/icons-material/AssignmentIndRounded";
-import ArticleRoundedIcon from "@mui/icons-material/ArticleRounded";
-import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
-import DarkModeRoundedIcon from "@mui/icons-material/DarkModeRounded";
-import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
-import GridViewRoundedIcon from "@mui/icons-material/GridViewRounded";
-import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
-import MenuIcon from "@mui/icons-material/Menu";
-import BookRoundedIcon from "@mui/icons-material/BookRounded";
+import ArticleRoundedIcon from '@mui/icons-material/ArticleRounded';
+import AssignmentIndRoundedIcon from '@mui/icons-material/AssignmentIndRounded';
+import BookRoundedIcon from '@mui/icons-material/BookRounded';
+import DarkModeRoundedIcon from '@mui/icons-material/DarkModeRounded';
+import GridViewRoundedIcon from '@mui/icons-material/GridViewRounded';
+import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
+import LightModeRoundedIcon from '@mui/icons-material/LightModeRounded';
+import MenuIcon from '@mui/icons-material/Menu';
+import PeopleRoundedIcon from '@mui/icons-material/PeopleRounded';
+import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 
 // custom
-import teamTheme from "../styles/theme";
-import Menu from "./MitamaLab/Menu";
-import * as Layout from "./MitamaLab/Layout";
-import { default as NextLink } from "next/link";
+import { default as NextLink } from 'next/link';
+import teamTheme from '../styles/theme';
+import * as Layout from './MitamaLab/Layout';
+import Menu from './MitamaLab/Menu';
 
 const ColorSchemeToggle = () => {
   const { mode, setMode } = useColorScheme();
@@ -50,28 +49,28 @@ const ColorSchemeToggle = () => {
       variant="outlined"
       color="primary"
       onClick={() => {
-        if (mode === "light") {
-          setMode("dark");
+        if (mode === 'light') {
+          setMode('dark');
         } else {
-          setMode("light");
+          setMode('light');
         }
       }}
     >
-      {mode === "light" ? <DarkModeRoundedIcon /> : <LightModeRoundedIcon />}
+      {mode === 'light' ? <DarkModeRoundedIcon /> : <LightModeRoundedIcon />}
     </IconButton>
   );
 };
 
 function ContentNav() {
   return (
-    <List size="sm" sx={{ "--List-item-radius": "8px" }}>
+    <List size="sm" sx={{ '--List-item-radius': '8px' }}>
       <ListItem nested sx={{ p: 0 }}>
         <Box
           sx={{
             mb: 1,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
           }}
         >
           <Typography
@@ -79,9 +78,9 @@ function ContentNav() {
             textColor="neutral.500"
             fontWeight={700}
             sx={{
-              fontSize: "10px",
-              textTransform: "uppercase",
-              letterSpacing: ".1rem",
+              fontSize: '10px',
+              textTransform: 'uppercase',
+              letterSpacing: '.1rem',
             }}
           >
             Browse
@@ -90,7 +89,7 @@ function ContentNav() {
             size="sm"
             variant="plain"
             color="primary"
-            sx={{ "--IconButton-size": "24px" }}
+            sx={{ '--IconButton-size': '24px' }}
           >
             <KeyboardArrowDownRoundedIcon fontSize="small" color="primary" />
           </IconButton>
@@ -98,36 +97,36 @@ function ContentNav() {
         <List
           aria-labelledby="nav-list-browse"
           sx={{
-            "& .JoyListItemButton-root": { p: "8px" },
+            '& .JoyListItemButton-root': { p: '8px' },
           }}
         >
           <ListItem>
             <ListItemButton variant="soft" color="primary">
-              <ListItemDecorator sx={{ color: "inherit" }}>
+              <ListItemDecorator sx={{ color: 'inherit' }}>
                 <PeopleRoundedIcon fontSize="small" />
               </ListItemDecorator>
-              <NextLink href={"/"}>
+              <NextLink href={'/'}>
                 <ListItemContent>HOME</ListItemContent>
               </NextLink>
             </ListItemButton>
           </ListItem>
           <ListItem>
             <ListItemButton>
-              <ListItemDecorator sx={{ color: "neutral.500" }}>
+              <ListItemDecorator sx={{ color: 'neutral.500' }}>
                 <AssignmentIndRoundedIcon fontSize="small" />
               </ListItemDecorator>
-              <NextLink href={"/mitamatch-operations"}>
+              <NextLink href={'/mitamatch-operations'}>
                 <ListItemContent>Mitamatch Operations</ListItemContent>
               </NextLink>
             </ListItemButton>
           </ListItem>
           <ListItem>
             <ListItemButton>
-              <ListItemDecorator sx={{ color: "neutral.500" }}>
+              <ListItemDecorator sx={{ color: 'neutral.500' }}>
                 <ArticleRoundedIcon fontSize="small" />
               </ListItemDecorator>
               <ListItemContent>ラーメンAPI</ListItemContent>
-              <Chip variant="soft" size="sm" sx={{ borderRadius: "sm" }}>
+              <Chip variant="soft" size="sm" sx={{ borderRadius: 'sm' }}>
                 Beta
               </Chip>
             </ListItemButton>
@@ -158,17 +157,17 @@ const MitamaLab: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
       <Layout.Root
         sx={{
           ...(drawerOpen && {
-            height: "100vh",
-            overflow: "hidden",
+            height: '100vh',
+            overflow: 'hidden',
           }),
         }}
       >
         <Layout.Header>
           <Box
             sx={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center',
               gap: 1.5,
             }}
           >
@@ -176,15 +175,15 @@ const MitamaLab: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
               variant="outlined"
               size="sm"
               onClick={() => setDrawerOpen(true)}
-              sx={{ display: { sm: "none" } }}
+              sx={{ display: { sm: 'none' } }}
             >
               <MenuIcon />
             </IconButton>
-            <Box sx={{ display: { xs: "none", sm: "inline-flex" } }}>
-              <NextLink href={"/"}>
+            <Box sx={{ display: { xs: 'none', sm: 'inline-flex' } }}>
+              <NextLink href={'/'}>
                 <img
                   src="/MitamaLabLogo.svg"
-                  alt={"logo"}
+                  alt={'logo'}
                   width={50}
                   height={50}
                 />
@@ -194,18 +193,18 @@ const MitamaLab: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
             <Typography
               component="h1"
               fontWeight="xl"
-              width={"100%"}
-              height={"100%"}
+              width={'100%'}
+              height={'100%'}
             >
-              {"Mitama Lab."}
+              {'Mitama Lab.'}
             </Typography>
           </Box>
-          <Box sx={{ display: "flex", flexDirection: "row", gap: 1.5 }}>
+          <Box sx={{ display: 'flex', flexDirection: 'row', gap: 1.5 }}>
             <IconButton
               size="sm"
               variant="outlined"
               color="primary"
-              sx={{ display: { xs: "inline-flex", sm: "none" } }}
+              sx={{ display: { xs: 'inline-flex', sm: 'none' } }}
             >
               <SearchRoundedIcon />
             </IconButton>
@@ -232,19 +231,19 @@ const MitamaLab: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
               }
               menus={[
                 {
-                  label: "Lab",
+                  label: 'Lab',
                   active: true,
-                  href: "/",
+                  href: '/',
                 },
                 {
-                  label: "Blog",
-                  href: "/",
-                  target: "_blank",
+                  label: 'Blog',
+                  href: '/',
+                  target: '_blank',
                 },
                 {
-                  label: "GitHub",
-                  href: "https://github.com/LoliGothick",
-                  target: "_blank",
+                  label: 'GitHub',
+                  href: 'https://github.com/LoliGothick',
+                  target: '_blank',
                 },
               ]}
             />

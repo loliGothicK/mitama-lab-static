@@ -1,27 +1,27 @@
-import styles from "../styles/Home.module.css";
+import { DoubleArrow, Download } from '@mui/icons-material';
+import WidgetsIcon from '@mui/icons-material/Widgets';
 import {
   Avatar,
+  Box,
+  Card,
   Container,
   Divider,
   List,
   ListItem,
-  Typography,
-  Box,
   Stack,
-  Card,
+  Typography,
   useColorScheme,
-} from "@mui/joy";
-import { ListItemAvatar, ListItemText } from "@mui/material";
-import WidgetsIcon from "@mui/icons-material/Widgets";
-import Link from "../components/Link";
-import { DoubleArrow, Download } from "@mui/icons-material";
-import MitamaLab from "../components/MitamaLab";
+} from '@mui/joy';
+import { ListItemAvatar, ListItemText } from '@mui/material';
+import Link from '../components/Link';
+import MitamaLab from '../components/MitamaLab';
+import styles from '../styles/Home.module.css';
 
 const features: [string, string][] = [
-  ["オーダーデッキ編成", "0.1.0"],
-  ["メンバー管理", "0.1.10"],
-  ["所持オーダー管理", "0.1.10"],
-  ["オーダー担当者自動割り振り", "0.1.10"],
+  ['オーダーデッキ編成', '0.1.0'],
+  ['メンバー管理', '0.1.10'],
+  ['所持オーダー管理', '0.1.10'],
+  ['オーダー担当者自動割り振り', '0.1.10'],
 ];
 
 const MitamatchOperations: React.FC<{}> = () => {
@@ -31,12 +31,12 @@ const MitamatchOperations: React.FC<{}> = () => {
     <div className={styles.container}>
       <MitamaLab>
         <Container>
-          {mode == "light" ? (
-            <img src="/MO_LIGHT.png" alt={"logo"} width={"80%"} />
+          {mode == 'light' ? (
+            <img src="/MO_LIGHT.png" alt={'logo'} width={'80%'} />
           ) : (
-            <img src="/MO_DARK.png" alt={"logo"} width={"80%"} />
+            <img src="/MO_DARK.png" alt={'logo'} width={'80%'} />
           )}
-          <Divider sx={{ margin: "5% 0" }} />
+          <Divider sx={{ margin: '5% 0' }} />
           <Typography>
             「Mitamatch Operations」は「アサルトリリィ Last Bullet
             」のレギオンマッチに本気を出す私により作られた支援ツール郡。
@@ -52,11 +52,11 @@ const MitamatchOperations: React.FC<{}> = () => {
             使ってみたいという方がいましたら公開しておきますのでぜひインストールしてみてください。
             インストール方法は「Getting Started」をごらんくださいませ。
           </Typography>
-          <Divider sx={{ margin: "5% 0" }} />
+          <Divider sx={{ margin: '5% 0' }} />
           <Stack direction="row" spacing={2}>
             <Link href={`mitamatch-operations/install-app`}>
               <Card>
-                <Box sx={{ backgrounColor: "darkgray" }}>
+                <Box sx={{ backgrounColor: 'darkgray' }}>
                   <Stack direction="row" spacing={2}>
                     <Download />
                     <Typography>Install Mitamatch Operations App</Typography>
@@ -66,7 +66,7 @@ const MitamatchOperations: React.FC<{}> = () => {
             </Link>
             <Link href={`mitamatch-operations/getting-started`}>
               <Card>
-                <Box sx={{ backgrounColor: "darkgray" }}>
+                <Box sx={{ backgrounColor: 'darkgray' }}>
                   <Stack direction="row" spacing={2}>
                     <DoubleArrow />
                     <Typography>Getting Started</Typography>
@@ -75,7 +75,7 @@ const MitamatchOperations: React.FC<{}> = () => {
               </Card>
             </Link>
           </Stack>
-          <Divider sx={{ margin: "5% 0" }} />
+          <Divider sx={{ margin: '5% 0' }} />
           <Typography gutterBottom level="h4" component="h1">
             主な機能
           </Typography>
@@ -84,9 +84,9 @@ const MitamatchOperations: React.FC<{}> = () => {
               {features.map(([feature, since]) => {
                 return (
                   <Link
-                    href={`mitamatch-operations/features/${since.replaceAll(
-                      ".",
-                      "_"
+                    href={`mitamatch-operations/features/v${since.replaceAll(
+                      '.',
+                      '_',
                     )}`}
                     key={feature}
                   >

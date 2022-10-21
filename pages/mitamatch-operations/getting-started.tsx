@@ -1,7 +1,7 @@
-import { Divider, List, Sheet, Stack, Typography } from "@mui/joy";
-import Link from "next/link";
-import React from "react";
-import MitamaLab from "../../components/MitamaLab";
+import { Divider, List, Sheet, Typography } from '@mui/joy';
+import Link from 'next/link';
+import React from 'react';
+import MitamaLab from '../../components/MitamaLab';
 
 const GettingStarted: React.FC<{}> = () => {
   return (
@@ -9,18 +9,18 @@ const GettingStarted: React.FC<{}> = () => {
       <Typography level="h1" component="h1">
         Getting Started
       </Typography>
-      <Divider sx={{ margin: "2% 0" }} />
+      <Divider sx={{ margin: '2% 0' }} />
       <Sheet
         sx={{
-          mx: "auto", // margin left & right
+          mx: 'auto', // margin left & right
           my: 4, // margin top & botom
           py: 3, // padding top & bottom
           px: 2, // padding left & right
-          display: "flex",
-          flexDirection: "column",
+          display: 'flex',
+          flexDirection: 'column',
           gap: 2,
-          borderRadius: "sm",
-          boxShadow: "md",
+          borderRadius: 'sm',
+          boxShadow: 'md',
         }}
         variant="outlined"
       >
@@ -29,7 +29,7 @@ const GettingStarted: React.FC<{}> = () => {
             まず、Windows 11の開発者モードをONにしてください。
           </Typography>
           <Typography key={1}>
-            <Link href={"/mitamatch-operations/releases"}>Releases</Link>
+            <Link href={'/mitamatch-operations/releases'}>Releases</Link>
             ページに行き最新版のcerファイルとappinstallerファイルのダウンロードボタンを押してダウンロードしてください。
           </Typography>
           <Typography key={2}>
