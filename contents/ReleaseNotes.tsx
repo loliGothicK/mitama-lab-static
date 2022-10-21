@@ -18,9 +18,9 @@ const ReleaseNotes: { [K: Version]: ReleaseNote } = {
     bufFix: ["細かいバグ修正を行いました"],
     packages: {
       certificate:
-        "https://github.com/LoliGothick/MitamatchOperations/files/9834160/MitamatchOperations.Package._0.1.10.0_x86_x64_arm64.cer.zip",
+        "https://storage.cloud.google.com/mitamatch-operations-installer/v0.1.10/MitamatchOperations%20(Package)_0.1.10.0_x86_x64_arm64.cer",
       appinstaller:
-        "https://github.com/LoliGothick/MitamatchOperations/archive/refs/tags/v0.1.10.tar.gz",
+        "https://storage.cloud.google.com/mitamatch-operations-installer/v0.1.10/MitamatchOperations%20(Package).appinstaller",
     },
   }),
 };

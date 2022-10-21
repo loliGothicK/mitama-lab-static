@@ -30,13 +30,13 @@ const GettingStarted: React.FC<{}> = () => {
           </Typography>
           <Typography key={1}>
             <Link href={"/mitamatch-operations/releases"}>Releases</Link>
-            ページに行き最新版のcerファイルとappinstallerのzipファイルのダウンロードボタンを押してダウンロードしてください。
+            ページに行き最新版のcerファイルとappinstallerファイルのダウンロードボタンを押してダウンロードしてください。
           </Typography>
           <Typography key={2}>
-            次に、解凍したcerファイルをインポートしてください。
+            次に、cerファイルをインポートしてください。
           </Typography>
           <Typography key={3}>
-            最後に、解凍した appinstaller
+            最後に、appinstaller
             をダブルクリックすればインストーラが起動します。
           </Typography>
         </List>

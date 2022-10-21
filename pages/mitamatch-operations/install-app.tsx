@@ -54,21 +54,21 @@ const Installation: React.FC<{}> = () => {
                 <Container sx={{ display: "flex" }}>
                   <Link
                     href={ReleaseNotes[version].packages.certificate}
-                    download={`MitamatchOperations-${version}.cer.zip`}
+                    download={`MitamatchOperations-${version}.cer`}
                   >
                     <Button sx={{ margin: "2% 1%" }}>
                       <Typography key={"certificate"}>
-                        {`MitamatchOperations-${version}.cer.zip`}
+                        {`MitamatchOperations-${version}.cer`}
                       </Typography>
                     </Button>
                   </Link>
                   <Link
                     href={ReleaseNotes[version].packages.appinstaller}
-                    download={`MitamatchOperations-${version}.appinstaller.zip`}
+                    download={`MitamatchOperations-${version}.appinstaller`}
                   >
                     <Button sx={{ margin: "2% 1%" }}>
                       <Typography key={"appinstaller"}>
-                        {`MitamatchOperations-${version}.appinstaller.zip`}
+                        {`MitamatchOperations-${version}.appinstaller`}
                       </Typography>
                     </Button>
                   </Link>
