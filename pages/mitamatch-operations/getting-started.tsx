@@ -30,14 +30,18 @@ const GettingStarted: React.FC<{}> = () => {
           </Typography>
           <Typography key={1}>
             <Link href={'/mitamatch-operations/releases'}>Releases</Link>
-            ページに行き最新版のcerファイルとappinstallerファイルのダウンロードボタンを押してダウンロードしてください。
+            ページに行き最新版のcerファイルをダウンロード・インポートしてください。
           </Typography>
           <Typography key={2}>
-            次に、cerファイルをインポートしてください。
+            同様にzipファイルをダウンロードして解凍してください。
+            解凍したフォルダのappinstallerをダブルクリックすればインストーラが起動します。
           </Typography>
-          <Typography key={3}>
-            最後に、appinstaller
-            をダブルクリックすればインストーラが起動します。
+          <Divider />
+          <Typography>補足</Typography>
+          <Typography>
+            msixもありますが、x64アーキテクチャ用にビルドされたものです。
+            「MitamatchOperations
+            (Package)_0.1.10.0_Test」みたいなフォルダにmsixbundleが入っていますが、罠なので使わないように。
           </Typography>
         </List>
       </Sheet>
