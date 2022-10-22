@@ -1,4 +1,4 @@
-import { Divider, List, Sheet, Typography } from '@mui/joy';
+import { Alert, Card, Divider, Sheet, Typography } from '@mui/joy';
 import Link from 'next/link';
 import React from 'react';
 import MitamaLab from '../../components/MitamaLab';
@@ -24,26 +24,53 @@ const GettingStarted: React.FC<{}> = () => {
         }}
         variant="outlined"
       >
-        <List>
-          <Typography key={0}>
-            まず、Windows 11の開発者モードをONにしてください。
-          </Typography>
-          <Typography key={1}>
-            <Link href={'/mitamatch-operations/releases'}>Releases</Link>
-            ページに行き最新版のcerファイルをダウンロード・インポートしてください。
-          </Typography>
-          <Typography key={2}>
-            同様にzipファイルをダウンロードして解凍してください。
-            解凍したフォルダのappinstallerをダブルクリックすればインストーラが起動します。
-          </Typography>
-          <Divider />
-          <Typography>補足</Typography>
+        <Card>
           <Typography>
-            msixもありますが、x64アーキテクチャ用にビルドされたものです。
-            「MitamatchOperations
-            (Package)_0.1.10.0_Test」みたいなフォルダにmsixbundleが入っていますが、罠なので使わないように。
+            <Link href={'/mitamatch-operations/releases'}>Releases</Link>
+            ページに行き最新版のzipファイルをダウンロードしてください。
           </Typography>
-        </List>
+          <Typography>
+            まず、アプリのインストール前にルート証明書をインポートする必要があります。
+          </Typography>
+          <Alert>
+            MSIXインストーラーはウイルスをインストールさせるためによく使われる手法です。
+            ルート証明書をインポートすることにより、アプリおよびアプリ製作者（私）を信頼することになります。
+            信頼ができないと思う場合はこの先の操作を行わないことを強く推奨します。
+          </Alert>
+          <Divider sx={{ margin: '2% 0' }} />
+          <Typography>
+            cerファイルを右クリックして「証明書のインストール」をクリック。
+          </Typography>
+          <img
+            src="/certificate/install_cer.png"
+            width={'40%'}
+            height={'40%'}
+          />
+          <Typography sx={{ margin: '2% 0' }}>
+            「証明書のインストール」をクリック。
+          </Typography>
+          <img
+            src="/certificate/installing_cer.png"
+            width={'40%'}
+            height={'40%'}
+          />
+          <Typography sx={{ margin: '2% 0' }}>
+            ローカルコンピューターを選択し、次へをクリック（管理者権限が求められます）。
+          </Typography>
+          <img
+            src="/certificate/local_computer.png"
+            width={'40%'}
+            height={'40%'}
+          />
+          <Typography sx={{ margin: '2% 0' }}>
+            証明書をすべてのストアに配置するを選択肢、参照をクリック。
+            「信頼されたルート証明機関」を選択して、次へをクリック。
+          </Typography>
+          <img src="/certificate/store.png" width={'40%'} height={'40%'} />
+          <Typography sx={{ margin: '2% 0' }}>
+            これで準備は完了です。msixbundleファイルをダブルクリックするとインストーラーが起動します。
+          </Typography>
+        </Card>
       </Sheet>
     </MitamaLab>
   );
