@@ -18,16 +18,14 @@ import * as React from 'react';
 // Icons import
 import ArticleRoundedIcon from '@mui/icons-material/ArticleRounded';
 import AssignmentIndRoundedIcon from '@mui/icons-material/AssignmentIndRounded';
-import BookRoundedIcon from '@mui/icons-material/BookRounded';
 import DarkModeRoundedIcon from '@mui/icons-material/DarkModeRounded';
-import GridViewRoundedIcon from '@mui/icons-material/GridViewRounded';
 import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
 import LightModeRoundedIcon from '@mui/icons-material/LightModeRounded';
 import MenuIcon from '@mui/icons-material/Menu';
 import PeopleRoundedIcon from '@mui/icons-material/PeopleRounded';
-import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 
 // custom
+import { GitHub, SearchRounded, Twitter } from '@mui/icons-material';
 import { default as NextLink } from 'next/link';
 import teamTheme from '../styles/theme';
 import * as Layout from './MitamaLab/Layout';
@@ -206,7 +204,7 @@ const MitamaLab: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
               color="primary"
               sx={{ display: { xs: 'inline-flex', sm: 'none' } }}
             >
-              <SearchRoundedIcon />
+              <SearchRounded />
             </IconButton>
             <IconButton
               size="sm"
@@ -215,7 +213,7 @@ const MitamaLab: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
               component="a"
               href="/blog/first-look-at-joy/"
             >
-              <BookRoundedIcon />
+              <Twitter />
             </IconButton>
             <Menu
               id="app-selector"
@@ -226,18 +224,19 @@ const MitamaLab: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
                   color="primary"
                   aria-label="Apps"
                 >
-                  <GridViewRoundedIcon />
+                  <GitHub />
                 </IconButton>
               }
               menus={[
                 {
-                  label: 'Lab',
+                  label: 'GitHub',
                   active: true,
-                  href: '/',
+                  href: 'https://github.com/LoliGothick',
+                  target: '_blank',
                 },
                 {
-                  label: 'Blog',
-                  href: '/',
+                  label: 'Twitter',
+                  href: 'https://twitter.com/mitama_rs',
                   target: '_blank',
                 },
                 {
