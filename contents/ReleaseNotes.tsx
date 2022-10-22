@@ -19,7 +19,7 @@ const ReleaseNotes: { [K: Version]: ReleaseNote } = {
     packages: {
       certificate:
         'https://storage.cloud.google.com/mitamatch-operations-installer/v0.1.10/MitamatchOperations%20(Package)_0.1.10.0_x86_x64_arm64.cer',
-      zip: 'https://storage.cloud.google.com/mitamatch-operations-installer/v0.1.10/MitamatchOperations.zip',
+      zip: 'https://storage.cloud.google.com/mitamatch-operations-installer/MitamatchOperations%20(Package)_0.1.10.0_Test.zip',
     },
   }),
 };
