@@ -6,7 +6,7 @@ import {
   ListItem,
   Sheet,
   Stack,
-  Typography
+  Typography,
 } from '@mui/joy';
 import React from 'react';
 import Link from '../../components/Link';
@@ -51,16 +51,6 @@ const Installation: React.FC<{}> = () => {
               <Typography level={'h2'}>{'Packages'}</Typography>
               <List>
                 <Container sx={{ display: 'flex' }}>
-                  <Link
-                    href={ReleaseNotes[version].packages.certificate}
-                    download={`MitamatchOperations-${version}.cer`}
-                  >
-                    <Button sx={{ margin: '2% 1%' }}>
-                      <Typography key={'certificate'}>
-                        {`MitamatchOperations-${version}.cer`}
-                      </Typography>
-                    </Button>
-                  </Link>
                   <Link
                     href={ReleaseNotes[version].packages.zip}
                     download={`MitamatchOperations-${version}.zip`}
