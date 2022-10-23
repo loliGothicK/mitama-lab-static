@@ -1,31 +1,38 @@
-import { z } from 'zod';
-import { Version } from '../types/Version';
+import Version from '../types/Version';
 
-const releaseNote = z.object({
-  wahtsNew: z.array(z.string()),
-  bufFix: z.array(z.string()),
-  packages: z.object({
-    zip: z.string().url(),
-  }),
-});
-
-type ReleaseNote = z.infer<typeof releaseNote>;
-
-const ReleaseNotes: { [K: Version]: ReleaseNote } = {
-  'v0.1.11': releaseNote.parse({
+const ReleaseNotes: {
+  [K: Version]: {
+    wahtsNew: string[];
+    bufFix: string[];
+    packages: {
+      zip: `https://storage.cloud.google.com/mitamatch-operations-installer/MitamatchOperations%20(Package)_${typeof K}.0_Test.zip`;
+    };
+  };
+} = {
+  '0.1.12': {
+    wahtsNew: [
+      'レギオン コンソールでメンバーを読み込むように',
+      'オーダー担当者をログインレギオンから取得するように',
+    ],
+    bufFix: ['オーダー保存・読み込み時のクラッシュを修正'],
+    packages: {
+      zip: 'https://storage.cloud.google.com/mitamatch-operations-installer/MitamatchOperations%20(Package)_0.1.12.0_Test.zip',
+    },
+  },
+  '0.1.11': {
     wahtsNew: ['ライトモード/ダークモードに対応'],
     bufFix: ['初回ロード時のクラッシュを修正'],
     packages: {
       zip: 'https://storage.cloud.google.com/mitamatch-operations-installer/MitamatchOperations%20(Package)_0.1.11.0_Test.zip',
     },
-  }),
-  'v0.1.10': releaseNote.parse({
+  },
+  '0.1.10': {
     wahtsNew: ['オーダー自動編成', 'レギオンメンバー管理', '所持オーダー管理'],
     bufFix: ['細かいバグ修正を行いました'],
     packages: {
       zip: 'https://storage.cloud.google.com/mitamatch-operations-installer/MitamatchOperations%20(Package)_0.1.10.0_Test.zip',
     },
-  }),
+  },
 };
 
 export default ReleaseNotes;
