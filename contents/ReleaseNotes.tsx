@@ -9,6 +9,15 @@ const ReleaseNotes: {
     };
   };
 } = {
+  '0.1.13': {
+    wahtsNew: [
+      'コントロール ダッシュボード: リアルタイムオーダー指示サポート用ダッシュボード',
+    ],
+    bufFix: ['オーダー コンソールでドラッグ時にクラッシュする不具合を修正'],
+    packages: {
+      zip: 'https://storage.cloud.google.com/mitamatch-operations-installer/MitamatchOperations%20(Package)_0.1.13.0_Test.zip',
+    },
+  },
   '0.1.12': {
     wahtsNew: [
       'レギオン コンソールでメンバーを読み込むように',
