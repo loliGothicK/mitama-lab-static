@@ -43,6 +43,7 @@ const GettingStarted: React.FC<{}> = () => {
           </Typography>
           <img
             src="/certificate/install_cer.png"
+            alt="install_cer"
             width={'40%'}
             height={'40%'}
           />
@@ -51,6 +52,7 @@ const GettingStarted: React.FC<{}> = () => {
           </Typography>
           <img
             src="/certificate/installing_cer.png"
+            alt="installing_cer"
             width={'40%'}
             height={'40%'}
           />
@@ -59,6 +61,7 @@ const GettingStarted: React.FC<{}> = () => {
           </Typography>
           <img
             src="/certificate/local_computer.png"
+            alt="local_computer"
             width={'40%'}
             height={'40%'}
           />
@@ -66,7 +69,12 @@ const GettingStarted: React.FC<{}> = () => {
             証明書をすべてのストアに配置するを選択肢、参照をクリック。
             「信頼されたルート証明機関」を選択して、次へをクリック。
           </Typography>
-          <img src="/certificate/store.png" width={'40%'} height={'40%'} />
+          <img
+            src="/certificate/store.png"
+            alt="store"
+            width={'40%'}
+            height={'40%'}
+          />
           <Typography sx={{ margin: '2% 0' }}>
             これで準備は完了です。msixbundleファイルをダブルクリックするとインストーラーが起動します。
           </Typography>

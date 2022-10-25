@@ -12,9 +12,9 @@ import React from 'react';
 import Link from '../../components/Link';
 import MitamaLab from '../../components/MitamaLab';
 import ReleaseNotes from '../../contents/ReleaseNotes';
-import Version, { Versions } from '../../types/Version';
+import Version from '../../types/Version';
 
-const releases: Versions = ['v0.1.10'].map((ver) => Version.parse(ver));
+const releases: Version[] = ['0.1.14', '0.1.13', '0.1.12', '0.1.11', '0.1.10'];
 
 const Installation: React.FC<{}> = () => {
   return (

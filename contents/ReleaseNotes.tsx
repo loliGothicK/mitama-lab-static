@@ -9,6 +9,13 @@ const ReleaseNotes: {
     };
   };
 } = {
+  '0.1.14': {
+    wahtsNew: [],
+    bufFix: ['ダッシュボードで5番目のオーダーが読み込まれない不具合を修正'],
+    packages: {
+      zip: 'https://storage.cloud.google.com/mitamatch-operations-installer/MitamatchOperations%20(Package)_0.1.14.0_Test.zip',
+    },
+  },
   '0.1.13': {
     wahtsNew: [
       'コントロール ダッシュボード: リアルタイムオーダー指示サポート用ダッシュボード',
