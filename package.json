@@ -15,14 +15,12 @@
     "@emotion/server": "11.10.0",
     "@emotion/styled": "11.10.4",
     "@fontsource/roboto": "4.5.8",
-    "@google-cloud/storage": "6.5.4",
     "@mui/icons-material": "5.10.9",
     "@mui/joy": "5.0.0-alpha.50",
     "@mui/material": "5.10.10",
-    "next": "12.3.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "zod": "3.19.1"
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "3.4.0",
@@ -30,12 +28,13 @@
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
     "eslint": "8.26.0",
-    "eslint-config-next": "12.3.1",
+    "eslint-config-next": "latest",
+    "prettier": "^2.7.1",
     "typescript": "4.8.4",
     "typescript-plugin-toml": "0.2.0"
   },
   "packageManager": "yarn@3.2.4",
   "volta": {
-    "node": "16.18.0"
+    "node": "18.12.0"
   }
 }
