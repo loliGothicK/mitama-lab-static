@@ -16,8 +16,8 @@
     "@emotion/styled": "11.10.4",
     "@fontsource/roboto": "4.5.8",
     "@mui/icons-material": "5.10.9",
-    "@mui/joy": "5.0.0-alpha.50",
-    "@mui/material": "5.10.10",
+    "@mui/joy": "5.0.0-alpha.51",
+    "@mui/material": "5.10.11",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"
