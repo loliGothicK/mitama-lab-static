@@ -2,6 +2,7 @@ import MenuItemUnstyled from '@mui/base/MenuItemUnstyled';
 import MenuUnstyled, { MenuUnstyledActions } from '@mui/base/MenuUnstyled';
 import PopperUnstyled from '@mui/base/PopperUnstyled';
 import { styled } from '@mui/joy/styles';
+
 import * as React from 'react';
 
 const Popper = styled(PopperUnstyled)({
@@ -105,8 +106,8 @@ const Menu = ({
         open={isOpen}
         onClose={close}
         anchorEl={anchorEl}
-        components={{ Root: Popper, Listbox }}
-        componentsProps={{ root: { placement: 'bottom-end' }, listbox: { id } }}
+        slots={{ listbox: Listbox, root: Popper }}
+        slotProps={{ listbox: { id }, root: { placement: 'bottom-end' } }}
       >
         {menus.map(({ label, active, ...item }) => {
           const menuItem = (

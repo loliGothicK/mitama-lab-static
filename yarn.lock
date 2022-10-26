@@ -598,9 +598,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mui/base@npm:5.0.0-alpha.102":
-  version: 5.0.0-alpha.102
-  resolution: "@mui/base@npm:5.0.0-alpha.102"
+"@mui/base@npm:5.0.0-alpha.103":
+  version: 5.0.0-alpha.103
+  resolution: "@mui/base@npm:5.0.0-alpha.103"
   dependencies:
     "@babel/runtime": ^7.19.0
     "@emotion/is-prop-valid": ^1.2.0
@@ -617,18 +617,18 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 226fff05a8edf868c2f626ce666cbd73e3c5399a934735ea57a3fa56cab1ecef6b4298a60dae93f3825b19a4c40fa1e879300a9bf816fea9a82866ac8fc16674
+  checksum: beabe1be30534f39faf62dc586aaf2e97fb1b3a986fa002fe66124e7a0bc582ef9430ca1945069c4d375e3cf7ffad02f825fdcb9983b472e120bc4ba8f15f19a
   languageName: node
   linkType: hard
 
-"@mui/core-downloads-tracker@npm:^5.10.10":
-  version: 5.10.10
-  resolution: "@mui/core-downloads-tracker@npm:5.10.10"
-  checksum: 534c066edf4d8b656e31000ac2eab8ed211cad4a0d35841eaf77751b38b76fe76114b94a18360292aa39753fe4e99ab0ab37466908991f96fc7c2ceeffc2c80b
+"@mui/core-downloads-tracker@npm:^5.10.11":
+  version: 5.10.11
+  resolution: "@mui/core-downloads-tracker@npm:5.10.11"
+  checksum: 16a1cab20098e55bb217fdbf20fe18e56a3f52ef0daef74f9f078cebf1b2e47906e28f707f70b8d6132bca2b0a56d9a9870364ea1dfce89c53567f30af9205ce
   languageName: node
   linkType: hard
 
-"@mui/icons-material@npm:5.10.9":
+"@mui/icons-material@npm:latest":
   version: 5.10.9
   resolution: "@mui/icons-material@npm:5.10.9"
   dependencies:
@@ -644,13 +644,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mui/joy@npm:5.0.0-alpha.50":
-  version: 5.0.0-alpha.50
-  resolution: "@mui/joy@npm:5.0.0-alpha.50"
+"@mui/joy@npm:latest":
+  version: 5.0.0-alpha.51
+  resolution: "@mui/joy@npm:5.0.0-alpha.51"
   dependencies:
     "@babel/runtime": ^7.19.0
-    "@mui/base": 5.0.0-alpha.102
-    "@mui/core-downloads-tracker": ^5.10.10
+    "@mui/base": 5.0.0-alpha.103
+    "@mui/core-downloads-tracker": ^5.10.11
     "@mui/system": ^5.10.10
     "@mui/types": ^7.2.0
     "@mui/utils": ^5.10.9
@@ -671,17 +671,17 @@ __metadata:
       optional: true
     "@types/react":
       optional: true
-  checksum: 0e362483293c6736cfd76b592147251ecd25278c323d65c216c687e74e4314f641596aee1f2d993dfa0ed3af72faff0e441328cb9bb98a4da842c62a597c7878
+  checksum: 159057c801ad7be5320fa54cf87e30e13c6435c3e56ea2edcaf425bc70bb9a22d8b9029edb0d45950950b41f679c22e0ed2e99dbf80dd9dfe719ec0d537894e4
   languageName: node
   linkType: hard
 
-"@mui/material@npm:5.10.10":
-  version: 5.10.10
-  resolution: "@mui/material@npm:5.10.10"
+"@mui/material@npm:latest":
+  version: 5.10.11
+  resolution: "@mui/material@npm:5.10.11"
   dependencies:
     "@babel/runtime": ^7.19.0
-    "@mui/base": 5.0.0-alpha.102
-    "@mui/core-downloads-tracker": ^5.10.10
+    "@mui/base": 5.0.0-alpha.103
+    "@mui/core-downloads-tracker": ^5.10.11
     "@mui/system": ^5.10.10
     "@mui/types": ^7.2.0
     "@mui/utils": ^5.10.9
@@ -704,7 +704,7 @@ __metadata:
       optional: true
     "@types/react":
       optional: true
-  checksum: 3bd9a1dd71ec6d7012266633e078e52ecd653c4a6fc286d24b04edae3e85f569a7ba9840443dca0212744f87afe2758599367dcff96bc23c0db79ddcc5ca5177
+  checksum: 208312fc063ccdfad393e0e86f1d22d1e8e45fdcf6ba9ce5e0914211944f7dec04a2784d04f728f6014d3fe17b1b102e0279a51d9cf94147c45520c662f3be40
   languageName: node
   linkType: hard
 
@@ -2749,9 +2749,9 @@ __metadata:
     "@emotion/server": 11.10.0
     "@emotion/styled": 11.10.4
     "@fontsource/roboto": 4.5.8
-    "@mui/icons-material": 5.10.9
-    "@mui/joy": 5.0.0-alpha.50
-    "@mui/material": 5.10.10
+    "@mui/icons-material": latest
+    "@mui/joy": latest
+    "@mui/material": latest
     "@trivago/prettier-plugin-sort-imports": 3.4.0
     "@types/node": 18.8.4
     "@types/react": 18.0.21
