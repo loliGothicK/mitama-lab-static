@@ -13,20 +13,8 @@ const nextConfig = {
       '/mitamatch-operations/getting-started': {
         page: '/mitamatch-operations/getting-started',
       },
-      '/mitamatch-operations/features/v0_1_10': {
-        page: '/mitamatch-operations/features/v0_1_10',
-      },
-      '/mitamatch-operations/features/v0_1_11': {
-        page: '/mitamatch-operations/features/v0_1_11',
-      },
-      '/mitamatch-operations/features/v0_1_12': {
-        page: '/mitamatch-operations/features/v0_1_12',
-      },
-      '/mitamatch-operations/features/v0_1_13': {
-        page: '/mitamatch-operations/features/v0_1_13',
-      },
-      '/mitamatch-operations/features/v0_1_14': {
-        page: '/mitamatch-operations/features/v0_1_14',
+      '/mitamatch-operations/features/v1_0_0': {
+        page: '/mitamatch-operations/features/v1_0_0',
       },
     };
   },

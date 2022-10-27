@@ -1,9 +1,11 @@
+// noinspection JSUnusedGlobalSymbols
+
 import { Alert, Card, Divider, Sheet, Typography } from '@mui/joy';
 import Link from 'next/link';
 import React from 'react';
 import MitamaLab from '../../components/MitamaLab';
 
-const GettingStarted: React.FC<{}> = () => {
+const GettingStarted: React.FC = () => {
   return (
     <MitamaLab>
       <Typography level="h1" component="h1">
@@ -13,7 +15,7 @@ const GettingStarted: React.FC<{}> = () => {
       <Sheet
         sx={{
           mx: 'auto', // margin left & right
-          my: 4, // margin top & botom
+          my: 4, // margin top & bottom
           py: 3, // padding top & bottom
           px: 2, // padding left & right
           display: 'flex',
