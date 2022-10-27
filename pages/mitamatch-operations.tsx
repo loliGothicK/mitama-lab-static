@@ -13,16 +13,18 @@ import {
   useColorScheme,
 } from '@mui/joy';
 import { ListItemAvatar, ListItemText } from '@mui/material';
+
+import React from 'react';
+
 import Link from '../components/Link';
 import MitamaLab from '../components/MitamaLab';
 import styles from '../styles/Home.module.css';
-import React from "react";
 
 const features: [string, string][] = [
-  ['オーダーデッキ編成', '0.1.0'],
-  ['メンバー管理', '0.1.10'],
-  ['所持オーダー管理', '0.1.10'],
-  ['オーダー担当者自動割り振り', '0.1.10'],
+  ['オーダーデッキ編成', '1.0.0'],
+  ['所持オーダー管理', '1.0.0'],
+  ['オーダー担当者自動割り振り', '1.0.0'],
+  ['オーダーダッシュボード', '1.0.0'],
 ];
 
 const MitamatchOperations: React.FC = () => {
