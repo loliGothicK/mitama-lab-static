@@ -8,7 +8,7 @@ const nextConfig = {
       '/': { page: '/' },
       '/mitamatch-operations': { page: '/mitamatch-operations' },
       '/mitamatch-operations/install-app': {
-        page: '/mitamatch-operations/install-app',
+        page: '/mitamatch-operations/install-app'
       },
       '/mitamatch-operations/getting-started': {
         page: '/mitamatch-operations/getting-started',
@@ -17,7 +17,7 @@ const nextConfig = {
         page: '/mitamatch-operations/features/v1_0_0',
       },
     };
-  },
+  }
 };
 
 module.exports = nextConfig;
