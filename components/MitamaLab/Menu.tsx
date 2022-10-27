@@ -1,3 +1,5 @@
+// noinspection JSUnusedLocalSymbols
+
 import MenuItemUnstyled from '@mui/base/MenuItemUnstyled';
 import MenuUnstyled, { MenuUnstyledActions } from '@mui/base/MenuUnstyled';
 import PopperUnstyled from '@mui/base/PopperUnstyled';
@@ -9,7 +11,7 @@ const Popper = styled(PopperUnstyled)({
   zIndex: 1500,
 });
 
-const Listbox = styled('ul')(({ theme }) => ({
+const ListBox = styled('ul')(({ theme }) => ({
   ...theme.variants.outlined.neutral,
   marginBlock: '0.25rem',
   padding: '0.45rem',
@@ -24,30 +26,32 @@ const Listbox = styled('ul')(({ theme }) => ({
 
 const MenuItem = styled(MenuItemUnstyled, {
   shouldForwardProp: (prop) => prop !== 'active',
-})<{ active?: boolean }>(({ theme, active }) => ({
-  listStyle: 'none',
-  fontFamily: theme.vars.fontFamily.body,
-  fontSize: theme.vars.fontSize.sm,
-  padding: '0.45rem 0.75rem',
-  borderRadius: theme.vars.radius.xs,
-  minWidth: 120,
-  textDecoration: 'none',
-  display: 'flex',
-  ...theme.variants.plain.neutral,
-  ...(active
-    ? {
-        ...theme.variants.soft.primary,
-        cursor: 'default',
-      }
-    : {
-        '&:hover': {
-          ...theme.variants.softHover.neutral,
-          cursor: 'pointer',
-        },
-        '&:active': theme.variants.outlinedHover.neutral,
-      }),
-  [theme.focus.selector]: theme.focus.default,
-}));
+})<{ active?: boolean }>(({ theme, active }) => {
+  return ({
+    listStyle: 'none',
+    fontFamily: theme.vars.fontFamily.body,
+    fontSize: theme.vars.fontSize.sm,
+    padding: '0.45rem 0.75rem',
+    borderRadius: theme.vars.radius.xs,
+    minWidth: 120,
+    textDecoration: 'none',
+    display: 'flex',
+    ...theme.variants.plain.neutral,
+    ...(active
+        ? {
+          ...theme.variants.soft.primary,
+          cursor: 'default',
+        }
+        : {
+          '&:hover': {
+            ...theme.variants.softHover.neutral,
+            cursor: 'pointer',
+          },
+          '&:active': theme.variants.outlinedHover.neutral,
+        }),
+    [theme.focus.selector]: theme.focus.default,
+  });
+});
 
 const Menu = ({
   control,
@@ -106,7 +110,7 @@ const Menu = ({
         open={isOpen}
         onClose={close}
         anchorEl={anchorEl}
-        slots={{ listbox: Listbox, root: Popper }}
+        slots={{ listbox: ListBox, root: Popper }}
         slotProps={{ listbox: { id }, root: { placement: 'bottom-end' } }}
       >
         {menus.map(({ label, active, ...item }) => {

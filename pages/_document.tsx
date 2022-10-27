@@ -4,6 +4,7 @@ import * as React from 'react';
 
 import createEmotionCache from '../utility/createEmotionCache';
 
+// noinspection JSUnusedGlobalSymbols
 export default class MyDocument extends Document {
   render() {
     return (

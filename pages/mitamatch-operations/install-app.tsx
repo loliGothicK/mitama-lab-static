@@ -16,7 +16,7 @@ import Version from '../../types/Version';
 
 const releases: Version[] = ['0.1.14', '0.1.13', '0.1.12', '0.1.11', '0.1.10'];
 
-const Installation: React.FC<{}> = () => {
+const Installation: React.FC = () => {
   return (
     <MitamaLab>
       <Stack direction={'row'}>
@@ -31,7 +31,7 @@ const Installation: React.FC<{}> = () => {
             <Sheet
               sx={{
                 mx: 'auto', // margin left & right
-                my: 4, // margin top & botom
+                my: 4, // margin top & bottom
                 py: 3, // padding top & bottom
                 px: 2, // padding left & right
                 display: 'flex',
@@ -56,7 +56,7 @@ const Installation: React.FC<{}> = () => {
                     download={`MitamatchOperations-${version}.zip`}
                   >
                     <Button sx={{ margin: '2% 1%' }}>
-                      <Typography key={'appinstaller'}>
+                      <Typography key={'installer'}>
                         {`MitamatchOperations-${version}.zip`}
                       </Typography>
                     </Button>
@@ -66,7 +66,7 @@ const Installation: React.FC<{}> = () => {
               <Divider sx={{ margin: '2% 0%' }} />
               <Typography level={'h3'}>{"What's new"}</Typography>
               <List>
-                {ReleaseNotes[version].wahtsNew.map((what, index) => {
+                {ReleaseNotes[version].whatsNew.map((what, index) => {
                   return (
                     <ListItem key={index}>
                       <Typography>{what}</Typography>
