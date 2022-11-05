@@ -18,13 +18,15 @@ import React from 'react';
 
 import Link from '../components/Link';
 import MitamaLab from '../components/MitamaLab';
+import ReleaseNotes from '../contents/ReleaseNotes';
 import styles from '../styles/Home.module.css';
 
-const features: [string, string][] = [
+const features: [string, keyof typeof ReleaseNotes][] = [
   ['オーダーデッキ編成', '1.0.0'],
   ['所持オーダー管理', '1.0.0'],
   ['オーダー担当者自動割り振り', '1.0.0'],
   ['オーダーダッシュボード', '1.0.0'],
+  ['ユニット管理', '2.0.0'],
 ];
 
 const MitamatchOperations: React.FC = () => {
