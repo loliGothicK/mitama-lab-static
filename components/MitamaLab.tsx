@@ -295,10 +295,14 @@ const MitamaLab: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
               <Box key={'md'}>
                 <List sx={{ borderRadius: 'sm', margin: 5 }}>
                   <ListItem>
-                    <Link href={'https://assaultlily.jp/'}>アサルトリリィ</Link>
+                    <Link href={'https://www.youtube.com/MaisakiBerry'}>
+                      苺咲べりぃ / Maisaki Berry
+                    </Link>
                   </ListItem>
                   <ListItem>
-                    <Link href={'https://www.rust-lang.org/en'}>Rust</Link>
+                    <Link href={'https://www.youtube.com/c/QuonTama'}>
+                      QuonTama Ch. 久遠たま
+                    </Link>
                   </ListItem>
                 </List>
               </Box>
