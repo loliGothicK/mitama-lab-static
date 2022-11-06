@@ -1,5 +1,6 @@
 import Box, { BoxProps } from '@mui/joy/Box';
 import Sheet from '@mui/joy/Sheet';
+
 import * as React from 'react';
 
 export const Root = (props: BoxProps) => (
@@ -15,6 +16,7 @@ export const Root = (props: BoxProps) => (
           md: 'minmax(160px, 300px) minmax(300px, 500px) minmax(500px, 1fr)',
         },
         gridTemplateRows: '64px 1fr',
+        minWidth: '100vw',
         minHeight: '100vh',
       },
       ...(Array.isArray(props.sx) ? props.sx : [props.sx]),
