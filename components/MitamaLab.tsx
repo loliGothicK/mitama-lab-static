@@ -275,7 +275,7 @@ const MitamaLab: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
           mt: 'auto',
         }}
       >
-        <Container maxWidth="sm">
+        <Container maxWidth="md">
           <Grid container spacing={2}>
             <Grid xs={6}>
               <Typography>Social</Typography>
