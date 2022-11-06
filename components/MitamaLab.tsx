@@ -1,7 +1,19 @@
+// custom
+import { GitHub, SearchRounded, Twitter } from '@mui/icons-material';
+// Icons import
+import ArticleRoundedIcon from '@mui/icons-material/ArticleRounded';
+import AssignmentIndRoundedIcon from '@mui/icons-material/AssignmentIndRounded';
+import DarkModeRoundedIcon from '@mui/icons-material/DarkModeRounded';
+import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
+import LightModeRoundedIcon from '@mui/icons-material/LightModeRounded';
+import MenuIcon from '@mui/icons-material/Menu';
+import PeopleRoundedIcon from '@mui/icons-material/PeopleRounded';
 import {
   Box,
   Chip,
+  Container,
   Divider,
+  Grid,
   IconButton,
   List,
   ListItem,
@@ -13,23 +25,24 @@ import {
 import type { Theme } from '@mui/joy/styles';
 import { CssVarsProvider, useColorScheme } from '@mui/joy/styles';
 import { GlobalStyles } from '@mui/system';
+
+import { default as NextLink } from 'next/link';
 import * as React from 'react';
 
-// Icons import
-import ArticleRoundedIcon from '@mui/icons-material/ArticleRounded';
-import AssignmentIndRoundedIcon from '@mui/icons-material/AssignmentIndRounded';
-import DarkModeRoundedIcon from '@mui/icons-material/DarkModeRounded';
-import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
-import LightModeRoundedIcon from '@mui/icons-material/LightModeRounded';
-import MenuIcon from '@mui/icons-material/Menu';
-import PeopleRoundedIcon from '@mui/icons-material/PeopleRounded';
-
-// custom
-import { GitHub, SearchRounded, Twitter } from '@mui/icons-material';
-import { default as NextLink } from 'next/link';
 import teamTheme from '../styles/theme';
+import Link from './Link';
 import * as Layout from './MitamaLab/Layout';
 import Menu from './MitamaLab/Menu';
+
+function Copyright() {
+  return (
+    <Typography level="h4">
+      {'Copyright © Mitama Lab. '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
+}
 
 const ColorSchemeToggle = () => {
   const { mode, setMode } = useColorScheme();
@@ -254,6 +267,47 @@ const MitamaLab: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
         </Layout.SideNav>
         <Layout.Main>{children}</Layout.Main>
       </Layout.Root>
+      <Box
+        component="footer"
+        sx={{
+          py: 3,
+          px: 2,
+          mt: 'auto',
+        }}
+      >
+        <Container maxWidth="sm">
+          <Grid container spacing={2}>
+            <Grid xs={6}>
+              <Typography>Social</Typography>
+              <Box key={'md'}>
+                <List sx={{ borderRadius: 'sm', margin: 5 }}>
+                  <ListItem>
+                    <Link href={'https://twitter.com/mitama_rs'}>Twitter</Link>
+                  </ListItem>
+                  <ListItem>
+                    <Link href={'https://github.com/LoliGothick'}>GitHub</Link>
+                  </ListItem>
+                </List>
+              </Box>
+            </Grid>
+            <Grid xs={6}>
+              <Typography>Recommend</Typography>
+              <Box key={'md'}>
+                <List sx={{ borderRadius: 'sm', margin: 5 }}>
+                  <ListItem>
+                    <Link href={'https://assaultlily.jp/'}>アサルトリリィ</Link>
+                  </ListItem>
+                  <ListItem>
+                    <Link href={'https://www.rust-lang.org/en'}>Rust</Link>
+                  </ListItem>
+                </List>
+              </Box>
+            </Grid>
+          </Grid>
+          <img src={'/MitamaLab.svg'} height={'50'} alt={'logo'} />
+          <Copyright />
+        </Container>
+      </Box>
     </CssVarsProvider>
   );
 };

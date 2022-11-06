@@ -1,3 +1,5 @@
+import { getInitColorSchemeScript } from '@mui/joy';
+
 import createEmotionServer from '@emotion/server/create-instance';
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 import * as React from 'react';
@@ -16,6 +18,7 @@ export default class MyDocument extends Document {
           />
         </Head>
         <body>
+          {getInitColorSchemeScript()}
           <Main />
           <NextScript />
         </body>
