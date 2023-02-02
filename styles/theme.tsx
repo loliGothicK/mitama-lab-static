@@ -25,8 +25,8 @@ export default extendTheme({
         background: {
           appBody: 'var(--joy-palette-common-black)',
           level1: 'var(--joy-palette-neutral-900)',
-          level2: 'var(--joy-palette-neutral-800)',
-          level3: 'var(--joy-palette-neutral-700)',
+          level2: 'var(--joy-palette-neutral-850)',
+          level3: 'var(--joy-palette-neutral-800)',
         },
       },
     },
