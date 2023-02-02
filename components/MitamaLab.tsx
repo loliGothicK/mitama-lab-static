@@ -282,7 +282,7 @@ const MitamaLab: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
               <Box key={'md'}>
                 <List sx={{ borderRadius: 'sm', margin: 5 }}>
                   <ListItem>
-                    <Link href={'https://twitter.com/mitama_rs'}>Twitter</Link>
+                    <Link href={'https://twitter.com/mitama_dev'}>Twitter</Link>
                   </ListItem>
                   <ListItem>
                     <Link href={'https://github.com/LoliGothick'}>GitHub</Link>
@@ -302,6 +302,11 @@ const MitamaLab: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
                   <ListItem>
                     <Link href={'https://www.youtube.com/c/QuonTama'}>
                       QuonTama Ch. 久遠たま
+                    </Link>
+                  </ListItem>
+                  <ListItem>
+                    <Link href={'https://www.youtube.com/@RurufuHizuki'}>
+                      陽月るるふ / Hizuki Rurufu
                     </Link>
                   </ListItem>
                 </List>
