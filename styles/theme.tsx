@@ -14,6 +14,9 @@ export default extendTheme({
         background: {
           appBody: 'var(--joy-palette-neutral-50)',
           componentBg: 'var(--joy-palette-common-white)',
+          level1: 'var(--joy-palette-neutral-100)',
+          level2: 'var(--joy-palette-neutral-150)',
+          level3: 'var(--joy-palette-neutral-200)',
         },
       },
     },
@@ -21,7 +24,9 @@ export default extendTheme({
       palette: {
         background: {
           appBody: 'var(--joy-palette-common-black)',
-          componentBg: 'var(--joy-palette-neutral-900)',
+          level1: 'var(--joy-palette-neutral-900)',
+          level2: 'var(--joy-palette-neutral-800)',
+          level3: 'var(--joy-palette-neutral-700)',
         },
       },
     },

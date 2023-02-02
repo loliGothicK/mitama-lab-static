@@ -43,6 +43,7 @@ export const Header = (props: BoxProps) => (
         borderColor: 'divider',
         position: 'sticky',
         top: 0,
+        opacity: 0.95,
         zIndex: 1100,
       },
       ...(Array.isArray(props.sx) ? props.sx : [props.sx]),

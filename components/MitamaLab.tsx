@@ -273,6 +273,7 @@ const MitamaLab: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
           py: 3,
           px: 2,
           mt: 'auto',
+          bgcolor: 'background.level3',
         }}
       >
         <Container maxWidth="md">
