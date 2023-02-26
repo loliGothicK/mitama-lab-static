@@ -9,8 +9,6 @@ const nextConfig = {
   exportPathMap: async () => {
     return {
       '/': { page: '/' },
-      blog: { page: '/blog' },
-      'post/preview': { page: '/posts/preview' },
     };
   },
 };
