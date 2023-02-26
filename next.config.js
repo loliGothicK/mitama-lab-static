@@ -7,9 +7,30 @@ const nextConfig = {
     unoptimized: true,
   },
   exportPathMap: async () => {
-    return {
-      '/': { page: '/' },
-    };
+    const fs = require('fs');
+
+    const posts = fs
+      .readdirSync('_posts')
+      .filter((file) => file.endsWith('.md'))
+      .map((file) => file.slice(0, -3))
+      .map((slug) => {
+        return {
+          [`/posts/${slug}`]: {
+            page: '/posts/[slug]',
+            query: {
+              slug: slug,
+            },
+          },
+        };
+      });
+
+    return Object.assign(
+      {
+        '/': { page: '/' },
+        '/blog': { page: '/blog' },
+      },
+      ...posts,
+    );
   },
 };
 
