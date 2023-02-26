@@ -1,4 +1,4 @@
-import { getInitColorSchemeScript } from '@mui/joy';
+import { getInitColorSchemeScript } from '@mui/material/styles';
 
 import createEmotionServer from '@emotion/server/create-instance';
 import Document, { Head, Html, Main, NextScript } from 'next/document';

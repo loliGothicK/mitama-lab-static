@@ -1,32 +1,21 @@
-import { extendTheme } from '@mui/joy/styles';
-
-declare module '@mui/joy/styles' {
-  interface PaletteBackground {
-    appBody: string;
-    componentBg: string;
-  }
-}
+import { pink } from '@mui/material/colors';
+import { experimental_extendTheme as extendTheme } from '@mui/material/styles';
 
 export default extendTheme({
   colorSchemes: {
     light: {
       palette: {
-        background: {
-          appBody: 'var(--joy-palette-neutral-50)',
-          componentBg: 'var(--joy-palette-common-white)',
+        primary: {
+          main: pink[600],
         },
       },
     },
     dark: {
       palette: {
-        background: {
-          appBody: 'var(--joy-palette-common-black)',
+        primary: {
+          main: pink[400],
         },
       },
     },
-  },
-  fontFamily: {
-    display: "'Roboto Flex', var(--joy-fontFamily-fallback)",
-    body: "'Roboto Flex', var(--joy-fontFamily-fallback)",
   },
 });

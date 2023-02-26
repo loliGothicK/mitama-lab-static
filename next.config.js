@@ -6,19 +6,8 @@ const nextConfig = {
   exportPathMap: async () => {
     return {
       '/': { page: '/' },
-      '/mitamatch-operations': { page: '/mitamatch-operations' },
-      '/mitamatch-operations/install-app': {
-        page: '/mitamatch-operations/install-app',
-      },
-      '/mitamatch-operations/getting-started': {
-        page: '/mitamatch-operations/getting-started',
-      },
-      '/mitamatch-operations/features/v1_0_0': {
-        page: '/mitamatch-operations/features/v1_0_0',
-      },
-      '/mitamatch-operations/features/v2_0_0': {
-        page: '/mitamatch-operations/features/v2_0_0',
-      },
+      blog: { page: '/blog' },
+      'post/preview': { page: '/posts/preview' },
     };
   },
 };
