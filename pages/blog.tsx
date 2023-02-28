@@ -1,7 +1,7 @@
 import MitamaLab from '../layouts/MitamaLab';
 import {getAllPosts} from "../lib/api";
 import Post from "../interfaces/post";
-import {Button, Card, CardActions, CardContent, Divider, Grid, Paper, Typography} from "@mui/material";
+import {Button, Divider, Grid, Paper, Typography} from "@mui/material";
 import {styled} from "@mui/material/styles";
 import Link from "next/link";
 
