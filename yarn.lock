@@ -1498,7 +1498,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cheerio@npm:^1.0.0-rc.12":
+"cheerio@npm:1.0.0-rc.12":
   version: 1.0.0-rc.12
   resolution: "cheerio@npm:1.0.0-rc.12"
   dependencies:
@@ -3149,13 +3149,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"markdown-it-anchor@npm:^8.4.1":
-  version: 8.6.6
-  resolution: "markdown-it-anchor@npm:8.6.6"
+"markdown-it-anchor@npm:^8.6.6":
+  version: 8.6.7
+  resolution: "markdown-it-anchor@npm:8.6.7"
   peerDependencies:
     "@types/markdown-it": "*"
     markdown-it: "*"
-  checksum: d67044f132cd94728227e065b2a82063a05ac5fb82a991c190fe48ac5ab308ed85f49a28e859bcf203e882af814902e67dd69724f6761c61709834b075cc6f95
+  checksum: 828236768ac7f61ed5591393c1b1bfc5dbf2b6d0c58a3deec606c61dddaa12658a34450cbef37ab50a04453e618ce1efd47d86e4e52595024334898fd306225b
   languageName: node
   linkType: hard
 
@@ -3598,9 +3598,9 @@ __metadata:
     remark-html: ^15.0.1
     typescript: 4.9.5
     typescript-plugin-toml: 0.2.0
-    zenn-content-css: ^0.1.137
-    zenn-embed-elements: ^0.1.137
-    zenn-markdown-html: ^0.1.137
+    zenn-content-css: ^0.1.141
+    zenn-embed-elements: ^0.1.141
+    zenn-markdown-html: ^0.1.141
   languageName: unknown
   linkType: soft
 
@@ -4010,7 +4010,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prismjs@npm:^1.27.0":
+"prismjs@npm:^1.29.0":
   version: 1.29.0
   resolution: "prismjs@npm:1.29.0"
   checksum: 007a8869d4456ff8049dc59404e32d5666a07d99c3b0e30a18bd3b7676dfa07d1daae9d0f407f20983865fd8da56de91d09cb08e6aa61f5bc420a27c0beeaf93
@@ -4325,9 +4325,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sanitize-html@npm:^2.7.2":
-  version: 2.9.0
-  resolution: "sanitize-html@npm:2.9.0"
+"sanitize-html@npm:^2.9.0":
+  version: 2.10.0
+  resolution: "sanitize-html@npm:2.10.0"
   dependencies:
     deepmerge: ^4.2.2
     escape-string-regexp: ^4.0.0
@@ -4335,7 +4335,7 @@ __metadata:
     is-plain-object: ^5.0.0
     parse-srcset: ^1.0.2
     postcss: ^8.3.11
-  checksum: ffe3445c365583265fc367528e7c780b7d3cf9d0bfd17ed66671b774c2ca0ff3739c77dea1e4ae0ccf531832c5eb3aca0303e835ecd932c25526421e920ff21f
+  checksum: 0cb2bb330ed966a4d667b1890322dd868a67f527f87c04d7e3be1688fcfda20f7452a9a7744870751f51e255742e7264a287d9bcfcd64d4cd74a3c99f99c73d2
   languageName: node
   linkType: hard
 
@@ -4970,36 +4970,36 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zenn-content-css@npm:^0.1.137":
-  version: 0.1.137
-  resolution: "zenn-content-css@npm:0.1.137"
-  checksum: f3461f00e3c445e5f092c98a939faf1189bb42b1e7a612daf2821757c8ce10d8059a79171f70fd9d160de7b027f1018c54fc6f2bb13a4752b6f9ac65927b27b5
+"zenn-content-css@npm:^0.1.141":
+  version: 0.1.141
+  resolution: "zenn-content-css@npm:0.1.141"
+  checksum: 35110d9d9a731868ad31998c501e80e890e8e25b75cd241bfce3d07c3793e45d8282e29911c343131cfaafe2209a8a9c1b8423c439b9961f746ea3b6ec74227c
   languageName: node
   linkType: hard
 
-"zenn-embed-elements@npm:^0.1.137":
-  version: 0.1.137
-  resolution: "zenn-embed-elements@npm:0.1.137"
-  checksum: def3d0608977442310c6a95fe951b9b85c35c9286bcbcb3fa8cdf22fcdefcbfe72584a415cee8e087c891e9f56aa28f01c2ee0a1078914b6ad93df75acea0986
+"zenn-embed-elements@npm:^0.1.141":
+  version: 0.1.141
+  resolution: "zenn-embed-elements@npm:0.1.141"
+  checksum: 9155ee4e2acc012287a95ac70b25dee5fa97f4da6365506b1217386190fe380c98bed6b17cabe88694442dd1da01711e78b3293e85b340401f8767ac6e1f219f
   languageName: node
   linkType: hard
 
-"zenn-markdown-html@npm:^0.1.137":
-  version: 0.1.137
-  resolution: "zenn-markdown-html@npm:0.1.137"
+"zenn-markdown-html@npm:^0.1.141":
+  version: 0.1.141
+  resolution: "zenn-markdown-html@npm:0.1.141"
   dependencies:
     "@steelydylan/markdown-it-imsize": ^1.0.2
-    cheerio: ^1.0.0-rc.12
+    cheerio: 1.0.0-rc.12
     markdown-it: ^12.3.2
-    markdown-it-anchor: ^8.4.1
+    markdown-it-anchor: ^8.6.6
     markdown-it-container: ^2.0.0
     markdown-it-footnote: ^3.0.3
     markdown-it-inline-comments: ^1.0.1
     markdown-it-link-attributes: ^4.0.1
     markdown-it-task-lists: ^2.1.1
-    prismjs: ^1.27.0
-    sanitize-html: ^2.7.2
-  checksum: 2185e8be7f13d7ea54f55efb1e529e7f7705545a82fce8d07c75eebbbca16997f599aa24b1566b51fca196a5eda0f5cae68976e43bc07e6927f143a207cdf3dd
+    prismjs: ^1.29.0
+    sanitize-html: ^2.9.0
+  checksum: 57ccf0fe01a80159cb0545a8bac0d26e8fff24c15704ec9f0a7086fe6e8dd06f2197d2218d7933173700534507636aea29766211bcbe4a5012bc00d96edd4628
   languageName: node
   linkType: hard
 
