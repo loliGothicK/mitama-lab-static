@@ -16,10 +16,7 @@ const nextConfig = {
       .map((slug) => {
         return {
           [`/posts/${slug}`]: {
-            page: '/posts/[slug]',
-            query: {
-              slug: slug,
-            },
+            page: `/posts/${slug}`,
           },
         };
       });
