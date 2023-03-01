@@ -365,20 +365,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/cache@npm:11.10.3":
-  version: 11.10.3
-  resolution: "@emotion/cache@npm:11.10.3"
-  dependencies:
-    "@emotion/memoize": ^0.8.0
-    "@emotion/sheet": ^1.2.0
-    "@emotion/utils": ^1.2.0
-    "@emotion/weak-memoize": ^0.3.0
-    stylis: 4.0.13
-  checksum: d31291eff1b270d8db6f471b2b9b3bc5d786c296838631f101837747ff5afa8e8890655279457c68ce2cee23256ab02a25c177f5487b5061da82c7354c1bdce5
-  languageName: node
-  linkType: hard
-
-"@emotion/cache@npm:^11.10.5":
+"@emotion/cache@npm:11.10.5, @emotion/cache@npm:^11.10.5":
   version: 11.10.5
   resolution: "@emotion/cache@npm:11.10.5"
   dependencies:
@@ -465,13 +452,6 @@ __metadata:
     "@emotion/css":
       optional: true
   checksum: 15b7135a578630e36f551b8856d658a50876fb62fe042819ad57895adaf45b79e2d21b3464f1874319f48b5f6209ce09dd387ce1df6aea6f98a20c43a78221b2
-  languageName: node
-  linkType: hard
-
-"@emotion/sheet@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "@emotion/sheet@npm:1.2.0"
-  checksum: b3771e47963d36c179f9a1119055d7e5d18e2718e73ebe2b4b1c56f4bbf4ea6b12c50bbc52cd502f03f7981beb2fbb3fee2638b6f5ef6c5f223b06f8bf88ec7b
   languageName: node
   linkType: hard
 
@@ -3572,7 +3552,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "mitama-lab-site@workspace:."
   dependencies:
-    "@emotion/cache": 11.10.3
+    "@emotion/cache": 11.10.5
     "@emotion/react": ^11.10.5
     "@emotion/server": 11.10.0
     "@emotion/styled": ^11.10.5
@@ -4547,13 +4527,6 @@ __metadata:
     babel-plugin-macros:
       optional: true
   checksum: 523a33b38603492547e861b98e29c873939b04e15fbe5ef16132c6f1e15958126647983c7d4675325038b428a5e91183d996e90141b18bdd1bbadf6e2c45b2fa
-  languageName: node
-  linkType: hard
-
-"stylis@npm:4.0.13":
-  version: 4.0.13
-  resolution: "stylis@npm:4.0.13"
-  checksum: 8ea7a87028b6383c6a982231c4b5b6150031ce028e0fdaf7b2ace82253d28a8af50cc5a9da8a421d3c7c4441592f393086e332795add672aa4a825f0fe3713a3
   languageName: node
   linkType: hard
 
