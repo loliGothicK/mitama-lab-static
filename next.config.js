@@ -18,8 +18,8 @@ const nextConfig = {
           [`/posts/${slug}`]: {
             page: `/posts/[slug]`,
             query: {
-              slug: slug
-            }
+              slug: slug,
+            },
           },
         };
       });

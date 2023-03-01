@@ -5,6 +5,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import markdownToHtml from 'zenn-markdown-html';
 
+import PostBody from '../../components/post-body';
 import type PostType from '../../interfaces/post';
 import MitamaLab from '../../layouts/MitamaLab';
 import { getAllPosts, getPostBySlug } from '../../lib/api';
@@ -34,7 +35,7 @@ export default function Post({ post, preview }: Props) {
               </Head>
               <Typography sx={{ m: 1 }}>{post.title}</Typography>
               <Divider sx={{ m: 2 }} />
-              {post.content}
+              <PostBody content={post.content} />
             </article>
           </>
         )}
