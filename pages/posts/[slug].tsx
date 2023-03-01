@@ -1,14 +1,14 @@
-import { Container, Divider, Typography } from '@mui/material';
+import {Container, Divider, Typography} from '@mui/material';
 
 import ErrorPage from 'next/error';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
+import {useRouter} from 'next/router';
 import markdownToHtml from 'zenn-markdown-html';
 
 import PostBody from '../../components/post-body';
 import type PostType from '../../interfaces/post';
 import MitamaLab from '../../layouts/MitamaLab';
-import { getAllPosts, getPostBySlug } from '../../lib/api';
+import {getAllPosts, getPostBySlug} from '../../lib/api';
 
 type Props = {
   post: PostType;
@@ -16,10 +16,10 @@ type Props = {
   preview?: boolean;
 };
 
-export default function Post({ post, preview }: Props) {
+export default function Post({post}: Props) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
-    return <ErrorPage statusCode={404} />;
+    return <ErrorPage statusCode={404}/>;
   }
   return (
     <MitamaLab>
@@ -28,15 +28,13 @@ export default function Post({ post, preview }: Props) {
           <Typography>{'Loading…'}</Typography>
         ) : (
           <>
-            <article className="mb-32 znc">
-              <Head>
-                <title>{post.title}</title>
-                <meta property="og:image" content={post.ogImage.url} />
-              </Head>
-              <Typography variant={"h1"} component={"h1"}>{post.title}</Typography>
-              <Divider sx={{ m: 2 }} />
-              <PostBody content={post.content} />
-            </article>
+            <Head>
+              <title>{post.title}</title>
+              <meta property="og:image" content={post.ogImage.url}/>
+            </Head>
+            <Typography variant={"h1"} component={"h1"}>{post.title}</Typography>
+            <Divider sx={{m: 2}}/>
+            <PostBody content={post.content}/>
           </>
         )}
       </Container>
@@ -50,7 +48,7 @@ type Params = {
   };
 };
 
-export async function getStaticProps({ params }: Params) {
+export async function getStaticProps({params}: Params) {
   const post = getPostBySlug(params.slug, [
     'title',
     'date',
@@ -61,7 +59,7 @@ export async function getStaticProps({ params }: Params) {
     'coverImage',
   ]);
   const content = markdownToHtml(post.content || '');
-
+  
   return {
     props: {
       post: {
@@ -74,7 +72,7 @@ export async function getStaticProps({ params }: Params) {
 
 export async function getStaticPaths() {
   const posts = getAllPosts(['slug']);
-
+  
   return {
     paths: posts.map((post) => {
       return {
