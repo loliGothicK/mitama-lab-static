@@ -42,9 +42,6 @@ const PostCard = ({ title, excerpt, date, slug, coverImage }: Post) => {
         subheader={date}
       />
       <CardMedia component="img" height="140" image={coverImage} alt={title} />
-      <Typography sx={{ fontSize: 20 }} color="text.secondary" gutterBottom>
-        {title}
-      </Typography>
       <Typography>{excerpt}</Typography>
       <Link href={`/posts/${slug}`}>
         <Button size="small">Read More</Button>
