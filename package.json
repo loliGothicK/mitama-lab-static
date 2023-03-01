@@ -25,9 +25,9 @@
     "react-dom": "^18.2.0",
     "remark": "^14.0.2",
     "remark-html": "^15.0.1",
-    "zenn-content-css": "^0.1.137",
-    "zenn-embed-elements": "^0.1.137",
-    "zenn-markdown-html": "^0.1.137"
+    "zenn-content-css": "^0.1.141",
+    "zenn-embed-elements": "^0.1.141",
+    "zenn-markdown-html": "^0.1.141"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^13.2.1",

@@ -17,30 +17,36 @@ const Item = styled(Paper)(({theme}) => ({
   color: theme.palette.text.secondary,
 }));
 
+const PostCard = ({title, excerpt, slug}: Post) => {
+  return (
+    <Item>
+      <Typography sx={{fontSize: 20}} color="text.secondary" gutterBottom>
+        {title}
+      </Typography>
+      <Typography>
+        {excerpt}
+      </Typography>
+      <Link href={`/posts/${slug}`}>
+        <Button size="small">Read More</Button>
+      </Link>
+    </Item>
+  );
+};
+
 export default function Blog({allPosts}: Props) {
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
 
   return (
     <MitamaLab>
-      <Item {...heroPost}></Item>
+      <PostCard {...heroPost} />
       <Divider sx={{ m: 2 }} />
       <Grid container spacing={2}>
         {
-          morePosts.map(({title, excerpt, slug}) => {
+          morePosts.map((post) => {
             return (
-              <Grid item xs={4} key={title}>
-                <Item>
-                  <Typography sx={{fontSize: 20}} color="text.secondary" gutterBottom>
-                    {title}
-                  </Typography>
-                  <Typography>
-                    {excerpt}
-                  </Typography>
-                  <Link href={`/posts/${slug}`}>
-                    <Button size="small">Read More</Button>
-                  </Link>
-                </Item>
+              <Grid item xs={4} key={post.title}>
+                <PostCard {...post} />
               </Grid>
             );
           })
