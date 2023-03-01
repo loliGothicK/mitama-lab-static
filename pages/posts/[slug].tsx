@@ -32,7 +32,7 @@ export default function Post({post}: Props) {
               <title>{post.title}</title>
               <meta property="og:image" content={post.ogImage.url}/>
             </Head>
-            <Typography variant={"h1"} component={"h2"}>{post.title}</Typography>
+            <Typography variant={"h2"} component={"h3"}>{post.title}</Typography>
             <Divider sx={{m: 2}}/>
             <PostBody content={post.content}/>
           </>
