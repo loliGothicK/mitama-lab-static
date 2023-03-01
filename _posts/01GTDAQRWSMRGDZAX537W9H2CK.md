@@ -10,12 +10,6 @@ ogImage:
   url: '/assets/blog/01GTDAQRWSMRGDZAX537W9H2CK/cover.jpg'
 ---
 
-## お店の詳細
-
-:::message
-ここにお店の詳細を書く
-:::
-
 ## 注文の詳細
 
 :::message
@@ -30,6 +24,12 @@ ogImage:
 
 :::message
 ここにラーメンの感想を書く
+:::
+
+## お店の詳細
+
+:::message
+ここにお店の詳細を書く
 :::
 
 ## 補足情報
