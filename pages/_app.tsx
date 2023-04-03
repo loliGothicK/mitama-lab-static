@@ -10,7 +10,6 @@ import * as React from 'react';
 import { useEffect } from 'react';
 import 'zenn-content-css';
 
-import '../styles/globals.css';
 import extendTheme from '../styles/theme';
 import createEmotionCache from '../utility/createEmotionCache';
 
