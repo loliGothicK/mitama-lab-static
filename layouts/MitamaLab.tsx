@@ -104,11 +104,11 @@ const MitamaLabBase: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
             <MenuIcon />
           </IconButton>
           <Box sx={{ flexGrow: 1 }}>
-            <NextLink href={'/'}>
               <Typography variant="h6" noWrap component="div">
-                Mitama Lab.
+                <NextLink href={'/'}>
+                  {"Mitama Lab."}
+                </NextLink>
               </Typography>
-            </NextLink>
           </Box>
           <IconButton
             sx={{ ml: 1 }}
@@ -158,8 +158,6 @@ const MitamaLabBase: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
         open={open}
         sx={{
           marginTop: 10,
-          bgcolor: 'background.default',
-          color: 'text.primary',
         }}
       >
         {children}
