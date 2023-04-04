@@ -82,7 +82,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 const MitamaLabBase: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
   const colorMode = React.useContext(ColorModeContext);
   const theme = useTheme();
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   const handleDrawerOpen = () => {
     setOpen(true);
