@@ -1,12 +1,12 @@
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: #000;
+        background-color: #121212;
         color: #fff;
     }
 }
 @media (prefers-color-scheme: light) {
     body {
-        background-color: #fff;
+        background-color: #e3f2fd;
         color: #000000;
     }
 }
