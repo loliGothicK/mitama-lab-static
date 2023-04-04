@@ -9,6 +9,7 @@ import type { AppProps } from 'next/app';
 import * as React from 'react';
 import { useEffect } from 'react';
 import 'zenn-content-css';
+import '../styles/global.css'
 
 import extendTheme from '../styles/theme';
 import createEmotionCache from '../utility/createEmotionCache';
