@@ -34,7 +34,7 @@ const PostCard = ({ title, excerpt, date, slug, coverImage }: Post) => {
     <Item>
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+          <Avatar sx={{ bgcolor: red[500] }} aria-label="author">
             M
           </Avatar>
         }
