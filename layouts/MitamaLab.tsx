@@ -97,6 +97,7 @@ const MitamaLabBase: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
       display: 'flex',
       bgcolor: theme.palette.background.default,
       color: theme.palette.text.primary,
+      minHeight: '100vh',
     }}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
@@ -132,7 +133,6 @@ const MitamaLabBase: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
           flexShrink: 0,
           '& .MuiDrawer-paper': {
             width: drawerWidth,
-            boxSizing: 'border-box',
             bgcolor: theme.palette.background.paper,
             color: theme.palette.text.primary,
           },
@@ -183,13 +183,14 @@ const MitamaLabBase: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
         open={open}
         sx={{
           marginTop: 10,
-          position: 'relative',
-          paddingBottom: '60px',
-          boxSizing: 'border-box',
-          height: '100vh'
         }}
       >
-        {children}
+        <Box sx={{
+          position: 'relative',
+          minHeight: '65vh',
+        }}>
+          {children}
+        </Box>
         <Footer sx={{
           position: 'absolute',
           bottom: 0,
