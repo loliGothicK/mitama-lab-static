@@ -23,6 +23,9 @@ import Typography from '@mui/material/Typography';
 
 import { default as NextLink } from 'next/link';
 import * as React from 'react';
+import Footer from "../components/footer";
+import {useEffect, useMemo, useState} from "react";
+import {useMediaQuery} from "@mui/material";
 
 const drawerWidth = 240;
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
@@ -79,7 +82,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 const MitamaLabBase: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
   const colorMode = React.useContext(ColorModeContext);
   const theme = useTheme();
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = useState(true);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -90,7 +93,12 @@ const MitamaLabBase: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
   };
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{
+      display: 'flex',
+      bgcolor: theme.palette.background.default,
+      color: theme.palette.text.primary,
+      minHeight: '100vh',
+    }}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
         <Toolbar>
@@ -104,11 +112,11 @@ const MitamaLabBase: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
             <MenuIcon />
           </IconButton>
           <Box sx={{ flexGrow: 1 }}>
-            <NextLink href={'/'}>
               <Typography variant="h6" noWrap component="div">
-                Mitama Lab.
+                <NextLink href={'/'}>
+                  {"Mitama Lab."}
+                </NextLink>
               </Typography>
-            </NextLink>
           </Box>
           <IconButton
             sx={{ ml: 1 }}
@@ -125,24 +133,41 @@ const MitamaLabBase: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
           flexShrink: 0,
           '& .MuiDrawer-paper': {
             width: drawerWidth,
-            boxSizing: 'border-box',
+            bgcolor: theme.palette.background.paper,
+            color: theme.palette.text.primary,
           },
+          bgcolor: theme.palette.background.default,
+          color: theme.palette.text.primary,
         }}
         variant="persistent"
         anchor="left"
         open={open}
       >
-        <DrawerHeader>
+        <DrawerHeader sx={{
+          bgcolor: theme.palette.background.paper,
+          color: theme.palette.text.primary,
+        }}>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'ltr' ? (
-              <ChevronLeftIcon />
+              <ChevronLeftIcon sx={{
+                bgcolor: theme.palette.background.default,
+                color: theme.palette.text.primary,
+              }}/>
             ) : (
-              <ChevronRightIcon />
+              <ChevronRightIcon sx={{
+                bgcolor: theme.palette.background.default,
+                color: theme.palette.text.primary,
+              }}/>
             )}
           </IconButton>
         </DrawerHeader>
-        <Divider />
-        <List>
+        <Divider sx={{
+          bgcolor: theme.palette.background.default,
+        }}/>
+        <List sx={{
+          bgcolor: theme.palette.background.default,
+          color: theme.palette.text.primary,
+        }}>
           {['Blog'].map((text, index) => (
             <NextLink href={'/blog'} key={index}>
               <ListItem disablePadding>
@@ -158,28 +183,57 @@ const MitamaLabBase: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
         open={open}
         sx={{
           marginTop: 10,
-          bgcolor: 'background.default',
-          color: 'text.primary',
         }}
       >
-        {children}
+        <Box sx={{
+          position: 'relative',
+          minHeight: '65vh',
+        }}>
+          {children}
+        </Box>
+        <Footer sx={{
+          position: 'absolute',
+          bottom: 0,
+        }}/>
       </Main>
     </Box>
   );
 };
 
 const MitamaLab: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
-  const [mode, setMode] = React.useState<'light' | 'dark'>('dark');
-  const colorMode = React.useMemo(
+  const [mode, setMode] = useState<'light' | 'dark'>('dark');
+  const colorMode = useMemo(
     () => ({
       toggleColorMode: () => {
-        setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
+        setMode((prevMode) => {
+          if (prevMode === 'light') {
+            localStorage.setItem('paletteMode', 'dark');
+            return 'dark';
+          } else {
+            localStorage.setItem('paletteMode', 'light');
+            return 'light';
+          }
+        });
       },
     }),
-    [],
+    [mode],
   );
+  
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+  
+  useEffect(() => {
+    if (localStorage.getItem('paletteMode') === 'dark') {
+      setMode('dark');
+    } else if (localStorage.getItem('paletteMode') === 'light') {
+      setMode('light');
+    } else if (prefersDarkMode) {
+      setMode('dark');
+    } else {
+      setMode('light');
+    }
+  }, [prefersDarkMode]);
 
-  const theme = React.useMemo(
+  const theme = useMemo(
     () =>
       createTheme({
         palette: {

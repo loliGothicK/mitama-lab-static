@@ -22,7 +22,7 @@ type Props = {
 };
 
 const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  backgroundColor: theme.palette.background.paper,
   ...theme.typography.body2,
   padding: theme.spacing(1),
   textAlign: 'center',
@@ -34,12 +34,11 @@ const PostCard = ({ title, excerpt, date, slug, coverImage }: Post) => {
     <Item>
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+          <Avatar sx={{ bgcolor: red[500] }} aria-label="author">
             M
           </Avatar>
         }
         title={title}
-        subheader={date}
       />
       <CardMedia component="img" height="140" image={coverImage} alt={title} />
       <Typography>{excerpt}</Typography>
