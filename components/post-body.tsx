@@ -3,9 +3,7 @@ type Props = {
 };
 
 const PostBody = ({ content }: Props) => {
-  return (
-    <div className={'znc'} dangerouslySetInnerHTML={{ __html: content }} />
-  );
+  return <div className={'znc'} dangerouslySetInnerHTML={{ __html: content }} />;
 };
 
 export default PostBody;

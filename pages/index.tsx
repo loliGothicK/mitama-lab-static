@@ -1,12 +1,11 @@
-import type { NextPage } from 'next';
-
 import MitamaLab from '../layouts/MitamaLab';
-import {styled, useTheme} from "@mui/material/styles";
+import { GitHub } from '@mui/icons-material';
+import { Avatar, CardHeader, CardMedia, Container, Divider, Paper } from '@mui/material';
+import { styled } from '@mui/material/styles';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
-import {Avatar, Button, CardHeader, CardMedia, Container, Divider, Paper, Typography} from "@mui/material";
-import Link from "next/link";
-import {GitHub} from "@mui/icons-material";
+import type { NextPage } from 'next';
+import Link from 'next/link';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.background.paper,
@@ -42,16 +41,15 @@ const pins: Pin[] = [
 ];
 
 const Home: NextPage = () => {
-  const theme = useTheme();
   return (
     <MitamaLab>
       <Container maxWidth={'md'}>
-        <img src={"MitamaLab.svg"}  alt={'logo'} />
+        <img src={'MitamaLab.svg'} alt={'logo'} />
       </Container>
-      <Divider sx={{ m: 2 }}/>
+      <Divider sx={{ m: 2 }} />
       <Container maxWidth={'md'}>
         <Splide aria-label="pinned">
-          {pins.map(({repo, title, img}) => {
+          {pins.map(({ repo, title, img }) => {
             return (
               <SplideSlide key={repo}>
                 <Item>

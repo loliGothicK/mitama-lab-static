@@ -1,3 +1,6 @@
+import Post from '../interfaces/post';
+import MitamaLab from '../layouts/MitamaLab';
+import { getAllPosts } from '../lib/api';
 import {
   Avatar,
   Button,
@@ -10,12 +13,7 @@ import {
 } from '@mui/material';
 import { red } from '@mui/material/colors';
 import { styled } from '@mui/material/styles';
-
 import Link from 'next/link';
-
-import Post from '../interfaces/post';
-import MitamaLab from '../layouts/MitamaLab';
-import { getAllPosts } from '../lib/api';
 
 type Props = {
   allPosts: Post[];
@@ -29,7 +27,7 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-const PostCard = ({ title, excerpt, date, slug, coverImage }: Post) => {
+const PostCard = ({ title, excerpt, slug, coverImage }: Post) => {
   return (
     <Item>
       <CardHeader
@@ -58,7 +56,7 @@ export default function Blog({ allPosts }: Props) {
       <PostCard {...heroPost} />
       <Divider sx={{ m: 2 }} />
       <Grid container spacing={2}>
-        {morePosts.map((post) => {
+        {morePosts.map(post => {
           return (
             <Grid item xs={4} key={post.title}>
               <PostCard {...post} />
@@ -71,14 +69,7 @@ export default function Blog({ allPosts }: Props) {
 }
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts([
-    'title',
-    'date',
-    'slug',
-    'author',
-    'coverImage',
-    'excerpt',
-  ]);
+  const allPosts = getAllPosts(['title', 'date', 'slug', 'author', 'coverImage', 'excerpt']);
 
   return {
     props: { allPosts },

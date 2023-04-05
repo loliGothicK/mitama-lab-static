@@ -1,10 +1,8 @@
-import { getInitColorSchemeScript } from '@mui/material/styles';
-
+import createEmotionCache from '../utility/createEmotionCache';
 import createEmotionServer from '@emotion/server/create-instance';
+import { getInitColorSchemeScript } from '@mui/material/styles';
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 import * as React from 'react';
-
-import createEmotionCache from '../utility/createEmotionCache';
 
 // noinspection JSUnusedGlobalSymbols
 export default class MyDocument extends Document {
@@ -12,7 +10,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <script src={"https://embed.zenn.studio/js/listen-embed-event.js"} async />
+          <script src={'https://embed.zenn.studio/js/listen-embed-event.js'} async />
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
@@ -30,7 +28,7 @@ export default class MyDocument extends Document {
 
 // `getInitialProps` belongs to `_document` (instead of `_app`),
 // it's compatible with static-site generation (SSG).
-MyDocument.getInitialProps = async (ctx) => {
+MyDocument.getInitialProps = async ctx => {
   // Resolution order
   //
   // On the server:
@@ -63,8 +61,7 @@ MyDocument.getInitialProps = async (ctx) => {
   /* eslint-disable */
   ctx.renderPage = () =>
     originalRenderPage({
-      enhanceApp: (App: any) => (props) =>
-        <App emotionCache={cache} {...props} />,
+      enhanceApp: (App: any) => props => <App emotionCache={cache} {...props} />,
     });
   /* eslint-enable */
 
@@ -72,7 +69,7 @@ MyDocument.getInitialProps = async (ctx) => {
   // This is important. It prevents emotion to render invalid HTML.
   // See https://github.com/mui-org/material-ui/issues/26561#issuecomment-855286153
   const emotionStyles = extractCriticalToChunks(initialProps.html);
-  const emotionStyleTags = emotionStyles.styles.map((style) => (
+  const emotionStyleTags = emotionStyles.styles.map(style => (
     <style
       data-emotion={`${style.key} ${style.ids.join(' ')}`}
       key={style.key}
@@ -84,9 +81,6 @@ MyDocument.getInitialProps = async (ctx) => {
   return {
     ...initialProps,
     // Styles fragment is rendered after the app and page rendering finish.
-    styles: [
-      ...React.Children.toArray(initialProps.styles),
-      ...emotionStyleTags,
-    ],
+    styles: [...React.Children.toArray(initialProps.styles), ...emotionStyleTags],
   };
 };

@@ -1,7 +1,9 @@
+import Footer from '../components/footer';
 import { DarkMode, LightMode } from '@mui/icons-material';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import MenuIcon from '@mui/icons-material/Menu';
+import { useMediaQuery } from '@mui/material';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -12,25 +14,17 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
-import {
-  createTheme,
-  styled,
-  ThemeProvider,
-  useTheme,
-} from '@mui/material/styles';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-
+import { createTheme, styled, ThemeProvider, useTheme } from '@mui/material/styles';
 import { default as NextLink } from 'next/link';
 import * as React from 'react';
-import Footer from "../components/footer";
-import {useEffect, useMemo, useState} from "react";
-import {useMediaQuery} from "@mui/material";
+import { useEffect, useMemo, useState } from 'react';
 
 const drawerWidth = 240;
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
-const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })<{
+const Main = styled('main', { shouldForwardProp: prop => prop !== 'open' })<{
   open?: boolean;
 }>(({ theme, open }) => ({
   flexGrow: 1,
@@ -54,7 +48,7 @@ interface AppBarProps extends MuiAppBarProps {
 }
 
 const AppBar = styled(MuiAppBar, {
-  shouldForwardProp: (prop) => prop !== 'open',
+  shouldForwardProp: prop => prop !== 'open',
 })<AppBarProps>(({ theme, open }) => ({
   transition: theme.transitions.create(['margin', 'width'], {
     easing: theme.transitions.easing.sharp,
@@ -93,12 +87,14 @@ const MitamaLabBase: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
   };
 
   return (
-    <Box sx={{
-      display: 'flex',
-      bgcolor: theme.palette.background.default,
-      color: theme.palette.text.primary,
-      minHeight: '100vh',
-    }}>
+    <Box
+      sx={{
+        display: 'flex',
+        bgcolor: theme.palette.background.default,
+        color: theme.palette.text.primary,
+        minHeight: '100vh',
+      }}
+    >
       <CssBaseline />
       <AppBar position="fixed" open={open}>
         <Toolbar>
@@ -112,17 +108,11 @@ const MitamaLabBase: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
             <MenuIcon />
           </IconButton>
           <Box sx={{ flexGrow: 1 }}>
-              <Typography variant="h6" noWrap component="div">
-                <NextLink href={'/'}>
-                  {"Mitama Lab."}
-                </NextLink>
-              </Typography>
+            <Typography variant="h6" noWrap component="div">
+              <NextLink href={'/'}>{'Mitama Lab.'}</NextLink>
+            </Typography>
           </Box>
-          <IconButton
-            sx={{ ml: 1 }}
-            onClick={colorMode.toggleColorMode}
-            color="inherit"
-          >
+          <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
             {theme.palette.mode === 'dark' ? <DarkMode /> : <LightMode />}
           </IconButton>
         </Toolbar>
@@ -143,31 +133,41 @@ const MitamaLabBase: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
         anchor="left"
         open={open}
       >
-        <DrawerHeader sx={{
-          bgcolor: theme.palette.background.paper,
-          color: theme.palette.text.primary,
-        }}>
+        <DrawerHeader
+          sx={{
+            bgcolor: theme.palette.background.paper,
+            color: theme.palette.text.primary,
+          }}
+        >
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'ltr' ? (
-              <ChevronLeftIcon sx={{
-                bgcolor: theme.palette.background.default,
-                color: theme.palette.text.primary,
-              }}/>
+              <ChevronLeftIcon
+                sx={{
+                  bgcolor: theme.palette.background.default,
+                  color: theme.palette.text.primary,
+                }}
+              />
             ) : (
-              <ChevronRightIcon sx={{
-                bgcolor: theme.palette.background.default,
-                color: theme.palette.text.primary,
-              }}/>
+              <ChevronRightIcon
+                sx={{
+                  bgcolor: theme.palette.background.default,
+                  color: theme.palette.text.primary,
+                }}
+              />
             )}
           </IconButton>
         </DrawerHeader>
-        <Divider sx={{
-          bgcolor: theme.palette.background.default,
-        }}/>
-        <List sx={{
-          bgcolor: theme.palette.background.default,
-          color: theme.palette.text.primary,
-        }}>
+        <Divider
+          sx={{
+            bgcolor: theme.palette.background.default,
+          }}
+        />
+        <List
+          sx={{
+            bgcolor: theme.palette.background.default,
+            color: theme.palette.text.primary,
+          }}
+        >
           {['Blog'].map((text, index) => (
             <NextLink href={'/blog'} key={index}>
               <ListItem disablePadding>
@@ -185,16 +185,20 @@ const MitamaLabBase: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
           marginTop: 10,
         }}
       >
-        <Box sx={{
-          position: 'relative',
-          minHeight: '65vh',
-        }}>
+        <Box
+          sx={{
+            position: 'relative',
+            minHeight: '65vh',
+          }}
+        >
           {children}
         </Box>
-        <Footer sx={{
-          position: 'absolute',
-          bottom: 0,
-        }}/>
+        <Footer
+          sx={{
+            position: 'absolute',
+            bottom: 0,
+          }}
+        />
       </Main>
     </Box>
   );
@@ -205,7 +209,7 @@ const MitamaLab: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
   const colorMode = useMemo(
     () => ({
       toggleColorMode: () => {
-        setMode((prevMode) => {
+        setMode(prevMode => {
           if (prevMode === 'light') {
             localStorage.setItem('paletteMode', 'dark');
             return 'dark';
@@ -218,9 +222,9 @@ const MitamaLab: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
     }),
     [mode],
   );
-  
+
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
-  
+
   useEffect(() => {
     if (localStorage.getItem('paletteMode') === 'dark') {
       setMode('dark');
