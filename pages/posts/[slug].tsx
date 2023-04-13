@@ -44,7 +44,10 @@ export default function Post({ post }: Props) {
               <meta property="og:image" content={'AMiMA.png'} />
               <meta name="twitter:card" content="summary" />
               <meta name="twitter:site" content="@mitama_rs" />
-              
+              <meta name="twitter:title" content={post.title} />
+              <meta name="twitter:description" content={post.excerpt} />
+              <meta name="twitter:image" content={'AMiMA.png'} />
+
             </Head>
             <Typography variant={'h2'} component={'h3'}>
               {post.title}
