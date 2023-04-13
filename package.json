@@ -11,7 +11,6 @@
     "format:fix": "prettier --write --ignore-path .gitignore ./**/*.{ts,tsx,css}"
   },
   "dependencies": {
-    "@cloudflare/pages-plugin-vercel-og": "^0.1.0",
     "@emotion/cache": "11.10.7",
     "@emotion/react": "11.10.5",
     "@emotion/server": "11.10.0",

@@ -1,5 +1,4 @@
-import { NextRequest } from 'next/server';
-import { ImageResponse } from "@cloudflare/pages-plugin-vercel-og/api";
+import { ImageResponse, NextRequest } from 'next/server';
 export const config = {
   runtime: 'edge',
 };
