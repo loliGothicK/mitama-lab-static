@@ -29,7 +29,7 @@ export default function handler(req: NextRequest) {
           <div style={{ display: 'flex', justifyContent: 'space-between'  }}>
             <div style={{ color: '#d1d5db', fontSize: 28, display: 'flex', alignItems: 'center' }}>
               <img
-                src="https://raw.githubusercontent.com/LoliGothick/mitama-lab-static/feature/og-image/public/AMiMA.png"
+                src="https://raw.githubusercontent.com/LoliGothick/mitama-lab-static/main/public/AMiMA.png"
                 width={60}
                 height={60}
                 style={{ borderRadius: 9999, marginRight: 20 }}
