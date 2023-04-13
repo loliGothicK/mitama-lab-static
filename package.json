@@ -47,7 +47,7 @@
   },
   "packageManager": "yarn@3.5.0",
   "volta": {
-    "node": "18.15.0"
+    "node": "18.16.0"
   },
   "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
   "main": ".prettierrc.js",
