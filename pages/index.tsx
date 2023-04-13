@@ -61,7 +61,7 @@ const Home: NextPage = () => {
                   <CardHeader
                     avatar={
                       <Avatar aria-label="author">
-                        <Link href={`https://github.com/LoliGothick/${repo}`}>
+                        <Link href={`https://github.com/LoliGothick/${repo}`} aria-label={repo}>
                           <GitHub />
                         </Link>
                       </Avatar>

@@ -1,3 +1,4 @@
+import { usePageView } from "../hooks/usePageView";
 import '../styles/global.css';
 import extendTheme from '../styles/theme';
 import createEmotionCache from '../utility/createEmotionCache';
@@ -19,6 +20,7 @@ interface MyAppProps extends AppProps {
 const clientSideEmotionCache = createEmotionCache();
 
 const MyApp: React.FunctionComponent<MyAppProps> = props => {
+  usePageView();
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
   useEffect(() => {
     import('zenn-embed-elements');
