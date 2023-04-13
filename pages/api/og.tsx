@@ -1,5 +1,8 @@
 import { NextRequest } from 'next/server';
 import { ImageResponse } from "@cloudflare/pages-plugin-vercel-og/api";
+export const config = {
+  runtime: 'edge',
+};
 
 export default function handler(req: NextRequest) {
   try {
