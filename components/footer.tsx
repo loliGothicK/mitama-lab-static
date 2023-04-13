@@ -34,7 +34,7 @@ export default function Footer({ ...props }) {
       <Container maxWidth="lg">
         <Box py={6} textAlign="center">
           <FooterBox component="nav">
-            <Link href="#" variant="body1" color={theme.palette.text.secondary}>
+            <Link href="/blog" variant="body1" color={theme.palette.text.secondary}>
               {content['link1']}
             </Link>
           </FooterBox>
