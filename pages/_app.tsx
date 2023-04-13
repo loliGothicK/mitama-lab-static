@@ -1,4 +1,4 @@
-import { usePageView } from "../hooks/usePageView";
+import { usePageView } from '../hooks/usePageView';
 import '../styles/global.css';
 import extendTheme from '../styles/theme';
 import createEmotionCache from '../utility/createEmotionCache';

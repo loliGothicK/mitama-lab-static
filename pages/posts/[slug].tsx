@@ -7,6 +7,7 @@ import ErrorPage from 'next/error';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import markdownToHtml from 'zenn-markdown-html';
+import { useMemo } from 'react';
 
 type Props = {
   post: PostType;
@@ -16,9 +17,15 @@ type Props = {
 
 export default function Post({ post }: Props) {
   const router = useRouter();
+
+  const ogImage = useMemo(() => {
+    return `https://mitama.tech/api/og?title=${post.title}`;
+  }, [post.title]);
+
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
+
   return (
     <MitamaLab>
       <Container>
@@ -28,7 +35,7 @@ export default function Post({ post }: Props) {
           <>
             <Head>
               <title>{post.title}</title>
-              <meta property="og:image" content={post.ogImage.url} />
+              <meta property="og:image" content={ogImage} />
             </Head>
             <Typography variant={'h2'} component={'h3'}>
               {post.title}

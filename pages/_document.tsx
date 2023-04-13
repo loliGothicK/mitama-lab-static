@@ -1,9 +1,9 @@
+import { GA_ID } from '../lib/gtag';
 import createEmotionCache from '../utility/createEmotionCache';
 import createEmotionServer from '@emotion/server/create-instance';
 import { getInitColorSchemeScript } from '@mui/material/styles';
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 import * as React from 'react';
-import { GA_ID } from '../lib/gtag';
 
 // noinspection JSUnusedGlobalSymbols
 export default class MyDocument extends Document {
