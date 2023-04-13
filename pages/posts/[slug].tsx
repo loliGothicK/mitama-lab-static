@@ -41,7 +41,7 @@ export default function Post({ post }: Props) {
               <meta property="og:description" content={post.excerpt} />
               <meta property="og:url" content={router.pathname} />
               <meta property="og:site_name" content={'Mitama Lab.'} />
-              <meta property="og:image" content={'MitamaLabLogo.svg'} />
+              <meta property="og:image" content={'AMiMA.png'} />
               <meta name="twitter:card" content="summary" />
               <meta name="twitter:site" content="@mitama_rs" />
               
