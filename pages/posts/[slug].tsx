@@ -18,9 +18,9 @@ type Props = {
 export default function Post({ post }: Props) {
   const router = useRouter();
 
-  // const ogImage = useMemo(() => {
-  //   return `https://mitama.tech/api/og?title=${post.title}`;
-  // }, [post.title]);
+  const ogImage = useMemo(() => {
+    return `https://mitama.tech/api/og?title=${post.title}`;
+  }, [post.title]);
 
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
@@ -41,12 +41,9 @@ export default function Post({ post }: Props) {
               <meta property="og:description" content={post.excerpt} />
               <meta property="og:url" content={router.pathname} />
               <meta property="og:site_name" content={'Mitama Lab.'} />
-              <meta property="og:image" content={'AMiMA.png'} />
-              <meta name="twitter:card" content="summary" />
+              <meta property="og:image" content={ogImage} />
+              <meta name="twitter:card" content="summary_large_image" />
               <meta name="twitter:site" content="@mitama_rs" />
-              <meta name="twitter:title" content={post.title} />
-              <meta name="twitter:description" content={post.excerpt} />
-              <meta name="twitter:image" content={'AMiMA.png'} />
 
             </Head>
             <Typography variant={'h2'} component={'h3'}>

@@ -14,45 +14,29 @@ export default function handler(req: NextRequest) {
       (
         <div
           style={{
-            backgroundColor: '#fff',
-            backgroundSize: '100% 100%',
             height: '100%',
             width: '100%',
             display: 'flex',
-            textAlign: 'left',
-            alignItems: 'flex-start',
-            justifyContent: 'center',
+            justifyContent: 'space-between',
             flexDirection: 'column',
-            flexWrap: 'nowrap',
+            backgroundColor: 'rgb(55,65,81)',
+            fontWeight: 600,
+            padding: 60,
+            border: '48px solid rgb(31,41,55)',
           }}
         >
-          <div
-            style={{
-              width: '100%',
-              fontSize: 60,
-              fontStyle: 'normal',
-              fontWeight: 'bold',
-              color: '#000',
-              padding: '0 120px',
-              lineHeight: 1.3,
-              marginBottom: '30px',
-              wordWrap: 'break-word',
-            }}
-          >
-            {title}
-          </div>
-          <div
-            style={{
-              width: '100%',
-              fontSize: 40,
-              fontStyle: 'normal',
-              fontWeight: 'bold',
-              color: '#000',
-              padding: '0 120px',
-              lineHeight: 1.3,
-            }}
-          >
-            Mitama Lab.
+          <div style={{ color: '#fff', fontSize: 64, maxWidth: 1000 }}>{title}</div>
+          <div style={{ display: 'flex', justifyContent: 'space-between'  }}>
+            <div style={{ color: '#d1d5db', fontSize: 28, display: 'flex', alignItems: 'center' }}>
+              <img
+                src="https://raw.githubusercontent.com/LoliGothick/mitama-lab-static/feature/og-image/public/AMiMA.png"
+                width={60}
+                height={60}
+                style={{ borderRadius: 9999, marginRight: 20 }}
+                alt={'logo'}
+              />
+              {'Mitama Lab.'}
+            </div>
           </div>
         </div>
       ),
