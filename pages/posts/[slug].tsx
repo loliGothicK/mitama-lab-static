@@ -35,7 +35,16 @@ export default function Post({ post }: Props) {
           <>
             <Head>
               <title>{post.title}</title>
+              
+              <meta property="og:type" content="article" />
+              <meta property="og:title" content={post.title} />
+              <meta property="og:description" content={post.excerpt} />
+              <meta property="og:url" content={router.pathname} />
+              <meta property="og:site_name" content={'Mitama Lab.'} />
               <meta property="og:image" content={ogImage} />
+              <meta name="twitter:card" content="summary_large_image" />
+              <meta name="twitter:site" content="@mitama_rs" />
+
             </Head>
             <Typography variant={'h2'} component={'h3'}>
               {post.title}
