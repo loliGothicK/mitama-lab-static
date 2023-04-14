@@ -25,7 +25,14 @@ export default function Footer({ ...props }) {
   const theme = useTheme();
   const content = {
     copy: '© 2023 Mitama Lab. All rights reserved.',
-    link1: 'blog',
+    links: [{
+      content: 'top',
+      href: '/',
+    },
+      {
+        content: 'blog',
+        href: '/blog',
+      }],
     ...props,
   };
 
@@ -34,9 +41,13 @@ export default function Footer({ ...props }) {
       <Container maxWidth="lg">
         <Box py={6} textAlign="center">
           <FooterBox component="nav">
-            <Link href="/blog" variant="body1" color={theme.palette.text.secondary}>
-              {content['link1']}
-            </Link>
+            {content.links.map(link => {
+              return (
+                <Link href={`${link.href}`} variant="body1" color={theme.palette.text.secondary} key={link.content} sx={{ m: 3 }}>
+                  {link.content}
+                </Link>
+              );
+            })}
           </FooterBox>
           <Box mb={3}>
             <IconButton aria-label="Twitter" sx={{ color: theme.palette.text.secondary }}>

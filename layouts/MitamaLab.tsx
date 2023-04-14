@@ -20,6 +20,8 @@ import { createTheme, styled, ThemeProvider, useTheme } from '@mui/material/styl
 import { default as NextLink } from 'next/link';
 import * as React from 'react';
 import { useEffect, useMemo, useState } from 'react';
+import Image from 'next/image';
+import Link from '@mui/material/Link';
 
 const drawerWidth = 240;
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
@@ -109,7 +111,14 @@ const MitamaLabBase: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
           </IconButton>
           <Box sx={{ flexGrow: 1 }}>
             <Typography variant="h6" noWrap component="div">
-              <NextLink href={'/'}>{'Mitama Lab.'}</NextLink>
+              <NextLink href={'/'}>
+                <Image
+                  src={'/MitamaLabHeader.svg'}
+                  alt={'header'}
+                  height={40}
+                  width={200}
+                />
+              </NextLink>
             </Typography>
           </Box>
           <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
@@ -168,14 +177,14 @@ const MitamaLabBase: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
             color: theme.palette.text.primary,
           }}
         >
-          {['Blog'].map((text, index) => (
-            <NextLink href={'/blog'} key={index}>
+          {['blog'].map((text, index) => (
+            <Link href={`/${text}`} key={index}>
               <ListItem disablePadding>
                 <ListItemButton>
                   <ListItemText primary={text} />
                 </ListItemButton>
               </ListItem>
-            </NextLink>
+            </Link>
           ))}
         </List>
       </Drawer>
