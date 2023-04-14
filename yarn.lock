@@ -2382,15 +2382,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:13.2.1":
-  version: 13.2.1
-  resolution: "@next/eslint-plugin-next@npm:13.2.1"
-  dependencies:
-    glob: 7.1.7
-  checksum: e4b49709d987ad5a6a67bdbcf43798e3a1d5d72e0cf503ae2dd8553add79221cb706ba824ab985d4cfccc5a6aafb2fa949f371f9b3a45832bc370a093cc9f096
-  languageName: node
-  linkType: hard
-
 "@next/eslint-plugin-next@npm:13.3.0":
   version: 13.3.0
   resolution: "@next/eslint-plugin-next@npm:13.3.0"
@@ -8667,7 +8658,7 @@ eslint-config-next@latest:
     "@fontsource/roboto": 4.5.8
     "@mui/icons-material": 5.11.11
     "@mui/material": 5.11.7
-    "@next/eslint-plugin-next": 13.2.1
+    "@next/eslint-plugin-next": 13.3.0
     "@splidejs/react-splide": 0.7.12
     "@trivago/prettier-plugin-sort-imports": 4.1.1
     "@types/gtag.js": 0.0.12
