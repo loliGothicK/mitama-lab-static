@@ -1,4 +1,5 @@
 import { ImageResponse, NextRequest } from 'next/server';
+
 export const config = {
   runtime: 'edge',
 };
@@ -26,7 +27,7 @@ export default function handler(req: NextRequest) {
           }}
         >
           <div style={{ color: '#fff', fontSize: 64, maxWidth: 1000 }}>{title}</div>
-          <div style={{ display: 'flex', justifyContent: 'space-between'  }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <div style={{ color: '#d1d5db', fontSize: 28, display: 'flex', alignItems: 'center' }}>
               <img
                 src="https://raw.githubusercontent.com/LoliGothick/mitama-lab-static/main/public/AMiMA.png"

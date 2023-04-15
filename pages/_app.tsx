@@ -1,6 +1,5 @@
 import { usePageView } from '../hooks/usePageView';
 import '../styles/global.css';
-import extendTheme from '../styles/theme';
 import createEmotionCache from '../utility/createEmotionCache';
 import { CacheProvider, EmotionCache } from '@emotion/react';
 import '@fontsource/roboto/300.css';
@@ -27,9 +26,7 @@ const MyApp: React.FunctionComponent<MyAppProps> = props => {
   }, []);
   return (
     <CacheProvider value={emotionCache}>
-      <ThemeProvider theme={extendTheme}>
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <Component {...pageProps} />
     </CacheProvider>
   );
 };

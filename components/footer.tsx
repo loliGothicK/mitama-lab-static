@@ -25,25 +25,33 @@ export default function Footer({ ...props }) {
   const theme = useTheme();
   const content = {
     copy: '© 2023 Mitama Lab. All rights reserved.',
-    links: [{
-      content: 'top',
-      href: '/',
-    },
+    links: [
+      {
+        content: 'top',
+        href: '/',
+      },
       {
         content: 'blog',
         href: '/blog',
-      }],
+      },
+    ],
     ...props,
   };
 
   return (
-    <footer>
-      <Container maxWidth="lg">
+    <Container sx={{ bgcolor: theme.palette.primary.main, minWidth: '100vw' }}>
+      <footer>
         <Box py={6} textAlign="center">
           <FooterBox component="nav">
             {content.links.map(link => {
               return (
-                <Link href={`${link.href}`} variant="body1" color={theme.palette.text.secondary} key={link.content} sx={{ m: 3 }}>
+                <Link
+                  href={`${link.href}`}
+                  variant="body1"
+                  color={theme.palette.text.secondary}
+                  key={link.content}
+                  sx={{ m: 3 }}
+                >
                   {link.content}
                 </Link>
               );
@@ -66,7 +74,7 @@ export default function Footer({ ...props }) {
             {content['copy']}
           </Typography>
         </Box>
-      </Container>
-    </footer>
+      </footer>
+    </Container>
   );
 }

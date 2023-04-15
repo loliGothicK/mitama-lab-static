@@ -10,18 +10,19 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
+import Link from '@mui/material/Link';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import { blueGrey } from '@mui/material/colors';
 import { createTheme, styled, ThemeProvider, useTheme } from '@mui/material/styles';
+import Image from 'next/image';
 import { default as NextLink } from 'next/link';
 import * as React from 'react';
 import { useEffect, useMemo, useState } from 'react';
-import Image from 'next/image';
-import Link from '@mui/material/Link';
 
 const drawerWidth = 240;
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
@@ -98,7 +99,7 @@ const MitamaLabBase: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
       }}
     >
       <CssBaseline />
-      <AppBar position="fixed" open={open}>
+      <AppBar position="fixed" open={open} sx={{ bgcolor: theme.palette.primary.main }}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -112,12 +113,7 @@ const MitamaLabBase: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
           <Box sx={{ flexGrow: 1 }}>
             <Typography variant="h6" noWrap component="div">
               <NextLink href={'/'}>
-                <Image
-                  src={'/MitamaLabHeader.svg'}
-                  alt={'header'}
-                  height={40}
-                  width={200}
-                />
+                <Image src={'/MitamaLabHeader.svg'} alt={'header'} height={40} width={200} />
               </NextLink>
             </Typography>
           </Box>
@@ -192,6 +188,7 @@ const MitamaLabBase: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
         open={open}
         sx={{
           marginTop: 10,
+          padding: 0,
         }}
       >
         <Box
@@ -250,6 +247,7 @@ const MitamaLab: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
     () =>
       createTheme({
         palette: {
+          primary: blueGrey,
           mode,
         },
       }),

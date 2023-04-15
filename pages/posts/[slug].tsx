@@ -6,8 +6,8 @@ import { Container, Divider, Typography } from '@mui/material';
 import ErrorPage from 'next/error';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import markdownToHtml from 'zenn-markdown-html';
 import { useMemo } from 'react';
+import markdownToHtml from 'zenn-markdown-html';
 
 type Props = {
   post: PostType;
@@ -35,7 +35,7 @@ export default function Post({ post }: Props) {
           <>
             <Head>
               <title>{post.title}</title>
-              
+
               <meta property="og:type" content="article" />
               <meta property="og:title" content={post.title} />
               <meta property="og:description" content={post.excerpt} />
@@ -44,7 +44,6 @@ export default function Post({ post }: Props) {
               <meta property="og:image" content={ogImage} />
               <meta name="twitter:card" content="summary_large_image" />
               <meta name="twitter:site" content="@mitama_rs" />
-
             </Head>
             <Typography variant={'h2'} component={'h3'}>
               {post.title}

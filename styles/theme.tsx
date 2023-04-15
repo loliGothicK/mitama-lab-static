@@ -1,12 +1,15 @@
 import { pink } from '@mui/material/colors';
 import { experimental_extendTheme as extendTheme } from '@mui/material/styles';
 
-export default extendTheme({
+const theme = extendTheme({
   colorSchemes: {
     light: {
       palette: {
         primary: {
           main: pink[600],
+        },
+        secondary: {
+          main: pink[700],
         },
       },
     },
@@ -15,7 +18,12 @@ export default extendTheme({
         primary: {
           main: pink[400],
         },
+        secondary: {
+          main: pink[200],
+        },
       },
     },
   },
 });
+
+export default theme;
