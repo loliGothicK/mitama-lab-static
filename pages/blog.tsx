@@ -5,7 +5,7 @@ import {
   Avatar,
   Button,
   CardHeader,
-  CardMedia,
+  CardMedia, Container,
   Divider,
   Grid,
   Paper,
@@ -29,7 +29,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const PostCard = ({ title, excerpt, slug, coverImage }: Post) => {
   return (
-    <Item>
+    <Item sx={{ minHeight: 'lg' }}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="author">
@@ -38,7 +38,7 @@ const PostCard = ({ title, excerpt, slug, coverImage }: Post) => {
         }
         title={title}
       />
-      <CardMedia component="img" height="140" image={coverImage} alt={title} />
+      <CardMedia component="img" image={coverImage} alt={title} />
       <Typography>{excerpt}</Typography>
       <Link href={`/posts/${slug}`}>
         <Button size="small">Read More</Button>
@@ -53,17 +53,19 @@ export default function Blog({ allPosts }: Props) {
 
   return (
     <MitamaLab>
-      <PostCard {...heroPost} />
-      <Divider sx={{ m: 2 }} />
-      <Grid container spacing={2}>
-        {morePosts.map(post => {
-          return (
-            <Grid item xs={4} key={post.title}>
-              <PostCard {...post} />
-            </Grid>
-          );
-        })}
-      </Grid>
+      <Container maxWidth={'lg'}>
+        <PostCard {...heroPost} />
+        <Divider sx={{ m: 2 }} />
+        <Grid container spacing={2}>
+          {morePosts.map(post => {
+            return (
+              <Grid item xs={4} key={post.title}>
+                <PostCard {...post} />
+              </Grid>
+            );
+          })}
+        </Grid>
+      </Container>
     </MitamaLab>
   );
 }
