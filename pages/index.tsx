@@ -33,6 +33,11 @@ type Pin = {
   img: string;
 };
 
+type Work = {
+  repo: string;
+  description: string;
+}
+
 const libraries: Pin[] = [
   {
     repo: `deriving_via`,
@@ -54,6 +59,21 @@ const libraries: Pin[] = [
     title: `C++17 Library for dimensional analysis based on variadic Phantom-Type.`,
     img: 'https://raw.githubusercontent.com/LoliGothick/mitama-dimensional/master/mitama-dimensional-logo.png',
   },
+];
+
+const works: Work[] = [
+  {
+    repo: 'clippy-check',
+    description: 'GitHub Action for PR annotations with clippy checks.'
+  },
+  {
+    repo: 'rustfmt-check',
+    description: 'GitHub Action for PR annotations with rustfmt checks.'
+  },
+  {
+    repo: 'MitamatchOperations',
+    description: 'アサルトリリィ Last Bullet (ラスバレ) のレギオンマッチ支援ツール（Windows アプリ）'
+  }
 ];
 
 const Home: NextPage = () => {
@@ -156,9 +176,23 @@ const Home: NextPage = () => {
             {'Other Works'}
           </Typography>
           <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-            {Array.from(Array(6)).map((_, index) => (
+            {works.map((work, index) => (
               <Grid item xs={2} sm={4} md={4} key={index}>
-                <Item>TODO</Item>
+                <Item>
+                  <CardHeader
+                    avatar={
+                      <Link href={`https://github.com/LoliGothick/${work.repo}`} aria-label={work.repo}>
+                        <GitHub />
+                      </Link>
+                    }
+                    title={work.repo}
+                  />
+                  <CardMedia component='div'>
+                    <Typography>
+                      {work.description}
+                    </Typography>
+                  </CardMedia>
+                </Item>
               </Grid>
             ))}
           </Grid>

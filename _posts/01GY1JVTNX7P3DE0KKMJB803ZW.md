@@ -37,7 +37,11 @@ Myリポジトリだと、[clippy-check](https://github.com/LoliGothick/clippy-c
 
 ![](https://storage.googleapis.com/zenn-user-upload/ea078d438800-20230415.png)
 
-そう、このツールはおそらく Cargo Workspace に対応していないのである。
+そう、このツールは ~~おそらく~~ Cargo Workspace に対応していないのである。
+
+https://twitter.com/getfossa/status/1648782084075409408
+
+だめらしいです。
 
 ![](https://storage.googleapis.com/zenn-user-upload/7895e4e4f486-20230415.png)
 
