@@ -3025,14 +3025,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:18.0.36":
-  version: 18.0.36
-  resolution: "@types/react@npm:18.0.36"
+"@types/react@npm:18.0.38":
+  version: 18.0.38
+  resolution: "@types/react@npm:18.0.38"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: ae4fc685a0a71b27d65e30f2a2c4a37d1763e2eb5920c7e433f1d841ac79bd82b62db749bad7573ae911d6145c78196791f61ad4280ba54c07f0c562db7b7cda
+  checksum: 34481c79f4f7ea2aefbaa45281319dc183200230d932d968463eba1643bd3635073d0a17c5c613150a69e36ca18b811ecffafea6384fa3dff3b5203866339d69
   languageName: node
   linkType: hard
 
@@ -8709,7 +8709,7 @@ eslint-config-next@latest:
     "@trivago/prettier-plugin-sort-imports": 4.1.1
     "@types/gtag.js": 0.0.12
     "@types/node": 18.15.13
-    "@types/react": 18.0.36
+    "@types/react": 18.0.38
     "@types/react-dom": 18.0.11
     classnames: 2.3.2
     date-fns: 2.29.3
