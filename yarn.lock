@@ -8736,7 +8736,7 @@ eslint-config-next@latest:
     typescript-plugin-toml: 0.2.0
     vercel: ^28.18.5
     zenn-content-css: 0.1.143
-    zenn-embed-elements: 0.1.142
+    zenn-embed-elements: 0.1.143
     zenn-markdown-html: 0.1.142
   languageName: unknown
   linkType: soft
@@ -11942,10 +11942,10 @@ eslint-config-next@latest:
   languageName: node
   linkType: hard
 
-"zenn-embed-elements@npm:0.1.142":
-  version: 0.1.142
-  resolution: "zenn-embed-elements@npm:0.1.142"
-  checksum: 2f9d1e2d245cbf3b8654d0a2851e448ad5b6003dff3a657211d9be9d2c56cb7b5c54aae1f4cc6dab844b1aaea378eae18b36645092229f37433aeeddf7866b94
+"zenn-embed-elements@npm:0.1.143":
+  version: 0.1.143
+  resolution: "zenn-embed-elements@npm:0.1.143"
+  checksum: a9afa19f68a1504e8a52d86b2cb6a5265106ab60c844f4bea3ba3c55fdad993209df8c7b2015bd4f160752fc3cecaeab1c36c64d5dc1bc34f50213863b33aa80
   languageName: node
   linkType: hard
 
