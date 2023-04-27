@@ -8,7 +8,6 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useMemo } from 'react';
 import markdownToHtml from 'zenn-markdown-html';
-import languageDetector from '../../lib/languageDetector';
 
 type Props = {
   post: PostType;
@@ -59,7 +58,7 @@ export default function Post({ post }: Props) {
 }
 
 type Params = {
-  locale?: string,
+  locale?: string;
   params: {
     slug: string;
   };
@@ -85,7 +84,7 @@ export const getStaticProps = async ({ locale, params }: Params) => {
       },
     },
   };
-}
+};
 
 export async function getStaticPaths({ locales }: { locales: string[] }) {
   return {

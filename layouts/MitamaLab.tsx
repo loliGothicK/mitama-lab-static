@@ -1,4 +1,5 @@
 import Footer from '../components/footer';
+import languageDetector from '../lib/languageDetector';
 import { DarkMode, LightMode } from '@mui/icons-material';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
@@ -21,10 +22,9 @@ import { blueGrey } from '@mui/material/colors';
 import { createTheme, styled, ThemeProvider, useTheme } from '@mui/material/styles';
 import Image from 'next/image';
 import { default as NextLink } from 'next/link';
+import { useRouter } from 'next/router';
 import * as React from 'react';
 import { useEffect, useMemo, useState } from 'react';
-import languageDetector from '../lib/languageDetector';
-import { useRouter } from 'next/router';
 
 const drawerWidth = 240;
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
@@ -91,7 +91,7 @@ const MitamaLabBase: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
   const handleDrawerClose = () => {
     setOpen(false);
   };
-  
+
   const [locale, setLocale] = useState(languageDetector.detect() || 'ja');
 
   return (
@@ -127,7 +127,7 @@ const MitamaLabBase: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
             <Select
               value={locale}
               label="Locale"
-              onChange={(event) => {
+              onChange={event => {
                 setLocale(event.target.value as string);
                 router.push(router.asPath, router.asPath, { locale: event.target.value as string });
               }}

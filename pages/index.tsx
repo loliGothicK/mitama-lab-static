@@ -14,11 +14,11 @@ import { styled } from '@mui/material/styles';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import type { GetStaticProps, NextPage } from 'next';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useTranslation } from 'next-i18next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.background.paper,
@@ -82,7 +82,7 @@ const works: Work[] = [
 const Home: NextPage = () => {
   const router = useRouter();
   const { t } = useTranslation('home');
-  
+
   return (
     <>
       <Head>
@@ -200,11 +200,8 @@ const Home: NextPage = () => {
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(
-      locale!,
-      ['common', 'home']
-    ))
-  }
+    ...(await serverSideTranslations(locale!, ['common', 'home'])),
+  },
 });
 
 export default Home;
