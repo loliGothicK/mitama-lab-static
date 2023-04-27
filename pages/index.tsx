@@ -113,7 +113,7 @@ const Home: NextPage = () => {
           }}
         >
           <Typography variant="h2" sx={{ margin: 10, fontWeight: 'bold' }}>
-            {'Coding and Ramen'}
+            {t('title')}
           </Typography>
           <Divider sx={{ m: 2 }} />
           <Typography variant={'h6'} sx={{ m: 2, flexGrow: 1 }}>
