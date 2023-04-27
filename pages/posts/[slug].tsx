@@ -8,6 +8,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useMemo } from 'react';
 import markdownToHtml from 'zenn-markdown-html';
+import languageDetector from '../../lib/languageDetector';
 
 type Props = {
   post: PostType;
@@ -58,13 +59,14 @@ export default function Post({ post }: Props) {
 }
 
 type Params = {
+  locale?: 'en' | 'ja',
   params: {
     slug: string;
   };
 };
 
-export async function getStaticProps({ params }: Params) {
-  const post = getPostBySlug(params.slug, [
+export const getStaticProps = async ({ locale, params }: Params) => {
+  const post = getPostBySlug(params.slug, locale || 'ja', [
     'title',
     'date',
     'slug',
@@ -86,7 +88,9 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(['slug']);
+  const locale = languageDetector.detect() || 'ja';
+  
+  const posts = getAllPosts(locale, ['slug']);
 
   return {
     paths: posts.map(post => {

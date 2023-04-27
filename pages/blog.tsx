@@ -5,7 +5,8 @@ import {
   Avatar,
   Button,
   CardHeader,
-  CardMedia, Container,
+  CardMedia,
+  Container,
   Divider,
   Grid,
   Paper,
@@ -14,6 +15,7 @@ import {
 import { red } from '@mui/material/colors';
 import { styled } from '@mui/material/styles';
 import Link from 'next/link';
+import languageDetector from '../lib/languageDetector';
 
 type Props = {
   allPosts: Post[];
@@ -71,7 +73,9 @@ export default function Blog({ allPosts }: Props) {
 }
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts(['title', 'date', 'slug', 'author', 'coverImage', 'excerpt']);
+  const locale = languageDetector.detect() || 'ja';
+  
+  const allPosts = getAllPosts(locale, ['title', 'date', 'slug', 'author', 'coverImage', 'excerpt']);
 
   return {
     props: { allPosts },
