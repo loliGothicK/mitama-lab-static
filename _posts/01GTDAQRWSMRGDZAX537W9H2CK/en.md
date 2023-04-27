@@ -1,6 +1,6 @@
 ---
-title: 'トイ・ボックス'
-excerpt: 'トイ・ボックスに行ってきました'
+title: 'Toy Box the Ramen Shop'
+excerpt: 'Wontan soy sauce ramen'
 coverImage: '/assets/blog/01GTDAQRWSMRGDZAX537W9H2CK/cover.jpg'
 date: '2023-03-01 00:56:41.625644900 UTC'
 author:
@@ -10,17 +10,17 @@ ogImage:
   url: '/assets/blog/01GTDAQRWSMRGDZAX537W9H2CK/cover.jpg'
 ---
 
-## ワンタン醤油ラーメン
+## Wontan soy sauce ramen
 
 ![ワンタン醤油ラーメン](/assets/blog/01GTDAQRWSMRGDZAX537W9H2CK/cover.jpg)
 
-## 感想
+## Impressions
 
-スープを一口すすると、返しの醤油が柔らかく広がり、その後に濃い出しの香りが追いかけてくる。
-相当美味しいスープだった。
-穂先メンマ・ネギ・チャーシューというシンプルな具材もまとまりがよくよい。
+When you take a sip of the soup, the returning soy sauce spreads softly, followed by the aroma of _dashi_.
+The soup was quite tasty.
+The simple ingredients - seasoned bamboo shoots, green onion and chashu pork - are also well put together.
 
-さて本題のワンタンだが、プリプリかつジューシーで醤油とかなり合っていて最高だった。
+The wontons were plump and juicy and matched the soy sauce perfectly.
 
-家から近いのでまた行きたい。
-ちょっと行列が長いのが欠点なのだが。
+I would like to go back as it is close to my house.
+The downside is that the queue are a bit long.
