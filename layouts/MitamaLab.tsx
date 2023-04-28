@@ -1,9 +1,10 @@
 import Footer from '../components/footer';
+import languageDetector from '../lib/languageDetector';
 import { DarkMode, LightMode } from '@mui/icons-material';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import MenuIcon from '@mui/icons-material/Menu';
-import { useMediaQuery } from '@mui/material';
+import { FormControl, InputLabel, MenuItem, Select, useMediaQuery } from '@mui/material';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -21,6 +22,7 @@ import { blueGrey } from '@mui/material/colors';
 import { createTheme, styled, ThemeProvider, useTheme } from '@mui/material/styles';
 import Image from 'next/image';
 import { default as NextLink } from 'next/link';
+import { useRouter } from 'next/router';
 import * as React from 'react';
 import { useEffect, useMemo, useState } from 'react';
 
@@ -77,6 +79,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 }));
 
 const MitamaLabBase: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
+  const router = useRouter();
   const colorMode = React.useContext(ColorModeContext);
   const theme = useTheme();
   const [open, setOpen] = useState(false);
@@ -88,6 +91,8 @@ const MitamaLabBase: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
   const handleDrawerClose = () => {
     setOpen(false);
   };
+
+  const [locale, setLocale] = useState(languageDetector.detect() || 'ja');
 
   return (
     <Box
@@ -117,6 +122,20 @@ const MitamaLabBase: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
               </NextLink>
             </Typography>
           </Box>
+          <FormControl fullWidth>
+            <InputLabel id="demo-simple-select-label">Lang</InputLabel>
+            <Select
+              value={locale}
+              label="Locale"
+              onChange={event => {
+                setLocale(event.target.value as string);
+                router.push(router.asPath, router.asPath, { locale: event.target.value as string });
+              }}
+            >
+              <MenuItem value={'ja'}>日本語</MenuItem>
+              <MenuItem value={'en'}>English</MenuItem>
+            </Select>
+          </FormControl>
           <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
             {theme.palette.mode === 'dark' ? <DarkMode /> : <LightMode />}
           </IconButton>

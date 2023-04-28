@@ -1,11 +1,13 @@
 import Post from '../interfaces/post';
 import MitamaLab from '../layouts/MitamaLab';
 import { getAllPosts } from '../lib/api';
+import languageDetector from '../lib/languageDetector';
 import {
   Avatar,
   Button,
   CardHeader,
-  CardMedia, Container,
+  CardMedia,
+  Container,
   Divider,
   Grid,
   Paper,
@@ -71,7 +73,16 @@ export default function Blog({ allPosts }: Props) {
 }
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts(['title', 'date', 'slug', 'author', 'coverImage', 'excerpt']);
+  const locale = languageDetector.detect() || 'ja';
+
+  const allPosts = getAllPosts(locale, [
+    'title',
+    'date',
+    'slug',
+    'author',
+    'coverImage',
+    'excerpt',
+  ]);
 
   return {
     props: { allPosts },

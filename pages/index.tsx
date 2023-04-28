@@ -13,7 +13,9 @@ import {
 import { styled } from '@mui/material/styles';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
-import type { NextPage } from 'next';
+import type { GetStaticProps, NextPage } from 'next';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -36,7 +38,7 @@ type Pin = {
 type Work = {
   repo: string;
   description: string;
-}
+};
 
 const libraries: Pin[] = [
   {
@@ -64,20 +66,23 @@ const libraries: Pin[] = [
 const works: Work[] = [
   {
     repo: 'clippy-check',
-    description: 'GitHub Action for PR annotations with clippy checks.'
+    description: 'GitHub Action for PR annotations with clippy checks.',
   },
   {
     repo: 'rustfmt-check',
-    description: 'GitHub Action for PR annotations with rustfmt checks.'
+    description: 'GitHub Action for PR annotations with rustfmt checks.',
   },
   {
     repo: 'MitamatchOperations',
-    description: 'アサルトリリィ Last Bullet (ラスバレ) のレギオンマッチ支援ツール（Windows アプリ）'
-  }
+    description:
+      'アサルトリリィ Last Bullet (ラスバレ) のレギオンマッチ支援ツール（Windows アプリ）',
+  },
 ];
 
 const Home: NextPage = () => {
   const router = useRouter();
+  const { t } = useTranslation('home');
+
   return (
     <>
       <Head>
@@ -108,21 +113,11 @@ const Home: NextPage = () => {
           }}
         >
           <Typography variant="h2" sx={{ margin: 10, fontWeight: 'bold' }}>
-            {'Coding and Ramen'}
+            {t('title')}
           </Typography>
           <Divider sx={{ m: 2 }} />
           <Typography variant={'h6'} sx={{ m: 2, flexGrow: 1 }}>
-            {
-              'Coding and ramen may seem like an unlikely pair, but they share one key ingredient: dedication. '
-            }
-            {
-              'Just as master ramen chefs perfect their recipes, ' +
-              'skilled coders devote countless hours to honing their craft. '
-            }
-            {
-              'And just as the perfect bowl of ramen can bring comfort and nourishment,' +
-              'a well-written code can bring functionality and innovation to the world.'
-            }
+            {t('excerpt')}
           </Typography>
           <Typography variant="h4" sx={{ margin: 10, fontWeight: 'bold' }}>
             {"What's in Mitama Lab?"}
@@ -181,16 +176,17 @@ const Home: NextPage = () => {
                 <Item>
                   <CardHeader
                     avatar={
-                      <Link href={`https://github.com/LoliGothick/${work.repo}`} aria-label={work.repo}>
+                      <Link
+                        href={`https://github.com/LoliGothick/${work.repo}`}
+                        aria-label={work.repo}
+                      >
                         <GitHub />
                       </Link>
                     }
                     title={work.repo}
                   />
-                  <CardMedia component='div'>
-                    <Typography>
-                      {work.description}
-                    </Typography>
+                  <CardMedia component="div">
+                    <Typography>{work.description}</Typography>
                   </CardMedia>
                 </Item>
               </Grid>
@@ -201,5 +197,11 @@ const Home: NextPage = () => {
     </>
   );
 };
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale!, ['common', 'home'])),
+  },
+});
 
 export default Home;

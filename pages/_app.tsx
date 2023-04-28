@@ -6,7 +6,7 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-import { ThemeProvider } from '@mui/material';
+import { appWithTranslation } from 'next-i18next';
 import type { AppProps } from 'next/app';
 import * as React from 'react';
 import { useEffect } from 'react';
@@ -31,4 +31,4 @@ const MyApp: React.FunctionComponent<MyAppProps> = props => {
   );
 };
 
-export default MyApp;
+export default appWithTranslation(MyApp);

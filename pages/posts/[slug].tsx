@@ -58,13 +58,14 @@ export default function Post({ post }: Props) {
 }
 
 type Params = {
+  locale?: string;
   params: {
     slug: string;
   };
 };
 
-export async function getStaticProps({ params }: Params) {
-  const post = getPostBySlug(params.slug, [
+export const getStaticProps = async ({ locale, params }: Params) => {
+  const post = getPostBySlug(params.slug, locale || 'ja', [
     'title',
     'date',
     'slug',
@@ -83,18 +84,15 @@ export async function getStaticProps({ params }: Params) {
       },
     },
   };
-}
+};
 
-export async function getStaticPaths() {
-  const posts = getAllPosts(['slug']);
-
+export async function getStaticPaths({ locales }: { locales: string[] }) {
   return {
-    paths: posts.map(post => {
-      return {
-        params: {
-          slug: post.slug,
-        },
-      };
+    paths: locales.flatMap(locale => {
+      const posts = getAllPosts(locale, ['slug']);
+      return posts.map(post => {
+        return { params: { slug: post.slug }, locale: locale };
+      });
     }),
     fallback: false,
   };
