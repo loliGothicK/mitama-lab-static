@@ -72,9 +72,7 @@ export default function Blog({ allPosts }: Props) {
   );
 }
 
-export const getStaticProps = async () => {
-  const locale = languageDetector.detect() || 'ja';
-
+export const getStaticProps = async ({ locale }: { locale: string }) => {
   const allPosts = getAllPosts(locale, [
     'title',
     'date',
