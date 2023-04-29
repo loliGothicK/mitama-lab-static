@@ -4,15 +4,7 @@ import { DarkMode, LightMode } from '@mui/icons-material';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import MenuIcon from '@mui/icons-material/Menu';
-import {
-  FormControl,
-  InputLabel,
-  MenuItem,
-  Select,
-  SelectChangeEvent, ToggleButton,
-  ToggleButtonGroup,
-  useMediaQuery,
-} from '@mui/material';
+import { ToggleButton, ToggleButtonGroup, useMediaQuery } from '@mui/material';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -102,14 +94,14 @@ const MitamaLabBase: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
 
   const [locale, setLocale] = useState(() => languageDetector.detect() || 'ja');
   
-  const handleLang = (
-    _: React.MouseEvent<HTMLElement>,
-    newLocale: string | null,
-  ) => {
-    setLocale(newLocale || 'ja');
+  useEffect(() => {
+    setLocale(router.locale || 'ja');
+  }, []);
+
+  const handleLang = (_: React.MouseEvent<HTMLElement>, newLocale: string | null) => {
     router.push(router.asPath, router.asPath, { locale: newLocale || 'ja' });
   };
-  
+
   return (
     <Box
       sx={{
