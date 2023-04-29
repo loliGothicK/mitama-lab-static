@@ -14,12 +14,20 @@ jobs:
         with:
           node-version: 18.x
 
+      - name: Restore cached Primes
+        id: cache-node_modules-restore
+        uses: actions/cache/restore@v3
+        with:
+          path: |
+            node_modules
+          key: node-v${{ matrix.node-version }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
+
       - name: Install Dependencies
         run: yarn install
 
       - name: cache node_modules
-        id: node_modules_cache_id
-        uses: actions/cache@v2
+        id: cache-node_modules-save
+        uses: actions/cache/save@v3
         with:
           path: |
             node_modules
