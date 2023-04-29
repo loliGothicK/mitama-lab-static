@@ -1,0 +1,40 @@
+name: Checks
+
+on:
+  push
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set Node.js 18.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+
+      - name: Restore cached Primes
+        id: cache-node_modules-restore
+        uses: actions/cache/restore@v3
+        with:
+          path: |
+            node_modules
+          key: node-v${{ matrix.node-version }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
+
+      - name: Install Dependencies
+        run: yarn install
+
+      - name: cache node_modules
+        id: cache-node_modules-save
+        uses: actions/cache/save@v3
+        with:
+          path: |
+            node_modules
+          key: node-v${{ matrix.node-version }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
+
+      - name: Format Check
+        run: yarn format:fix
+
+      - name: Lint Check
+        run: yarn lint

@@ -8,7 +8,9 @@
     "export": "next export",
     "start": "next start",
     "lint": "next lint",
-    "format:fix": "prettier --write --ignore-path .gitignore ./**/*.{ts,tsx,css}"
+    "lint:fix": "next lint --fix",
+    "format:fix": "prettier --write --ignore-path .gitignore ./**/*.{ts,tsx,css}",
+    "format:check": "prettier --check --ignore-path .gitignore ./**/*.{ts,tsx,css}"
   },
   "dependencies": {
     "@emotion/cache": "11.10.8",
@@ -54,7 +56,7 @@
   "volta": {
     "node": "18.16.0"
   },
-  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "description": "This is a [Next.js](https://nextjs.org/) Static Site for Mitama Lab.",
   "main": ".prettierrc.js",
   "directories": {
     "lib": "lib"
