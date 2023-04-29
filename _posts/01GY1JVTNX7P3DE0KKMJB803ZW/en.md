@@ -12,7 +12,7 @@ ogImage:
 
 More than half a century has already passed since mankind began space migration for the survival of software.
 We encountered various licences and were building a major interstellar civilisation.
-But there are still numerous unknown threats in space. ......
+But there are still numerous unknown threats in space.
 Licence compliance violations. One day you will suddenly be fined.
 People were frightened of compliance risks that could happen anywhere and at any time.
 But there were those who dared to face the threat.
@@ -45,7 +45,7 @@ https://twitter.com/getfossa/status/1648782084075409408
 
 Oh no, I can't use FOSSA...
 
-## cargo-deny は希望
+## cargo-deny is desired one
 
 In her grief, Nami-no-Mitama no Kami looked for an alternative tool.
 She found [cargo-deny](https://github.com/EmbarkStudios/cargo-deny).
