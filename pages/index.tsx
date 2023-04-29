@@ -1,4 +1,5 @@
 import MitamaLab from '../layouts/MitamaLab';
+import { generateIndex } from '../lib/algolia';
 import { GitHub } from '@mui/icons-material';
 import {
   Avatar,
@@ -198,10 +199,12 @@ const Home: NextPage = () => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async ({ locale }) => ({
-  props: {
-    ...(await serverSideTranslations(locale!, ['common', 'home'])),
-  },
-});
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale!, ['common', 'home'])),
+    },
+  };
+};
 
 export default Home;
