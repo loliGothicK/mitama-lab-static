@@ -4,7 +4,15 @@ import { DarkMode, LightMode } from '@mui/icons-material';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import MenuIcon from '@mui/icons-material/Menu';
-import { FormControl, InputLabel, MenuItem, Select, useMediaQuery } from '@mui/material';
+import {
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  SelectChangeEvent, ToggleButton,
+  ToggleButtonGroup,
+  useMediaQuery,
+} from '@mui/material';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -92,8 +100,16 @@ const MitamaLabBase: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
     setOpen(false);
   };
 
-  const [locale, setLocale] = useState(languageDetector.detect() || 'ja');
-
+  const [locale, setLocale] = useState(() => languageDetector.detect() || 'ja');
+  
+  const handleLang = (
+    _: React.MouseEvent<HTMLElement>,
+    newLocale: string | null,
+  ) => {
+    setLocale(newLocale || 'ja');
+    router.push(router.asPath, router.asPath, { locale: newLocale || 'ja' });
+  };
+  
   return (
     <Box
       sx={{
@@ -122,20 +138,19 @@ const MitamaLabBase: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
               </NextLink>
             </Typography>
           </Box>
-          <FormControl fullWidth>
-            <InputLabel id="demo-simple-select-label">Lang</InputLabel>
-            <Select
-              value={locale}
-              label="Locale"
-              onChange={event => {
-                setLocale(event.target.value as string);
-                router.push(router.asPath, router.asPath, { locale: event.target.value as string });
-              }}
-            >
-              <MenuItem value={'ja'}>日本語</MenuItem>
-              <MenuItem value={'en'}>English</MenuItem>
-            </Select>
-          </FormControl>
+          <ToggleButtonGroup
+            value={locale}
+            exclusive
+            onChange={handleLang}
+            aria-label="change language"
+          >
+            <ToggleButton value="ja" aria-label="ja-JP">
+              {'日本語'}
+            </ToggleButton>
+            <ToggleButton value="en" aria-label="en-EN">
+              {'English'}
+            </ToggleButton>
+          </ToggleButtonGroup>
           <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
             {theme.palette.mode === 'dark' ? <DarkMode /> : <LightMode />}
           </IconButton>
