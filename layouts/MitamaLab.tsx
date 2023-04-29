@@ -93,7 +93,7 @@ const MitamaLabBase: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
   };
 
   const [locale, setLocale] = useState(() => languageDetector.detect() || 'ja');
-  
+
   useEffect(() => {
     setLocale(router.locale || 'ja');
   }, []);
