@@ -1,6 +1,6 @@
 ---
 title: 'Macros Frontier'
-excerpt: 'Procedural Macros の設計について二言三言'
+excerpt: 'Procedural Macros Design'
 coverImage: '/assets/blog/01GX0ZVZVZPBNZQKWD8KFBAZH5/cover.svg'
 date: '2023-04-02 12:42:57.791510309 UTC'
 author:
@@ -10,98 +10,98 @@ ogImage:
   url: '/assets/blog/01GX0ZVZVZPBNZQKWD8KFBAZH5/cover.svg'
 ---
 
-## 時は西暦2059年。
+## The year is 2059 AD.
 
-かつて、procedural macros と呼ばれる巨人たちとの戦争があった。
-初めてのメタプログラミングとの戦いで滅びの危機を経験したいなむのみたまのかみは proc macro ライブラリの設計に関する記事を求め、インターネットの各方面へと旅立っていった…… [^1]
+There was once a war against the giants called PROCEDURAL MACROS.
+After experiencing the threat of extinction in his first battle against metaprogramming, I travelled to various parts of the internet in search of articles on the design of the proc macro library. ...... [^1]
 
-## はい
+## Few minutes later...
 
-この記事では、procedural macros のライブラリを設計する方法について解説します。
-結局、設計に関する記事なんてものはなかったんですね。
-そもそも procedural macros に関す記事自体が少ないんですよね。
+This article describes how to design a library of procedural macros.
+After all, there was no such thing as an article about designing one.
+There aren't many articles on procedural macros to begin with.
 
 ::: message
-ライブラリを作ろうとする者へ向けた解説記事です（入門者へ向けた記事ではありません）。
+This is an explanatory article aimed at those who want to build a library (not an introductory article).
 :::
 
-## 使うべきライブラリ
+## Libraries to use.
 
-絶対に使うべきライブラリが4つあるので紹介しておきます。
+There are four libraries that you should definitely use.
 
 ### [proc-macro-error](https://docs.rs/proc-macro-error/latest/proc_macro_error/)
 
-わかりやすいエラーを出すためのライブラリです。
-標準で安定化されていない機能をライブラリ化したものなので、安定化後もコードをほぼ変更せずに対応できるため、使うべきです。
+This is a library for easy-to-understand errors.
+It should be used because it is a library of functions that are not stabilised in the standard and can be handled after stabilisation with almost no code changes.
 
 ### [proc-macro2](https://docs.rs/proc-macro2/latest/proc-macro2/)
 
-ユニットテスタブルなマクロ開発に必要なので使うべき。
+It should be used because it is necessary for developing unit-testable macros.
 
 ### [quote](https://docs.rs/quote/latest/quote/)
 
-TokenStream を構築するための最強のライブラリです。
-使わない選択肢はないです。
+It is the most powerful library for building TokenStreams.
+There is no choice not to use it.
 
 ### [syn](https://docs.rs/syn/latest/syn/)
 
-TokenStream を構文木にパースしてくるライブラリです。
-使わない選択肢はないです。
+This library parses TokenStream into a parse tree.
+There is no choice not to use it.
 
-## 設計段階
+## design stage
 
-### 注意事項
-
-:::message alert
-マクロを使わずに実現できないかを検討してください
-:::
-
-マクロで解決すべきことは
-
-- 可変長引数の関数
-- 大量のボイラープレートの自動生成
-
-などです。
+### Notes.
 
 :::message alert
-すでに存在していないかを確認してください
+Consider whether this can be achieved without macros
 :::
 
-すでにあるものが利用可能であれば、作る必要はありません。
+What needs to be resolved at the macro level is.
 
-### スコープの決定
+- Functions with variable length arguments
+- Automatic generation of large numbers of boiler plates
 
-最初にやることは、マクロで実現したいことを明確にすることです。
-マクロでやること、マクロでやらないことを決定してください。
+These include.
 
-- ジェネリクスに対応するか？
-- カスタマイズ性をもたせるか？
+:::message alert
+Check if it does not already exist.
+:::
 
-などをこの段階で考えてください。
+There is no need to create one if one is already available.
 
-### どのようなコードを生成すればよいのかを考える
+### Determining the scope
 
-もっとも難しいのがこのステップです。
-マクロはあらゆるコードを入力に受け取り、コードを生成（またはコンパイルエラーを生成）する必要があります。
-そのため、ありえる入力がどのようなものかを把握しておく必要があります。
+The first thing to do is to identify what you want to achieve with macros.
+Decide what you will and will not do with macros.
 
-まず、Rust の言語仕様と文法について完全に理解してください。
-おのずとどのようなコードを生成するべきかが明らかになるでしょう。
-完全に理解するのが難しい場合は、既存のライブラリを参考にするのが良いでしょう。
+- Will it be generics compliant?
+- Do you want to make it customisable?
 
-ありえる入力に対してエラーにする場合を考え、それらを除いた入力に対して動作するコードを考えます。
+and so on should be considered at this stage.
 
-このステップでは、マクロライブラリをまだ書きません。
-普通のコードを書いてください。
-うまくコンパイルできて、ちゃんと動作するコードを思いつくことができればつぎのステップに進みましょう。
+### Consider what code to generate.
 
-### 利用するマクロの形態の選択
+The most difficult step is this step.
+The macro needs to take any code as input and generate code (or generate compilation errors).
+Therefore, you need to know what the possible inputs are.
+
+First, you should have a thorough understanding of the Rust language specification and syntax.
+It will naturally become clear what code you should generate.
+If it is difficult to fully understand, it is a good idea to refer to existing libraries.
+
+Consider the case where you make an error for possible inputs, and consider the code that works for the inputs without them.
+
+In this step, do not write the macro library yet.
+Write normal code.
+If you can compile it well and come up with code that works properly, you can move on to the next step.
+
+### Selecting the form of macro to be used.
 
 - function-like procedural macros
 - derive macros
 - attribute macros
 
-の3種類からの選択になります。
+The choice is between three types of
 
 #### [function-like procedural macros](https://doc.rust-lang.org/reference/procedural-macros.html#function-like-procedural-macros)
 
@@ -112,8 +112,8 @@ pub fn make_answer(_item: TokenStream) -> TokenStream {
 }
 ```
 
-マクロに与えた入力をコードに変化するマクロの形態。
-DSL からコードを生成したり、大量のボイラープレートを生成したりするときに用います。
+A form of macro that transforms the input given to the macro into code.
+Used to generate code from a DSL or to generate a large number of boilerplates.
 
 #### [derive macros](https://doc.rust-lang.org/reference/procedural-macros.html#derive-macros)
 
@@ -132,9 +132,9 @@ use proc_macro_examples::AnswerFn;
 struct Struct;
 ```
 
-struct/enum/union を受け取り、それらが存在するモジュールに追加でなんらかのコードを自動生成できるマクロの形態です。
+It is a form of macro that can take struct/enum/union and automatically generate some code in addition to the module in which they exist.
 
-主に impl を自動生成するために用います。
+It is mainly used to automatically generate impls.
 
 #### [attribute macros](https://doc.rust-lang.org/reference/procedural-macros.html#attribute-macros)
 
@@ -145,29 +145,29 @@ pub fn return_as_is(_attr: TokenStream, item: TokenStream) -> TokenStream {
 }
 ```
 
-色々なものを受け取り、それを書き換える方法でコードを自動生成するマクロの形態です。
-struct/enum/union 以外を受け取りたい場合はこれを用います。
-derive macros と違ってコードを書き換えるため、書き換えたい場合はこちらを用います。
+This is a form of macro that takes various things and automatically generates code in a way that rewrites it.
+Use this if you want to receive something other than struct/enum/union.
+Unlike derive macros, this is used if you want to rewrite the code, because it rewrites the code.
 
-### マクロ内で利用する文法の検討
+### Consideration of the grammar to be used within the macro.
 
-マクロユーザーにどのようなマクロを書かせるかを検討します。
-基本的にはマクロで使う文法は Rust の文法としてパースできるように設計するのが望ましいです（syn を使って簡単にパースできるため）。
-Rustの文法を完全に理解しているとここでも便利です。
+Consider what macros you want macro users to write.
+Basically, the syntax used in macros should be designed to be parsable as a Rust syntax (as it can be easily parsed using syn).
+A thorough understanding of Rust syntax is also useful here.
 
-derive macros を使う場合は、custom attributes を使うかどうかをこの段階で考えてください。
+If derive macros are used, consider at this stage whether custom attributes should be used.
 
-## 実際にコードを書く
+## Writing the actual code
 
-必要なことは3つです。
+Three things are needed.
 
-- パースする
-- 構文木から必要なデータをかき集める
-- データから必要な `TokenStream` を構築する
+- Parsing.
+- Scrape the necessary data from the syntax tree.
+- Build the required `TokenStream` from the data.
 
-### workspace 構成
+### workspace Configuration
 
-最強の構成を教えます。
+The best configuration is taught.
 
 ```tree:最強の構成はこれだ
 .
@@ -181,27 +181,27 @@ derive macros を使う場合は、custom attributes を使うかどうかをこ
    └── ...
 ```
 
-ポイントは、`library_macros` というクレートに procedural macros を封印してそれを `library` から再エクスポートすることです。
-マクロライブラリはマクロしかかけないため、ライブラリがマクロ以外の機能を提供する場合はこの構成になります。
-かなりの割合でマクロが生成するコードに自分のライブラリが提供するなにかを埋め込みたくなると思われるので、最終的にこれにたどり着く可能性が高いと思われます。
-マクロだけで完結する場合は `library_macros` だけになります。
+The point is to seal procedural macros in a crate called `library_macros` and re-export them from the `library`.
+Macro libraries only apply macros, so if your library provides non-macro functionality, this is the configuration to use.
+It is likely that you will eventually arrive at this, as a significant proportion of the time you will want to embed something provided by your library in the code generated by the macros.
+If you only want to use macros, you will only need `library_macros`.
 
-`example` は絶対に用意してください。
+`example` should definitely be provided.
 
-`tests` は実際にマクロを使ってみた結果を使ってみてテストをするためのクレートです。
+`tests` is a crate for testing the results of using the actual macros.
 
-### パースする
+### Parsing.
 
-さて、ついにパースをするときです。
-syn を使ってパースしていきましょう。
-この段階でエラーになった場合はパースエラーになります。
-どのような文法を要求しているのかをユーザーに伝えるエラーメッセージを出しましょう。
+Now it is time to finally parse.
+Let's parse using syn.
+If an error occurs at this stage, it is a parsing error.
+Give the user an error message telling them what syntax is required.
 
-#### function-like procedural macros のパース
+#### Parsing function-like procedural macros
 
-ユーザーから受け取った入力をパースしましょう。
-気合でパーサを実装してください。
-syn のドキュメントを読んでください。
+Parse the input received from the user.
+Implement the parser with gusto.
+Read the syn documentation.
 
 ```rust
 use proc_macro::TokenStream;
@@ -226,9 +226,9 @@ pub fn my_macro(tokens: TokenStream) -> TokenStream {
 }
 ```
 
-#### derive macros のパース
+#### Parsing of derive macros
 
-`syn::DeriveInput` としてパースします。
+Parse as `syn::DeriveInput`.
 
 ```rust
 use proc_macro::TokenStream;
@@ -243,7 +243,7 @@ pub fn my_macro(tokens: TokenStream) -> TokenStream {
 }
 ```
 
-`syn::DeriveInput` にはつぎのようなフィールドがあるので、コード生成に必要なデータをかき集めましょう。
+The `syn::DeriveInput` contains the following fields to gather the data needed for code generation.
 
 ```rust
 pub struct DeriveInput {
@@ -255,11 +255,11 @@ pub struct DeriveInput {
 }
 ```
 
-#### attribute macros のパース
+#### Parsing of attribute macros
 
-何につけることができるのかによって違いますが、item にはRust のコードが入っているので `syn::???` にパースすればいいです。関数なら `syn::ItemFn` です。
+It depends on what you can attach it to, but the item contains Rust code, so you can parse it into `syn::??? `, you can parse it into `syn::ItemFn`. If it's a function, it's `syn::ItemFn`.
 
-attribute の引数を参照したい場合は第1引数に入っているので、それもパースしましょう。
+If you want to refer to the attribute argument, it is in the first argument, so parse that too.
 
 ```rust
 use proc_macro::TokenStream;
@@ -274,27 +274,26 @@ pub fn my_attr(attr: TokenStream, item: TokenStream) -> TokenStream {
 }
 ```
 
-### 必要なデータをかき集める
+### Gather the data you need.
 
-パースが完了したあとにすべきことは、コード生成に必要なデータが揃っているかを確認することです。
-必要に応じて、「このアトリビュートはジェネリクスに対応していません」だとか「この Derive にはこのアトリビュートが必要です」だとかのエラーを発生させることが重要です。
-適切にエラーをハンドリングして proc-macro-error でわかりやすいヒント付きのエラーを出しましょう。
+What you should do after parsing is complete is to check that you have all the data you need for code generation.
+If necessary, it is important to generate errors such as 'This attribute does not support generics' or 'This Derive requires this attribute'.
+Handle errors properly and generate errors with easy-to-understand hints in proc-macro-error.
 
+### Generate code
 
-### コードを生成する
+Once the required data has been gathered, build a TokenStream of code that should eventually be generated automatically.
 
-必要なデータが集まったら、最終的に自動生成されるべきコードの TokenStream を構築します。
+`quote!` macros to build it.
+A thorough understanding of Rust's language features and syntax is required to build solid all-case code.
 
-`quote!` マクロを使って構築します。
-しっかりとすべての場合に対応したコードを構築するためには Rust の言語機能や文法を完全に理解している必要があります。
+## Summary
 
-## まとめ
+- Do macro things that only macro can do.
+- Investigate libraries that already exist.
+- Parsing, collecting data and `quote!`.
+- Fully understand the language features and syntax of Rust
 
-- マクロでしかできないことをマクロでやる
-- すでに存在しているライブラリを調査する
-- パースし、データを集め、`quote!` する
-- Rust の言語機能と文法を完全に理解する
-
-以上です。
+That's all.
 
 [^1]: [『マクロスF』 第1話「クロース・エンカウンター」](https://www.youtube.com/watch?v=-_KxGpUvw5o)
