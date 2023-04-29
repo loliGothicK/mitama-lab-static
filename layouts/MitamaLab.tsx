@@ -1,4 +1,5 @@
 import Footer from '../components/footer';
+import Search from '../components/search/Search';
 import languageDetector from '../lib/languageDetector';
 import { DarkMode, LightMode } from '@mui/icons-material';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
@@ -130,6 +131,7 @@ const MitamaLabBase: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
               </NextLink>
             </Typography>
           </Box>
+          <Search />
           <ToggleButtonGroup
             value={locale}
             exclusive

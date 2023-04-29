@@ -1,3 +1,4 @@
+import PostType from '../interfaces/post';
 import fs from 'fs';
 import matter from 'gray-matter';
 import { join } from 'path';
@@ -8,7 +9,11 @@ export function getPostSlugs() {
   return fs.readdirSync(postsDirectory);
 }
 
-export function getPostBySlug(slug: string, locale: string, fields: string[] = []) {
+export function getPostBySlug<Fields extends readonly (keyof PostType)[]>(
+  slug: string,
+  locale: string,
+  fields: readonly (keyof PostType)[] = [],
+): { [Field in Fields[number]]: PostType[Field] } {
   const realSlug = slug.replace(/\.md$/, '');
   const fullPath = join(postsDirectory, `${realSlug}`, `${locale}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
@@ -34,15 +39,13 @@ export function getPostBySlug(slug: string, locale: string, fields: string[] = [
     }
   });
 
-  return items;
+  return items as unknown as { [Field in Fields[number]]: PostType[Field] };
 }
 
-export function getAllPosts(locale: string, fields: string[] = []) {
+export function getAllPosts<Fields extends readonly (keyof PostType)[]>(
+  locale: string,
+  fields: readonly (keyof PostType)[] = [],
+): { [Field in Fields[number]]: PostType[Field] }[] {
   const slugs = getPostSlugs();
-  return (
-    slugs
-      .map(slug => getPostBySlug(slug, locale, fields))
-      // sort posts by date in descending order
-      .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
-  );
+  return slugs.map(slug => getPostBySlug<Fields>(slug, locale, fields));
 }

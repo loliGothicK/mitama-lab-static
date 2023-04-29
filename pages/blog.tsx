@@ -72,15 +72,21 @@ export default function Blog({ allPosts }: Props) {
   );
 }
 
+const PostProperties = [
+  'title',
+  'date',
+  'slug',
+  'author',
+  'coverImage',
+  'excerpt',
+  'ogImage',
+  'content',
+] as const;
+
 export const getStaticProps = async ({ locale }: { locale: string }) => {
-  const allPosts = getAllPosts(locale, [
-    'title',
-    'date',
-    'slug',
-    'author',
-    'coverImage',
-    'excerpt',
-  ]);
+  const allPosts = getAllPosts<typeof PostProperties>(locale, PostProperties).sort((p1, p2) =>
+    p1.date < p2.date ? 1 : -1,
+  );
 
   return {
     props: { allPosts },
