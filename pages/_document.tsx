@@ -7,7 +7,7 @@ import * as React from 'react';
 
 // noinspection JSUnusedGlobalSymbols
 export default class MyDocument extends Document {
-  render() {
+  override render() {
     return (
       <Html lang="en">
         <Head>

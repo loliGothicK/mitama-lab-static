@@ -30,16 +30,7 @@ export const generateIndex = async (): Promise<void> => {
     });
 
   // 追加
-  const client = algoliasearch('RCM8CWQP3S', process.env.ALGOLIA_CLIENT_ID!);
+  const client = algoliasearch('RCM8CWQP3S', process.env['ALGOLIA_CLIENT_ID']!);
   const index = client.initIndex('mitama_lab');
   await index.saveObjects(objects, { autoGenerateObjectIDIfNotExist: true });
 };
-
-function splitByChunk(str: string, size: number) {
-  const numChunks = Math.ceil(str.length / size);
-  const chunks = new Array(numChunks);
-  for (let i = 0, x = 0; i < numChunks; ++i, x += size) {
-    chunks[i] = str.substring(x, size);
-  }
-  return chunks;
-}

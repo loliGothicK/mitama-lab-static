@@ -1,5 +1,4 @@
 import MitamaLab from '../layouts/MitamaLab';
-import { generateIndex } from '../lib/algolia';
 import { GitHub } from '@mui/icons-material';
 import {
   Avatar,

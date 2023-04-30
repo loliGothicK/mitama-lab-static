@@ -1,4 +1,3 @@
-import languageDetector from '../../lib/languageDetector';
 import { Message } from './types';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -21,9 +20,12 @@ const Hits: React.FC<HitsProvided<Message>> = ({ hits }) => {
   return (
     <List>
       {Object.values(aggregate).map(hit => (
+        // @ts-ignore
         <ListItem key={hit[0].objectID}>
           <ListItemText>
+            { /* @ts-ignore */ }
             <Link href={hit[0].url}>
+              { /* @ts-ignore */ }
               <Typography>{hit[0].title}</Typography>
             </Link>
           </ListItemText>

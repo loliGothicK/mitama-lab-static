@@ -94,16 +94,18 @@ const MitamaLabBase: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
   };
 
   const [locale, setLocale] = useState(() => languageDetector.detect() || 'ja');
-  const [lang, setLang] = useState<string>(locale);
 
   useEffect(() => {
-    setLocale(lang);
-  }, [lang]);
+    const match = window.location.pathname.match(/^\/(en|ja)\//);
+    if (!match) {
+      setLocale('ja');
+    } else {
+      setLocale(match[1] || 'ja');
+    }
+  }, []);
 
   const handleLang = (_: React.MouseEvent<HTMLElement>, newLocale: string | null) => {
-    router.push(router.asPath, router.asPath, { locale: newLocale || 'ja' }).then(() => {
-      setLang(newLocale || 'ja');
-    });
+    router.push(router.asPath, router.asPath, { locale: newLocale || 'ja' });
   };
 
   return (
