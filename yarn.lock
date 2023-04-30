@@ -3430,10 +3430,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/next@npm:3.8.1":
-  version: 3.8.1
-  resolution: "@vercel/next@npm:3.8.1"
-  checksum: 96afe4713f50c19e815076582b3798cd1fa62c807837671fc7cf3537cec035468fc0db71dc0c00c90c9e80305823898afb85502ac5a2e04c7714cf1e53b2a93b
+"@vercel/next@npm:3.8.2":
+  version: 3.8.2
+  resolution: "@vercel/next@npm:3.8.2"
+  checksum: 05fca09c85266fcd98fdb6b2f9dadc86991fd1f74c34becc2dcdd41ea8018955768d953804068c57f77e7fecd062715e0ba5b10f1b260f35dc6b303f4e3c51e4
   languageName: node
   linkType: hard
 
@@ -11974,13 +11974,13 @@ eslint-config-next@latest:
   linkType: hard
 
 "vercel@npm:^29.0.0":
-  version: 29.0.2
-  resolution: "vercel@npm:29.0.2"
+  version: 29.0.3
+  resolution: "vercel@npm:29.0.3"
   dependencies:
     "@vercel/build-utils": 6.7.2
     "@vercel/go": 2.5.1
     "@vercel/hydrogen": 0.0.64
-    "@vercel/next": 3.8.1
+    "@vercel/next": 3.8.2
     "@vercel/node": 2.14.0
     "@vercel/python": 3.1.60
     "@vercel/redwood": 1.1.15
@@ -11990,7 +11990,7 @@ eslint-config-next@latest:
   bin:
     vc: dist/index.js
     vercel: dist/index.js
-  checksum: 3edd38c1ba6fa848f42297232c23fc84beecc970b81198945229204886a53f1b9790f17e0c06706e28a7b534b7de37de1cda4ef51e4a640015a34cd0c4ada3ee
+  checksum: 6ad64beffd3627c89b2930ff50e1a9b586c751c917c807f93448d27aec3ba23f1fdbca264dba0d50f3d54ba85573cb3abef8bc0264c8c8be23b71834cfa806cd
   languageName: node
   linkType: hard
 
