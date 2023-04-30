@@ -50,11 +50,11 @@ const PostCard = ({ title, excerpt, slug, coverImage }: Post) => {
 
 export default function Blog({ allPosts }: Props) {
   const heroPost = allPosts[0];
-  
+
   if (heroPost === undefined) {
     return <div>{'No blog post here...'}</div>;
   }
-  
+
   const morePosts = allPosts.slice(1);
 
   return (

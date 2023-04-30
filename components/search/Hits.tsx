@@ -8,25 +8,26 @@ import React from 'react';
 import { HitsProvided } from 'react-instantsearch-core';
 import { connectHits } from 'react-instantsearch-dom';
 
-export const groupBy = <T, K extends keyof any>(arr: T[], key: (i: T) => K) =>
+export const groupBy = <K extends PropertyKey>(arr: Message[], key: (i: Message) => K) =>
   arr.reduce((groups, item) => {
-    (groups[key(item)] ||= []).push(item);
+    if (groups.has(key(item))) groups.set(key(item), item);
+    else groups.set(key(item), { ...item, content: groups.get(key(item))?.content + item.content });
     return groups;
-  }, {} as Record<K, T[]>);
+  }, new Map<K, Message>());
 
 const Hits: React.FC<HitsProvided<Message>> = ({ hits }) => {
-  const aggregate = groupBy(hits, hit => hit.objectID.slice(0, -2));
+  const aggregate = groupBy(
+    hits.sort((h1, h2) => (h1.objectID.slice(-1) < h2.objectID.slice(-1) ? 1 : -1)),
+    hit => hit.objectID.slice(0, -2),
+  );
 
   return (
     <List>
-      {Object.values(aggregate).map(hit => (
-        // @ts-ignore
-        <ListItem key={hit[0].objectID}>
+      {[...aggregate.values()].map(hit => (
+        <ListItem key={hit.objectID}>
           <ListItemText>
-            { /* @ts-ignore */ }
-            <Link href={hit[0].url}>
-              { /* @ts-ignore */ }
-              <Typography>{hit[0].title}</Typography>
+            <Link href={hit.url}>
+              <Typography>{hit.title}</Typography>
             </Link>
           </ListItemText>
         </ListItem>
