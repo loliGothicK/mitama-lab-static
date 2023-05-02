@@ -10,6 +10,7 @@ import { appWithTranslation } from 'next-i18next';
 import type { AppProps } from 'next/app';
 import * as React from 'react';
 import { useEffect } from 'react';
+import { RecoilRoot } from 'recoil';
 import 'zenn-content-css';
 
 interface MyAppProps extends AppProps {
@@ -26,7 +27,9 @@ const MyApp: React.FunctionComponent<MyAppProps> = props => {
   }, []);
   return (
     <CacheProvider value={emotionCache}>
-      <Component {...pageProps} />
+      <RecoilRoot>
+        <Component {...pageProps} />
+      </RecoilRoot>
     </CacheProvider>
   );
 };
