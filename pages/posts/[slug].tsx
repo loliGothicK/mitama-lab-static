@@ -84,7 +84,8 @@ const useProcessor = (text: string, callback: (head: string) => void) => {
       .then(file => {
         setContent(file.result);
       });
-  }, [text, callback]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [text]);
 
   return Content;
 };
