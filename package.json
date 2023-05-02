@@ -59,7 +59,7 @@
     "typescript-plugin-toml": "0.2.0",
     "vercel": "^29.0.0"
   },
-  "packageManager": "yarn@3.5.0",
+  "packageManager": "yarn@3.5.1",
   "volta": {
     "node": "18.16.0"
   },
