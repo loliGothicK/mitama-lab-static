@@ -127,17 +127,17 @@ export default function Post({ post, toc }: Props) {
   const ogImage = useMemo(() => {
     return `https://mitama.tech/api/og?title=${post.title}`;
   }, [post.title]);
-  
+
   const [_, setTOC] = useRecoilState(tocAtom);
 
   const content = useProcessor(post.content, head => {
     setTOC(_ => head);
   });
-  
+
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
-  
+
   return (
     <MitamaLab>
       <Container>
