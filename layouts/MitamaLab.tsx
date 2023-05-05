@@ -1,6 +1,5 @@
 import Footer from '../components/footer';
 import Search from '../components/search/Search';
-import languageDetector from '../lib/languageDetector';
 import { DarkMode, LightMode } from '@mui/icons-material';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
@@ -26,6 +25,7 @@ import { default as NextLink } from 'next/link';
 import { useRouter } from 'next/router';
 import * as React from 'react';
 import { useEffect, useMemo, useState } from 'react';
+import languageDetector from '../lib/languageDetector';
 
 const drawerWidth = 240;
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });

@@ -2,9 +2,6 @@ import Post from '../interfaces/post';
 import MitamaLab from '../layouts/MitamaLab';
 import { getAllPosts } from '../lib/api';
 import {
-  Avatar,
-  Button,
-  CardHeader,
   CardMedia,
   Container,
   Divider,
@@ -12,13 +9,10 @@ import {
   Paper,
   Typography,
 } from '@mui/material';
-import { red } from '@mui/material/colors';
 import { styled } from '@mui/material/styles';
+import { GetStaticProps, InferGetStaticPropsType } from 'next';
+import PostType from '../interfaces/post';
 import Link from 'next/link';
-
-type Props = {
-  allPosts: Post[];
-};
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.background.paper,
@@ -28,27 +22,18 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-const PostCard = ({ title, excerpt, slug, coverImage }: Post) => {
+const PostCard = ({ slug, title, excerpt, coverImage }: Post) => {
   return (
-    <Item sx={{ minHeight: 'lg' }}>
-      <CardHeader
-        avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="author">
-            M
-          </Avatar>
-        }
-        title={title}
-      />
-      <CardMedia component="img" image={coverImage} alt={title} />
-      <Typography>{excerpt}</Typography>
+    <Item sx={{ minHeight: 300 }}>
       <Link href={`/posts/${slug}`}>
-        <Button size="small">Read More</Button>
+        <CardMedia component="img" image={coverImage} alt={title} sx={{ height: 200 }} />
       </Link>
+      <Typography>{excerpt}</Typography>
     </Item>
   );
 };
 
-export default function Blog({ allPosts }: Props) {
+export default function Blog({ allPosts }: InferGetStaticPropsType<typeof getStaticProps>) {
   const heroPost = allPosts[0];
 
   if (heroPost === undefined) {
@@ -87,11 +72,11 @@ const PostProperties = [
   'content',
 ] as const;
 
-export const getStaticProps = async ({ locale }: { locale: string }) => {
-  const allPosts = getAllPosts<typeof PostProperties>(locale, PostProperties).sort((p1, p2) =>
+export const getStaticProps: GetStaticProps<{ allPosts: PostType[] }> = async ({ locale }) => {
+  const allPosts = getAllPosts<typeof PostProperties>(locale || 'ja', PostProperties).sort((p1, p2) =>
     p1.date < p2.date ? 1 : -1,
-  );
-
+  )
+  
   return {
     props: { allPosts },
   };
