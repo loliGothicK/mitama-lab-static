@@ -1,17 +1,10 @@
 import Post from '../interfaces/post';
+import PostType from '../interfaces/post';
 import MitamaLab from '../layouts/MitamaLab';
 import { getAllPosts } from '../lib/api';
-import {
-  CardMedia,
-  Container,
-  Divider,
-  Grid,
-  Paper,
-  Typography,
-} from '@mui/material';
+import { CardMedia, Container, Divider, Grid, Paper, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
-import PostType from '../interfaces/post';
 import Link from 'next/link';
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -73,10 +66,10 @@ const PostProperties = [
 ] as const;
 
 export const getStaticProps: GetStaticProps<{ allPosts: PostType[] }> = async ({ locale }) => {
-  const allPosts = getAllPosts<typeof PostProperties>(locale || 'ja', PostProperties).sort((p1, p2) =>
-    p1.date < p2.date ? 1 : -1,
-  )
-  
+  const allPosts = getAllPosts<typeof PostProperties>(locale || 'ja', PostProperties).sort(
+    (p1, p2) => (p1.date < p2.date ? 1 : -1),
+  );
+
   return {
     props: { allPosts },
   };
