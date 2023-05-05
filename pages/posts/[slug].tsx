@@ -3,24 +3,27 @@ import MitamaLab from '../../layouts/MitamaLab';
 import { getAllPosts, getPostBySlug } from '../../lib/api';
 import { CurrentHead } from '../../recoil/TocSelector';
 import { tocAtom } from '../../recoil/toc';
+import TwitterIcon from '@mui/icons-material/Twitter';
 import {
   Container,
   Divider,
+  Stack,
   Step,
   StepContent,
   StepLabel,
   Stepper,
   Typography,
 } from '@mui/material';
+import { Link as MuiLink } from '@mui/material';
 import Box from '@mui/material/Box';
 import Grid2 from '@mui/material/Unstable_Grid2';
 import ErrorPage from 'next/error';
 import Head from 'next/head';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { PropsWithChildren, useMemo } from 'react';
 import { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
+import { TwitterShareButton } from 'react-share';
 import StickyBox from 'react-sticky-box';
 import { useRecoilState, useRecoilValue } from 'recoil';
 import rehypeParse from 'rehype-parse';
@@ -105,9 +108,9 @@ const SideToc = ({ toc }: { toc: Toc }) => {
         return (
           <Step key={item.title}>
             <StepLabel>
-              <Link href={`#${item.id}`}>
+              <MuiLink href={`#${item.id}`} underline={'none'}>
                 <Typography variant="caption">{item.title}</Typography>
-              </Link>
+              </MuiLink>
             </StepLabel>
             {item.children !== undefined ? (
               <StepContent>
@@ -171,12 +174,18 @@ export default function Post({ post, toc }: Props) {
                 </Grid2>
                 <Grid2 xs={2}>
                   <StickyBox offsetTop={100}>
+                    <TwitterShareButton
+                      title={post.title}
+                      via={'mitama_rs'}
+                      url={`https://www.mitama.io/${router.asPath}`}
+                    >
+                      <Stack direction={'row'}>
+                        <TwitterIcon />
+                        <Typography>{'share'}</Typography>
+                      </Stack>
+                    </TwitterShareButton>
                     <Box sx={{ display: 'flex' }}>
-                      <Box
-                        component="nav"
-                        sx={{ flexShrink: { sm: 0 } }}
-                        aria-label="table of contents"
-                      >
+                      <Box component="nav" sx={{ flexShrink: { sm: 0 } }}>
                         <SideToc toc={toc} />
                       </Box>
                     </Box>
