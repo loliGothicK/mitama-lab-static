@@ -2629,9 +2629,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@remix-run/dev@npm:@vercel/remix-run-dev@1.16.0":
-  version: 1.16.0
-  resolution: "@vercel/remix-run-dev@npm:1.16.0"
+"@remix-run/dev@npm:@vercel/remix-run-dev@1.16.0-patch.1":
+  version: 1.16.0-patch.1
+  resolution: "@vercel/remix-run-dev@npm:1.16.0-patch.1"
   dependencies:
     "@babel/core": ^7.18.6
     "@babel/generator": ^7.18.6
@@ -2692,7 +2692,7 @@ __metadata:
       optional: true
   bin:
     remix: dist/cli.js
-  checksum: d65e4c54042cd6ed8f6ff770b5d3462d49752dcc01c4eeef5b2d7427af94dbebbf14f9e48c6fca06cec3ab9b77381ad09c2d7326b53a10c7977f18acec0fa7c8
+  checksum: d05f1d5fe31faca41cf25d6c1866a3fc2d871667a4a19e7abd24e9cead51f77798a83d61c894821cb0cd0fca158080f0aafc952f541ca2f3558e151245ad28e7
   languageName: node
   linkType: hard
 
@@ -3424,18 +3424,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/remix-builder@npm:1.8.7":
-  version: 1.8.7
-  resolution: "@vercel/remix-builder@npm:1.8.7"
+"@vercel/remix-builder@npm:1.8.8":
+  version: 1.8.8
+  resolution: "@vercel/remix-builder@npm:1.8.8"
   dependencies:
-    "@remix-run/dev": "npm:@vercel/remix-run-dev@1.16.0"
+    "@remix-run/dev": "npm:@vercel/remix-run-dev@1.16.0-patch.1"
     "@vercel/build-utils": 6.7.2
     "@vercel/nft": 0.22.5
     "@vercel/static-config": 2.0.17
     path-to-regexp: 6.2.1
     semver: 7.3.8
     ts-morph: 12.0.0
-  checksum: 8375f95f4b6ba15d21e4afac3a9385ecf561c187512e5ddc3c775d33e7d4fdf597460c0a47a9167b3f912a2fe7813bc76e9983e476c824ded2e37da63a0706ca
+  checksum: 8a9c0aa188723b22f918918c3a55379f87c4036980636bed982ce8dcd891c0b6444fef57d0fc1bf91a7132a5d16416d27fc4be41a2c7a2bc59c9fb34c1857b60
   languageName: node
   linkType: hard
 
@@ -11929,8 +11929,8 @@ eslint-config-next@latest:
   linkType: hard
 
 "vercel@npm:^29.0.0":
-  version: 29.2.0
-  resolution: "vercel@npm:29.2.0"
+  version: 29.2.1
+  resolution: "vercel@npm:29.2.1"
   dependencies:
     "@vercel/build-utils": 6.7.2
     "@vercel/go": 2.5.1
@@ -11939,13 +11939,13 @@ eslint-config-next@latest:
     "@vercel/node": 2.14.2
     "@vercel/python": 3.1.60
     "@vercel/redwood": 1.1.15
-    "@vercel/remix-builder": 1.8.7
+    "@vercel/remix-builder": 1.8.8
     "@vercel/ruby": 1.3.76
     "@vercel/static-build": 1.3.30
   bin:
     vc: dist/index.js
     vercel: dist/index.js
-  checksum: 2e71e4139f8d578f3ecdde5ddf150f58884bf107c73ebca9f3721fa4d657614258058ccc1291dc95f989132dc59608616dc66ca0b48d356489aab421c2f5ac30
+  checksum: fe6d15a22f86db10384485ed535f1631be28a6d664c3a298188f80ef0f694b1eb8529a98cb278d615dc162b1523e16795bfd93dfdafae83e2b819a25dae031ad
   languageName: node
   linkType: hard
 
