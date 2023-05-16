@@ -39,7 +39,7 @@
     "recoil": "^0.7.7",
     "rehype-parse": "^8.0.4",
     "rehype-react": "^7.2.0",
-    "remark": "14.0.2",
+    "remark": "14.0.3",
     "remark-html": "15.0.2",
     "zenn-content-css": "0.1.143",
     "zenn-embed-elements": "0.1.143",
