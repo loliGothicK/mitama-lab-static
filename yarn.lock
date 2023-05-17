@@ -11940,8 +11940,8 @@ eslint-config-next@latest:
   linkType: hard
 
 "vercel@npm:^29.0.0":
-  version: 29.3.0
-  resolution: "vercel@npm:29.3.0"
+  version: 29.3.2
+  resolution: "vercel@npm:29.3.2"
   dependencies:
     "@vercel/build-utils": 6.7.2
     "@vercel/go": 2.5.1
@@ -11956,7 +11956,7 @@ eslint-config-next@latest:
   bin:
     vc: dist/index.js
     vercel: dist/index.js
-  checksum: 821d52ccdfced526a75afe47552c58d26201a6b401e2632fc6c5e47d3b3813a4726498fdc84a717f560eb5b5e1c61d02771e99b30c08355636b640d91283a0b6
+  checksum: 88b3e71fa8a526ce8bda8a9b56a7eaedbc7fac4b047099de5eb75e0f604a62a45537807a4ebb61c77aa153154f4efa0825ab2766ecb9cd637c3e7dba3cd514df
   languageName: node
   linkType: hard
 
