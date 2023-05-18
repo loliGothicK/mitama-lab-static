@@ -170,7 +170,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:^7.18.6, @babel/core@npm:^7.20.7":
+"@babel/core@npm:^7.20.7":
   version: 7.21.5
   resolution: "@babel/core@npm:7.21.5"
   dependencies:
@@ -193,6 +193,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/core@npm:^7.21.8":
+  version: 7.21.8
+  resolution: "@babel/core@npm:7.21.8"
+  dependencies:
+    "@ampproject/remapping": ^2.2.0
+    "@babel/code-frame": ^7.21.4
+    "@babel/generator": ^7.21.5
+    "@babel/helper-compilation-targets": ^7.21.5
+    "@babel/helper-module-transforms": ^7.21.5
+    "@babel/helpers": ^7.21.5
+    "@babel/parser": ^7.21.8
+    "@babel/template": ^7.20.7
+    "@babel/traverse": ^7.21.5
+    "@babel/types": ^7.21.5
+    convert-source-map: ^1.7.0
+    debug: ^4.1.0
+    gensync: ^1.0.0-beta.2
+    json5: ^2.2.2
+    semver: ^6.3.0
+  checksum: f28118447355af2a90bd340e2e60699f94c8020517eba9b71bf8ebff62fa9e00d63f076e033f9dfb97548053ad62ada45fafb0d96584b1a90e8aef5a3b8241b1
+  languageName: node
+  linkType: hard
+
 "@babel/generator@npm:7.17.7":
   version: 7.17.7
   resolution: "@babel/generator@npm:7.17.7"
@@ -204,7 +227,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/generator@npm:^7.17.3, @babel/generator@npm:^7.18.6, @babel/generator@npm:^7.21.5":
+"@babel/generator@npm:^7.17.3, @babel/generator@npm:^7.21.5":
   version: 7.21.5
   resolution: "@babel/generator@npm:7.21.5"
   dependencies:
@@ -483,12 +506,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/parser@npm:^7.17.3, @babel/parser@npm:^7.18.6, @babel/parser@npm:^7.20.5, @babel/parser@npm:^7.20.7, @babel/parser@npm:^7.21.5":
+"@babel/parser@npm:^7.17.3, @babel/parser@npm:^7.20.5, @babel/parser@npm:^7.20.7, @babel/parser@npm:^7.21.5":
   version: 7.21.5
   resolution: "@babel/parser@npm:7.21.5"
   bin:
     parser: ./bin/babel-parser.js
   checksum: c7ec0dae795f2a43885fdd5c1c53c7f11b3428628ae82ebe1e1537cb3d13e25e7993549e026662a3e05dcc743b595f82b25f0a49ef9155459a9a424eedb7e2b0
+  languageName: node
+  linkType: hard
+
+"@babel/parser@npm:^7.21.8":
+  version: 7.21.8
+  resolution: "@babel/parser@npm:7.21.8"
+  bin:
+    parser: ./bin/babel-parser.js
+  checksum: 1b9a820fedfb6ef179e6ffa1dbc080808882949dec68340a616da2aa354af66ea2886bd68e61bd444d270aa0b24ad6273e3cfaf17d6878c34bf2521becacb353
   languageName: node
   linkType: hard
 
@@ -793,7 +825,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-syntax-jsx@npm:^7.18.6, @babel/plugin-syntax-jsx@npm:^7.21.4":
+"@babel/plugin-syntax-jsx@npm:^7.21.4":
   version: 7.21.4
   resolution: "@babel/plugin-syntax-jsx@npm:7.21.4"
   dependencies:
@@ -892,7 +924,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-syntax-typescript@npm:^7.20.0":
+"@babel/plugin-syntax-typescript@npm:^7.20.0, @babel/plugin-syntax-typescript@npm:^7.21.4":
   version: 7.21.4
   resolution: "@babel/plugin-syntax-typescript@npm:7.21.4"
   dependencies:
@@ -1296,7 +1328,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-env@npm:^7.18.6":
+"@babel/preset-env@npm:^7.21.5":
   version: 7.21.5
   resolution: "@babel/preset-env@npm:7.21.5"
   dependencies:
@@ -1397,7 +1429,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-typescript@npm:^7.18.6":
+"@babel/preset-typescript@npm:^7.21.5":
   version: 7.21.5
   resolution: "@babel/preset-typescript@npm:7.21.5"
   dependencies:
@@ -1475,7 +1507,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/traverse@npm:^7.18.6, @babel/traverse@npm:^7.20.5, @babel/traverse@npm:^7.21.5":
+"@babel/traverse@npm:^7.20.5, @babel/traverse@npm:^7.21.5":
   version: 7.21.5
   resolution: "@babel/traverse@npm:7.21.5"
   dependencies:
@@ -1503,7 +1535,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/types@npm:^7.17.0, @babel/types@npm:^7.18.6, @babel/types@npm:^7.18.9, @babel/types@npm:^7.20.0, @babel/types@npm:^7.20.2, @babel/types@npm:^7.20.5, @babel/types@npm:^7.20.7, @babel/types@npm:^7.21.0, @babel/types@npm:^7.21.4, @babel/types@npm:^7.21.5, @babel/types@npm:^7.4.4, @babel/types@npm:^7.8.3":
+"@babel/types@npm:^7.17.0, @babel/types@npm:^7.18.6, @babel/types@npm:^7.18.9, @babel/types@npm:^7.20.0, @babel/types@npm:^7.20.5, @babel/types@npm:^7.20.7, @babel/types@npm:^7.21.0, @babel/types@npm:^7.21.4, @babel/types@npm:^7.21.5, @babel/types@npm:^7.4.4, @babel/types@npm:^7.8.3":
   version: 7.21.5
   resolution: "@babel/types@npm:7.21.5"
   dependencies:
@@ -2629,21 +2661,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@remix-run/dev@npm:@vercel/remix-run-dev@1.16.0-patch.1":
-  version: 1.16.0-patch.1
-  resolution: "@vercel/remix-run-dev@npm:1.16.0-patch.1"
+"@remix-run/dev@npm:@vercel/remix-run-dev@1.16.1":
+  version: 1.16.1
+  resolution: "@vercel/remix-run-dev@npm:1.16.1"
   dependencies:
-    "@babel/core": ^7.18.6
-    "@babel/generator": ^7.18.6
-    "@babel/parser": ^7.18.6
-    "@babel/plugin-syntax-jsx": ^7.18.6
-    "@babel/plugin-syntax-typescript": ^7.20.0
-    "@babel/preset-env": ^7.18.6
-    "@babel/preset-typescript": ^7.18.6
-    "@babel/traverse": ^7.18.6
-    "@babel/types": ^7.20.2
+    "@babel/core": ^7.21.8
+    "@babel/generator": ^7.21.5
+    "@babel/parser": ^7.21.8
+    "@babel/plugin-syntax-jsx": ^7.21.4
+    "@babel/plugin-syntax-typescript": ^7.21.4
+    "@babel/preset-env": ^7.21.5
+    "@babel/preset-typescript": ^7.21.5
+    "@babel/traverse": ^7.21.5
+    "@babel/types": ^7.21.5
     "@npmcli/package-json": ^2.0.0
-    "@remix-run/server-runtime": 1.16.0
+    "@remix-run/server-runtime": 1.16.1
     "@vanilla-extract/integration": ^6.2.0
     arg: ^5.0.1
     cacache: ^15.0.5
@@ -2686,33 +2718,33 @@ __metadata:
     ws: ^7.4.5
     xdm: ^2.0.0
   peerDependencies:
-    "@remix-run/serve": ^1.16.0
+    "@remix-run/serve": ^1.16.1
   peerDependenciesMeta:
     "@remix-run/serve":
       optional: true
   bin:
     remix: dist/cli.js
-  checksum: d05f1d5fe31faca41cf25d6c1866a3fc2d871667a4a19e7abd24e9cead51f77798a83d61c894821cb0cd0fca158080f0aafc952f541ca2f3558e151245ad28e7
+  checksum: b297d6862a57493e2217fe4602f628dfd456b69330cf2673eb326d23b7bc4e5837148b8b7ffb0eb170086279a3448d076b4d48ce6c4fcbefb5818ea4ac3720a2
   languageName: node
   linkType: hard
 
-"@remix-run/router@npm:1.6.0":
-  version: 1.6.0
-  resolution: "@remix-run/router@npm:1.6.0"
-  checksum: 9f08f20500b2fc9d689c06c3c25504baf2ece861a9f4d0c49ba043ef4040a96b85c15a57a1c11377e64bf78b727ce8fb58b300345642efb05a75d49e4b638344
+"@remix-run/router@npm:1.6.2":
+  version: 1.6.2
+  resolution: "@remix-run/router@npm:1.6.2"
+  checksum: 5969d313bff6ba5c75917910090cebafda84b9d3b4b453fae6b3d60fea9f938078578ffca769c532ab7ce252cd4a207b78d1024d7c727ab80dd572e62fd3b3f2
   languageName: node
   linkType: hard
 
-"@remix-run/server-runtime@npm:1.16.0":
-  version: 1.16.0
-  resolution: "@remix-run/server-runtime@npm:1.16.0"
+"@remix-run/server-runtime@npm:1.16.1":
+  version: 1.16.1
+  resolution: "@remix-run/server-runtime@npm:1.16.1"
   dependencies:
-    "@remix-run/router": 1.6.0
+    "@remix-run/router": 1.6.2
     "@web3-storage/multipart-parser": ^1.0.0
     cookie: ^0.4.1
     set-cookie-parser: ^2.4.8
     source-map: ^0.7.3
-  checksum: c533f075fce49fe2710bef3be050d1121777617aded2b5cf8d2e388e4814f75e8efa8b706db440675f6b5c5dfc63010f903935d813ed521b4ca1c76a6fbf178c
+  checksum: 797b0d839e53d2d0de7259d744beff17b93d9a424253efdd69de7798cb5b0a7fb7334ce3764faa44d2c23f9d65fc59477773e5246e59c81470c6e9c597928314
   languageName: node
   linkType: hard
 
@@ -3343,10 +3375,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/next@npm:3.8.3":
-  version: 3.8.3
-  resolution: "@vercel/next@npm:3.8.3"
-  checksum: 6bc88d53ffdc35f3564065a0c88fa0af999e767663126c970c8c5dd20f7268d2618d69f7032afc805400b8785898cc50ee4be5f966b929fe20766ad9fff7c051
+"@vercel/next@npm:3.8.4":
+  version: 3.8.4
+  resolution: "@vercel/next@npm:3.8.4"
+  checksum: 414260f40e69c9dfdbb2849a83d5c8c5ce08d4f4bc31023c986ad13d530f6ee2107038d1e872e7d47680efeaf32d6ac7e10f275608d9e4b54893cc7d2ea72c1e
   languageName: node
   linkType: hard
 
@@ -3413,18 +3445,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/remix-builder@npm:1.8.8":
-  version: 1.8.8
-  resolution: "@vercel/remix-builder@npm:1.8.8"
+"@vercel/remix-builder@npm:1.8.9":
+  version: 1.8.9
+  resolution: "@vercel/remix-builder@npm:1.8.9"
   dependencies:
-    "@remix-run/dev": "npm:@vercel/remix-run-dev@1.16.0-patch.1"
+    "@remix-run/dev": "npm:@vercel/remix-run-dev@1.16.1"
     "@vercel/build-utils": 6.7.2
     "@vercel/nft": 0.22.5
     "@vercel/static-config": 2.0.17
     path-to-regexp: 6.2.1
     semver: 7.3.8
     ts-morph: 12.0.0
-  checksum: 8a9c0aa188723b22f918918c3a55379f87c4036980636bed982ce8dcd891c0b6444fef57d0fc1bf91a7132a5d16416d27fc4be41a2c7a2bc59c9fb34c1857b60
+  checksum: 2a2349e9729bdafdee94d2c27fa9a69af8411daefc0df024b8ddf19ddd85c7c1597b7b1293e980b6b8ea7f01de4c427c22a09d7143ce5e1f95297cd19e655a81
   languageName: node
   linkType: hard
 
@@ -11929,23 +11961,23 @@ eslint-config-next@latest:
   linkType: hard
 
 "vercel@npm:^29.0.0":
-  version: 29.3.3
-  resolution: "vercel@npm:29.3.3"
+  version: 29.3.4
+  resolution: "vercel@npm:29.3.4"
   dependencies:
     "@vercel/build-utils": 6.7.2
     "@vercel/go": 2.5.1
     "@vercel/hydrogen": 0.0.64
-    "@vercel/next": 3.8.3
+    "@vercel/next": 3.8.4
     "@vercel/node": 2.14.2
     "@vercel/python": 3.1.60
     "@vercel/redwood": 1.1.15
-    "@vercel/remix-builder": 1.8.8
+    "@vercel/remix-builder": 1.8.9
     "@vercel/ruby": 1.3.76
     "@vercel/static-build": 1.3.30
   bin:
     vc: dist/index.js
     vercel: dist/index.js
-  checksum: 0a164e4b0a4bb77f870f71162bc306c536556b982666affc1557f338f70f450175af36d35054af5d6a97c4d41fdef3b9b802538a38510b1a74ac0bf350fe4720
+  checksum: ab0d510f9faff0bdadb76b9e627a9b7bb0413cd8bbd5582d13594e6dfaa40d9f40591be4b008a5a5758ab05a3e8c2dfb2a5bc39bfea15d741e20fcc89594193a
   languageName: node
   linkType: hard
 
