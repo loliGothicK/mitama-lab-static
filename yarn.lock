@@ -2164,10 +2164,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fontsource/roboto@npm:4.5.8":
-  version: 4.5.8
-  resolution: "@fontsource/roboto@npm:4.5.8"
-  checksum: 460b6de2c9f7a172192c3f5bdd3aa11f78f0b6660dca9dc2b9d8207272b50c55b5a8f2da68e11e7fbaf44c7d3cf4191030eecce9def79fab75d4cc1de39754e2
+"@fontsource/roboto@npm:5.0.0":
+  version: 5.0.0
+  resolution: "@fontsource/roboto@npm:5.0.0"
+  checksum: 381e8d6be2348295e11614942e6ec6618220463f863a27f3202ca8ee869c134b5e61a302ceee74f6349a8a25ad658420f16fd388a673ad2f31a78366d4e63ae6
   languageName: node
   linkType: hard
 
@@ -8919,7 +8919,7 @@ eslint-config-next@latest:
     "@emotion/react": 11.11.0
     "@emotion/server": 11.11.0
     "@emotion/styled": 11.11.0
-    "@fontsource/roboto": 4.5.8
+    "@fontsource/roboto": 5.0.0
     "@mui/icons-material": 5.11.16
     "@mui/material": 5.13.1
     "@next/eslint-plugin-next": 13.4.3
