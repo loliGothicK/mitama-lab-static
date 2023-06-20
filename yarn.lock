@@ -3591,14 +3591,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"algoliasearch-helper@npm:^3.13.0":
-  version: 3.13.0
-  resolution: "algoliasearch-helper@npm:3.13.0"
+"algoliasearch-helper@npm:^3.13.2":
+  version: 3.13.2
+  resolution: "algoliasearch-helper@npm:3.13.2"
   dependencies:
     "@algolia/events": ^4.0.1
   peerDependencies:
     algoliasearch: ">= 3.1 < 6"
-  checksum: a2ae225ab6716ea7c1a9fca763b7092114f11e7eb391d537b2e04756a3fb91df96917ea0929024fbc9622013aaceedc06f309fa746cb3d850c93bee9f77d8b6e
+  checksum: 75aa5731edcd6397be9072e8a2c6abb4eda7e6a0ffd89a375b46caaf52456469a3ae9701413dc459c039586a182e3ae18b0ba7466d65ea4e90c8200342b2f1ba
   languageName: node
   linkType: hard
 
@@ -10110,36 +10110,36 @@ eslint-config-next@latest:
   languageName: node
   linkType: hard
 
-"react-instantsearch-core@npm:6.40.0, react-instantsearch-core@npm:^6.39.1":
-  version: 6.40.0
-  resolution: "react-instantsearch-core@npm:6.40.0"
+"react-instantsearch-core@npm:6.40.1, react-instantsearch-core@npm:^6.39.1":
+  version: 6.40.1
+  resolution: "react-instantsearch-core@npm:6.40.1"
   dependencies:
     "@babel/runtime": ^7.1.2
-    algoliasearch-helper: ^3.13.0
+    algoliasearch-helper: ^3.13.2
     prop-types: ^15.6.2
     react-fast-compare: ^3.0.0
   peerDependencies:
     algoliasearch: ">= 3.1 < 5"
     react: ">= 16.3.0 < 19"
-  checksum: 331ace5a154aa6fb372db9ff6521572efc828347b298eee228190e778df247a844255962c363b9c5600a27444ec903e34bf1bbcef3ebbe8444df76d32098beae
+  checksum: 6ed06ea658bb0b09631fbc139f5d9742c1ea054f4ee81ec5151d69203bc1e1b7354c71a5d5cf76d794cf53204aa9fa4f533484ca7b58e58ac97a9d879f1beabf
   languageName: node
   linkType: hard
 
 "react-instantsearch-dom@npm:^6.39.1":
-  version: 6.40.0
-  resolution: "react-instantsearch-dom@npm:6.40.0"
+  version: 6.40.1
+  resolution: "react-instantsearch-dom@npm:6.40.1"
   dependencies:
     "@babel/runtime": ^7.1.2
-    algoliasearch-helper: ^3.13.0
+    algoliasearch-helper: ^3.13.2
     classnames: ^2.2.5
     prop-types: ^15.6.2
     react-fast-compare: ^3.0.0
-    react-instantsearch-core: 6.40.0
+    react-instantsearch-core: 6.40.1
   peerDependencies:
     algoliasearch: ">= 3.1 < 5"
     react: ">= 16.3.0 < 19"
     react-dom: ">= 16.3.0 < 19"
-  checksum: 588653560ef161ae653dcaea8aae5c190143824160d378d00d85fe05a2b7f520f994e0d505a989c971d77f4dfef313b266f367c700156d913600ffe7e26ce32c
+  checksum: e7e249b77974dd585b3cb49efe2b150e6cb241ea474ae039f5f2aaf5fda5cc9e50e714675b0f4e34d4612a4a26f561c169549134f5290cf94ffa7b9194d890cd
   languageName: node
   linkType: hard
 
