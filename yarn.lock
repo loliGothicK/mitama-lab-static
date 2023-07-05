@@ -8944,7 +8944,7 @@ eslint-config-next@latest:
     next: 13.4.8
     next-i18next: ^14.0.0
     next-language-detector: ^1.0.2
-    prettier: 2.8.8
+    prettier: 3.0.0
     react: 18.2.0
     react-dom: 18.2.0
     react-i18next: ^13.0.0
@@ -9908,7 +9908,16 @@ eslint-config-next@latest:
   languageName: node
   linkType: hard
 
-"prettier@npm:2.8.8, prettier@npm:^2.7.1":
+"prettier@npm:3.0.0":
+  version: 3.0.0
+  resolution: "prettier@npm:3.0.0"
+  bin:
+    prettier: bin/prettier.cjs
+  checksum: 6a832876a1552dc58330d2467874e5a0b46b9ccbfc5d3531eb69d15684743e7f83dc9fbd202db6270446deba9c82b79d24383d09924c462b457136a759425e33
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^2.7.1":
   version: 2.8.8
   resolution: "prettier@npm:2.8.8"
   bin:
