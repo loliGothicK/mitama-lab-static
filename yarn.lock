@@ -7127,11 +7127,11 @@ eslint-config-next@latest:
   linkType: hard
 
 "i18next@npm:^23.0.0":
-  version: 23.2.7
-  resolution: "i18next@npm:23.2.7"
+  version: 23.2.10
+  resolution: "i18next@npm:23.2.10"
   dependencies:
     "@babel/runtime": ^7.22.5
-  checksum: b5fdf0d7a8bda38fde39b5968fe637ccc22e7d2157f729008b4d34fb8474df93d82bcbdfabe51bf1286176669409aad3fe68b0934cadeb9f9b95f45ddf74fc79
+  checksum: 68a0189dc54631a37e1ead81727cdf91ab3fb27b224a0d6f9ff91ea8caae931d068898c778f0bdf9eb70f4bbe455657531600b22f76cc5610fbb33d5f6ad5261
   languageName: node
   linkType: hard
 
