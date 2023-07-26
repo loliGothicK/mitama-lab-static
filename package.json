@@ -51,7 +51,7 @@
     "@tsconfig/strictest": "^2.0.1",
     "@types/gtag.js": "0.0.12",
     "@types/node": "18.17.1",
-    "@types/react": "18.2.16",
+    "@types/react": "18.2.17",
     "@types/react-dom": "18.2.7",
     "@types/react-instantsearch-dom": "^6.12.3",
     "@types/remove-markdown": "^0.3.1",
