@@ -279,7 +279,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.1.2, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.14.6, @babel/runtime@npm:^7.18.3, @babel/runtime@npm:^7.20.13, @babel/runtime@npm:^7.20.7, @babel/runtime@npm:^7.21.0, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.8.7":
+"@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.14.6, @babel/runtime@npm:^7.18.3, @babel/runtime@npm:^7.20.13, @babel/runtime@npm:^7.20.7, @babel/runtime@npm:^7.21.0, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.8.7":
   version: 7.21.5
   resolution: "@babel/runtime@npm:7.21.5"
   dependencies:
@@ -1727,17 +1727,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"algoliasearch-helper@npm:3.14.0":
-  version: 3.14.0
-  resolution: "algoliasearch-helper@npm:3.14.0"
-  dependencies:
-    "@algolia/events": ^4.0.1
-  peerDependencies:
-    algoliasearch: ">= 3.1 < 6"
-  checksum: bfda2125432eb6807241bb1ebfeb9b43ece456a759e160c28f34ef50c53eb763428fe7276a9e6b32ae70eba7346f89a1251524b5c8cfebe3bce45abe44af669d
-  languageName: node
-  linkType: hard
-
 "algoliasearch-helper@npm:>=3":
   version: 3.12.0
   resolution: "algoliasearch-helper@npm:3.12.0"
@@ -1749,7 +1738,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"algoliasearch@npm:>=4, algoliasearch@npm:^4.17.0":
+"algoliasearch@npm:>=4":
   version: 4.19.1
   resolution: "algoliasearch@npm:4.19.1"
   dependencies:
@@ -2148,7 +2137,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"classnames@npm:2.3.2, classnames@npm:^2.2.5, classnames@npm:^2.3.2":
+"classnames@npm:2.3.2, classnames@npm:^2.3.2":
   version: 2.3.2
   resolution: "classnames@npm:2.3.2"
   checksum: 2c62199789618d95545c872787137262e741f9db13328e216b093eea91c85ef2bfb152c1f9e63027204e2559a006a92eb74147d46c800a9f96297ae1d9f96f4e
@@ -5034,7 +5023,6 @@ eslint-config-next@latest:
     "@types/react-dom": 18.2.7
     "@types/react-instantsearch-dom": ^6.12.3
     "@types/remove-markdown": ^0.3.1
-    algoliasearch: ^4.17.0
     classnames: 2.3.2
     date-fns: 2.30.0
     eslint: 8.46.0
@@ -5049,8 +5037,6 @@ eslint-config-next@latest:
     react: 18.2.0
     react-dom: 18.2.0
     react-i18next: ^13.0.0
-    react-instantsearch-core: ^6.39.1
-    react-instantsearch-dom: ^6.39.1
     react-intersection-observer: ^9.4.3
     react-share: ^4.4.1
     react-sticky-box: ^2.0.4
@@ -5664,13 +5650,6 @@ eslint-config-next@latest:
   languageName: node
   linkType: hard
 
-"react-fast-compare@npm:^3.0.0":
-  version: 3.2.1
-  resolution: "react-fast-compare@npm:3.2.1"
-  checksum: 209b4dc3a9cc79c074a26ec020459efd8be279accaca612db2edb8ada2a28849ea51cf3d246fc0fafb344949b93a63a43798b6c1787559b0a128571883fe6859
-  languageName: node
-  linkType: hard
-
 "react-i18next@npm:^13.0.0":
   version: 13.0.3
   resolution: "react-i18next@npm:13.0.3"
@@ -5686,39 +5665,6 @@ eslint-config-next@latest:
     react-native:
       optional: true
   checksum: 5b23c517204ac7ce66191368b185bb278c34e75778714ffdae84dd4672fdaf8c500c7965cb87508c686de55ac7c8853f05134ee61aa21add1b8c8e02bcc0a0a4
-  languageName: node
-  linkType: hard
-
-"react-instantsearch-core@npm:6.40.4, react-instantsearch-core@npm:^6.39.1":
-  version: 6.40.4
-  resolution: "react-instantsearch-core@npm:6.40.4"
-  dependencies:
-    "@babel/runtime": ^7.1.2
-    algoliasearch-helper: 3.14.0
-    prop-types: ^15.6.2
-    react-fast-compare: ^3.0.0
-  peerDependencies:
-    algoliasearch: ">= 3.1 < 5"
-    react: ">= 16.3.0 < 19"
-  checksum: 7a49f7ea2b47d7d64406f82c7d8d510b89b6d6ea2c1814762257c802257f49ab0457681a9b7094b10db749d384b42ceabfe864524d0b555ed8712401e29c25ce
-  languageName: node
-  linkType: hard
-
-"react-instantsearch-dom@npm:^6.39.1":
-  version: 6.40.4
-  resolution: "react-instantsearch-dom@npm:6.40.4"
-  dependencies:
-    "@babel/runtime": ^7.1.2
-    algoliasearch-helper: 3.14.0
-    classnames: ^2.2.5
-    prop-types: ^15.6.2
-    react-fast-compare: ^3.0.0
-    react-instantsearch-core: 6.40.4
-  peerDependencies:
-    algoliasearch: ">= 3.1 < 5"
-    react: ">= 16.3.0 < 19"
-    react-dom: ">= 16.3.0 < 19"
-  checksum: 401174b5a5aa9362a9aef17c8bb120d85b69e19d9e63ed193b08534e6695b306bd768801e7be1ed36d4f7d973a2efb6eb49d8a9fc8bb81936da89fcdd2a2d603
   languageName: node
   linkType: hard
 
@@ -6706,21 +6652,21 @@ eslint-config-next@latest:
 
 "typescript@patch:typescript@4.9.5#~builtin<compat/typescript>":
   version: 4.9.5
-  resolution: "typescript@patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=289587"
+  resolution: "typescript@patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 1f8f3b6aaea19f0f67cba79057674ba580438a7db55057eb89cc06950483c5d632115c14077f6663ea76fd09fce3c190e6414bb98582ec80aa5a4eaf345d5b68
+  checksum: ab417a2f398380c90a6cf5a5f74badd17866adf57f1165617d6a551f059c3ba0a3e4da0d147b3ac5681db9ac76a303c5876394b13b3de75fdd5b1eaa06181c9d
   languageName: node
   linkType: hard
 
 "typescript@patch:typescript@5.1.6#~builtin<compat/typescript>":
   version: 5.1.6
-  resolution: "typescript@patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"
+  resolution: "typescript@patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=85af82"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: f53bfe97f7c8b2b6d23cf572750d4e7d1e0c5fff1c36d859d0ec84556a827b8785077bc27676bf7e71fae538e517c3ecc0f37e7f593be913d884805d931bc8be
+  checksum: 21e88b0a0c0226f9cb9fd25b9626fb05b4c0f3fddac521844a13e1f30beb8f14e90bd409a9ac43c812c5946d714d6e0dee12d5d02dfc1c562c5aacfa1f49b606
   languageName: node
   linkType: hard
 
