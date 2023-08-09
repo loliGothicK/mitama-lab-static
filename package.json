@@ -64,7 +64,7 @@
   },
   "packageManager": "yarn@3.6.1",
   "volta": {
-    "node": "18.17.0"
+    "node": "18.17.1"
   },
   "description": "This is a [Next.js](https://nextjs.org/) Static Site for Mitama Lab.",
   "main": ".prettierrc.js",
