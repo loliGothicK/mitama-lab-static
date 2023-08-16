@@ -5783,14 +5783,14 @@ eslint-config-next@latest:
   linkType: hard
 
 "rehype-parse@npm:^8.0.4":
-  version: 8.0.4
-  resolution: "rehype-parse@npm:8.0.4"
+  version: 8.0.5
+  resolution: "rehype-parse@npm:8.0.5"
   dependencies:
     "@types/hast": ^2.0.0
     hast-util-from-parse5: ^7.0.0
     parse5: ^6.0.0
     unified: ^10.0.0
-  checksum: e678a5f9fa7cb91d5957f5f38bc37bc9fb90b8011a1ed6a90541ba6fff9f243c752c88b7f422cba8f5ba83ccb22942b1825654e8c3040970c703b85a6037efdf
+  checksum: ca41df7ac2f7805348eec547515de2fb3cda42bebf32892ffff21f539385519649179977dcd70e02897f8b0a5a45463d7e9cf8e29e292239cb82f5c9c8f564fe
   languageName: node
   linkType: hard
 
