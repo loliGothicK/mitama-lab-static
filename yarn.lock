@@ -1609,13 +1609,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/static-build@npm:1.3.46":
-  version: 1.3.46
-  resolution: "@vercel/static-build@npm:1.3.46"
+"@vercel/static-build@npm:1.4.0":
+  version: 1.4.0
+  resolution: "@vercel/static-build@npm:1.4.0"
   dependencies:
     "@vercel/gatsby-plugin-vercel-analytics": 1.0.10
     "@vercel/gatsby-plugin-vercel-builder": 1.3.18
-  checksum: 7c94b2f380a36c4e4265aa26837089df2c5cb4742a292d5e222331c4756a6c3abe36e7c927ab9e5d45188a2a1b3ca88aef18261ab40cefb232d9d5bb048d8769
+  checksum: 79343e0c8e38159d28c97e450bb900b7c4f6144f8321518d44fa1d270c7a10d7948015f703d53979757ef5dc16c20247d4549c6c31c75e0ac3472003625eb0bc
   languageName: node
   linkType: hard
 
@@ -6803,8 +6803,8 @@ eslint-config-next@latest:
   linkType: hard
 
 "vercel@npm:^31.0.0":
-  version: 31.3.1
-  resolution: "vercel@npm:31.3.1"
+  version: 31.4.0
+  resolution: "vercel@npm:31.4.0"
   dependencies:
     "@vercel/build-utils": 6.8.3
     "@vercel/go": 2.5.1
@@ -6815,11 +6815,11 @@ eslint-config-next@latest:
     "@vercel/redwood": 1.1.15
     "@vercel/remix-builder": 1.10.1
     "@vercel/ruby": 1.3.76
-    "@vercel/static-build": 1.3.46
+    "@vercel/static-build": 1.4.0
   bin:
     vc: dist/index.js
     vercel: dist/index.js
-  checksum: 4b92563eff3cf745a99837e2400ea9bfc72b24ec0ada8125be3220f5f75f261d8f0d744109bc392135810636d8047abcfcf352d8d602b7b0cb4660f1f9c67183
+  checksum: 466b2cc323b175259dd6a442bb0ad7a5c211be731ab2bf225f80e256b70bc5299e5ca08793e731a55322f7929fc5b7a1d53244ee3279a42bbde8b9babf75f555
   languageName: node
   linkType: hard
 
