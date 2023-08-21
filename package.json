@@ -60,7 +60,7 @@
     "remove-markdown": "^0.5.0",
     "typescript": "5.1.6",
     "typescript-plugin-toml": "0.2.0",
-    "vercel": "^31.0.0"
+    "vercel": "^32.0.0"
   },
   "packageManager": "yarn@3.6.2",
   "volta": {
