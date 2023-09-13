@@ -1507,10 +1507,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/next@npm:4.0.3":
-  version: 4.0.3
-  resolution: "@vercel/next@npm:4.0.3"
-  checksum: 7a93773d4ab488b29bfe1818d1ca7e480ea70c401070c97e42f74d5903defd698c551322329e4e4bf4083e48cc55fb40a75cf8fff05f0ac052674ae700f1d955
+"@vercel/next@npm:4.0.4":
+  version: 4.0.4
+  resolution: "@vercel/next@npm:4.0.4"
+  checksum: 92995f27704bf1d2cc1fedf466060d0f7fbf8bbbdddfd28c5c982e51cc943aed381f58ded9247472c9d0310b319d557ed66f92d2b20df213c55fb1a6318dab0e
   languageName: node
   linkType: hard
 
@@ -1579,14 +1579,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/remix-builder@npm:2.0.4":
-  version: 2.0.4
-  resolution: "@vercel/remix-builder@npm:2.0.4"
+"@vercel/remix-builder@npm:2.0.5":
+  version: 2.0.5
+  resolution: "@vercel/remix-builder@npm:2.0.5"
   dependencies:
     "@vercel/nft": 0.22.5
     "@vercel/static-config": 3.0.0
     ts-morph: 12.0.0
-  checksum: f74658c7db02b6b8c316137ce96ddbd4a1469c66de66e3824ba399ef4c7a6c557bfc6f3b932ea758ea3398c61450ae7976bd39f49128b900f3d24a58cc765a09
+  checksum: 786a80cae6ea77c556d63b817dc5ba67157b742603e6faea911618a9cec41426463d34f6777b92400f3f434b632506fb8971ce5368c10068838cba477b19e72a
   languageName: node
   linkType: hard
 
@@ -6766,23 +6766,23 @@ eslint-config-next@latest:
   linkType: hard
 
 "vercel@npm:^32.0.0":
-  version: 32.2.1
-  resolution: "vercel@npm:32.2.1"
+  version: 32.2.2
+  resolution: "vercel@npm:32.2.2"
   dependencies:
     "@vercel/build-utils": 7.2.0
     "@vercel/go": 3.0.1
     "@vercel/hydrogen": 1.0.1
-    "@vercel/next": 4.0.3
+    "@vercel/next": 4.0.4
     "@vercel/node": 3.0.5
     "@vercel/python": 4.0.1
     "@vercel/redwood": 2.0.2
-    "@vercel/remix-builder": 2.0.4
+    "@vercel/remix-builder": 2.0.5
     "@vercel/ruby": 2.0.2
     "@vercel/static-build": 2.0.5
   bin:
     vc: dist/index.js
     vercel: dist/index.js
-  checksum: 3393afcf0332f47b56a3b90ba0475333499cf10e2aeda7e95fc211493e7fbc24ebda43be99d31a039b758ff8e30cba06cb8d717f30d0524e96fc5e1876df160b
+  checksum: 55df60042bf07c7a0bdf5941a32a017b7b72175c0e99ebb029b71e875fe0aa406acf226d462469032ec7325eff1a8d6d3e9a29351a2089ba22cf080a55464bca
   languageName: node
   linkType: hard
 
