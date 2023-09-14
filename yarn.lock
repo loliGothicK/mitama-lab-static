@@ -4986,7 +4986,7 @@ eslint-config-next@latest:
     vercel: ^32.0.0
     zenn-content-css: 0.1.146
     zenn-embed-elements: 0.1.146
-    zenn-markdown-html: 0.1.145
+    zenn-markdown-html: 0.1.146
   languageName: unknown
   linkType: soft
 
@@ -6983,9 +6983,9 @@ eslint-config-next@latest:
   languageName: node
   linkType: hard
 
-"zenn-markdown-html@npm:0.1.145":
-  version: 0.1.145
-  resolution: "zenn-markdown-html@npm:0.1.145"
+"zenn-markdown-html@npm:0.1.146":
+  version: 0.1.146
+  resolution: "zenn-markdown-html@npm:0.1.146"
   dependencies:
     "@steelydylan/markdown-it-imsize": ^1.0.2
     cheerio: 1.0.0-rc.12
@@ -6998,7 +6998,7 @@ eslint-config-next@latest:
     markdown-it-task-lists: ^2.1.1
     prismjs: ^1.29.0
     sanitize-html: ^2.9.0
-  checksum: 1ff87ca189ec7f4749c44e40bf46f99bab2fefdfe1471609ec5d2c2387e114835639610062ecd2166511366cc6d168f476571a6bd1677748fd025ff9889ea5b4
+  checksum: 816b52fa9d3525dd7809679642c11a8393dd91d71071174c93c6b5748efee1b33a251f73cb4e8a121576695fd9b84148dfaf2292d5be9c64132f6adc933bce31
   languageName: node
   linkType: hard
 
