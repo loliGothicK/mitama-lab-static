@@ -40,7 +40,7 @@
     "remark": "15.0.1",
     "remark-html": "15.0.2",
     "zenn-content-css": "0.1.148",
-    "zenn-embed-elements": "0.1.147",
+    "zenn-embed-elements": "0.1.148",
     "zenn-markdown-html": "0.1.147"
   },
   "devDependencies": {
