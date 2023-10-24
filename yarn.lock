@@ -6698,11 +6698,11 @@ __metadata:
   linkType: hard
 
 "react-sticky-box@npm:^2.0.4":
-  version: 2.0.4
-  resolution: "react-sticky-box@npm:2.0.4"
+  version: 2.0.5
+  resolution: "react-sticky-box@npm:2.0.5"
   peerDependencies:
     react: ">=16.8.0"
-  checksum: 8/6f6c1ab7b04851bcafce12cf9125d60d7944ff4f713ecfa53babb7695c6bfbb66d89a3e3cb040145a895a49a0fc9d47cf7325de3402a95f7fb16899ea96f2f80
+  checksum: c5e23af1d5d9399dc00362a6fe08934be6e326699406c5d9f3a6d28a4c74d71ac645dbeb51e58b8f16f4d10162cf87dc1a240e12beadd0b92cedcdf217908fa1
   languageName: node
   linkType: hard
 
