@@ -1457,14 +1457,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:18.2.31":
-  version: 18.2.31
-  resolution: "@types/react@npm:18.2.31"
+"@types/react@npm:18.2.32":
+  version: 18.2.32
+  resolution: "@types/react@npm:18.2.32"
   dependencies:
     "@types/prop-types": "npm:*"
     "@types/scheduler": "npm:*"
     csstype: "npm:^3.0.2"
-  checksum: 8/b11be8e39174d3303e308461400889e353e422d22b01d09795b2c35b7b99d5351716503d9ec5c58e4c2c871249603fa52840d45a34fb5901dd7a26e06129c716
+  checksum: 648662cd852107d7933eee072fa5826069aca1ce15602db8573393ec694780de035cfac4d76f239762e2453b53a4aa8767ae057789661ccfee4d1311040953b9
   languageName: node
   linkType: hard
 
@@ -5804,7 +5804,7 @@ __metadata:
     "@tsconfig/strictest": "npm:^2.0.1"
     "@types/gtag.js": "npm:0.0.17"
     "@types/node": "npm:20.8.8"
-    "@types/react": "npm:18.2.31"
+    "@types/react": "npm:18.2.32"
     "@types/react-dom": "npm:18.2.14"
     "@types/react-instantsearch-dom": "npm:^6.12.3"
     "@types/remove-markdown": "npm:^0.3.1"
