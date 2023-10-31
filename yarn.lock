@@ -5832,7 +5832,7 @@ __metadata:
     remark-html: "npm:15.0.2"
     remove-markdown: "npm:^0.5.0"
     typescript: "npm:5.2.2"
-    typescript-plugin-toml: "npm:0.2.0"
+    typescript-plugin-toml: "npm:0.3.1"
     vercel: "npm:^32.0.0"
     zenn-content-css: "npm:0.1.148"
     zenn-embed-elements: "npm:0.1.148"
@@ -7796,12 +7796,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript-plugin-toml@npm:0.2.0":
-  version: 0.2.0
-  resolution: "typescript-plugin-toml@npm:0.2.0"
+"typescript-plugin-toml@npm:0.3.1":
+  version: 0.3.1
+  resolution: "typescript-plugin-toml@npm:0.3.1"
   dependencies:
     toml: "npm:^3.0.0"
-  checksum: 8/c9ee5f3e5da78631d43a4efe24c51a0a276d9b4fbbb9b5f624b920a04499f969af3e9ab1e7136a74d595b7ad699ee514b0ae912b17fc789ec4e2fe7dde8abc78
+  peerDependencies:
+    typescript: ^5.0.2
+  checksum: 4dce369cb4663224ce10891c9b46a69b9eadf3f31b52897abd1cf8b799b2a817d624db15986daa1710588881d5a8dc05b65f02369d593fc6d1077b1302538897
   languageName: node
   linkType: hard
 
