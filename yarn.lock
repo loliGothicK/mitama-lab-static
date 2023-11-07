@@ -1298,10 +1298,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/gtag.js@npm:0.0.17":
-  version: 0.0.17
-  resolution: "@types/gtag.js@npm:0.0.17"
-  checksum: 8/9ba341f7ad8b4539606956af1592027dc7846a2f39950aa11f4b987fd959444777f7364d1089871c80019f011cb7b7a523e2f816e8b6fe19e66db0e82e6cbd88
+"@types/gtag.js@npm:0.0.18":
+  version: 0.0.18
+  resolution: "@types/gtag.js@npm:0.0.18"
+  checksum: af7a0a5769c5cfbe75e47f2b0346a65db8234b3c89775b897681548dfb6898edb3145153e2bc5dd1751a5ace221e03e6a68b7650ecacc6aa16a099aa9d925c99
   languageName: node
   linkType: hard
 
@@ -5802,7 +5802,7 @@ __metadata:
     "@splidejs/react-splide": "npm:0.7.12"
     "@trivago/prettier-plugin-sort-imports": "npm:4.2.1"
     "@tsconfig/strictest": "npm:^2.0.1"
-    "@types/gtag.js": "npm:0.0.17"
+    "@types/gtag.js": "npm:0.0.18"
     "@types/node": "npm:20.8.10"
     "@types/react": "npm:18.2.36"
     "@types/react-dom": "npm:18.2.14"
