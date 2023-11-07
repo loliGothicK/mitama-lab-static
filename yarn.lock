@@ -1428,12 +1428,12 @@ __metadata:
   linkType: hard
 
 "@types/react-instantsearch-dom@npm:^6.12.3":
-  version: 6.12.5
-  resolution: "@types/react-instantsearch-dom@npm:6.12.5"
+  version: 6.12.6
+  resolution: "@types/react-instantsearch-dom@npm:6.12.6"
   dependencies:
     "@types/react": "npm:*"
     "@types/react-instantsearch-core": "npm:*"
-  checksum: 8/7818629a261143fa088ea7a3177475910a6abad5b1a4a3d17667daf7a416dc7dca1861c76c234bffc5722d19f8923dee4045dadedc921dcccc7f5a6fa90f4e2b
+  checksum: d7e738ee1b02d27e5abc057be49879eec337376db401087d29741d5884c75b029acce0b7c31e241f547e18e7d0a8a35391e402f6eef68f6640d854bcc5b6e1b1
   languageName: node
   linkType: hard
 
