@@ -1469,9 +1469,9 @@ __metadata:
   linkType: hard
 
 "@types/remove-markdown@npm:^0.3.1":
-  version: 0.3.3
-  resolution: "@types/remove-markdown@npm:0.3.3"
-  checksum: 8/cd9ba3e75a385fce0899aa2751eff8a69c25771e2feebd405ac8b1b002d33db091f7580a581bb94d82e46336ed487bc2c44221edc13e8ce75e36ed1561c2237d
+  version: 0.3.4
+  resolution: "@types/remove-markdown@npm:0.3.4"
+  checksum: cba937dafd6fe7ddd2fd75cd9452f7901d0bb8edfc1ae071730d25a49a9c68b1bdc8662279b69aadb8707d7712052fc64fa5aeb9b32f440ddd5d06a8e0622ab2
   languageName: node
   linkType: hard
 
