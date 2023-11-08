@@ -662,6 +662,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fastify/busboy@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@fastify/busboy@npm:2.0.0"
+  checksum: fdaedca865721769a3a8d788c9efd6af90e73b5f2ff0160dbf46a6160631bbe56e6e5770fafb9a6395111372c73fb2bfa8d4698edc98c6b1f7d97cc9b74e37ea
+  languageName: node
+  linkType: hard
+
 "@floating-ui/core@npm:^1.4.1":
   version: 1.4.1
   resolution: "@floating-ui/core@npm:1.4.1"
@@ -1654,12 +1661,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/next@npm:4.0.13":
-  version: 4.0.13
-  resolution: "@vercel/next@npm:4.0.13"
+"@vercel/next@npm:4.0.14":
+  version: 4.0.14
+  resolution: "@vercel/next@npm:4.0.14"
   dependencies:
     "@vercel/nft": "npm:0.24.2"
-  checksum: 90d2d324d1433386d4a24079ac3dd29c6b7a4b4858d8ab6906abc8d5558df6106ed271e6db666bfac87a0536adafb8fc97b51433e0c6533ba7fc8817c0e7dd2e
+  checksum: d13d6c86b8d8c1626c02e47f4a6371f929f6a884da57c76ee552286fa47c0a34b521da23c09059ddaedbde7d73cbd6c1655d3ca80acb62a67a34d73c0489e7fd
   languageName: node
   linkType: hard
 
@@ -1684,9 +1691,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/node@npm:3.0.8":
-  version: 3.0.8
-  resolution: "@vercel/node@npm:3.0.8"
+"@vercel/node@npm:3.0.9":
+  version: 3.0.9
+  resolution: "@vercel/node@npm:3.0.9"
   dependencies:
     "@edge-runtime/node-utils": "npm:2.2.1"
     "@edge-runtime/primitives": "npm:4.0.5"
@@ -1706,8 +1713,8 @@ __metadata:
     ts-morph: "npm:12.0.0"
     ts-node: "npm:10.9.1"
     typescript: "npm:4.9.5"
-    undici: "npm:5.23.0"
-  checksum: 5adbf54d106c88c3603749db9f9da002574d96a7f3b8059c77936febad102f9b5fdad960603ed94b888c92a5d153ee138a3c38ffaf576f74ae39f966fce14446
+    undici: "npm:5.26.5"
+  checksum: 52b0ebbcbaef661eefa902262af86a2df43b02c64a89f57dfb9b5576e42c940f2dbcc5204ca446e5e7bae161eee647d5264ecb7d090f2e34171502d5657358a5
   languageName: node
   linkType: hard
 
@@ -2246,7 +2253,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"busboy@npm:1.6.0, busboy@npm:^1.6.0":
+"busboy@npm:1.6.0":
   version: 1.6.0
   resolution: "busboy@npm:1.6.0"
   dependencies:
@@ -7880,12 +7887,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici@npm:5.23.0":
-  version: 5.23.0
-  resolution: "undici@npm:5.23.0"
+"undici@npm:5.26.5":
+  version: 5.26.5
+  resolution: "undici@npm:5.26.5"
   dependencies:
-    busboy: "npm:^1.6.0"
-  checksum: 8/906ca4fb1d47163d2cee2ecbbc664a1d92508a2cdf1558146621109f525c983a83597910b36e6ba468240e95259be5939cea6babc99fc0c36360b16630f66784
+    "@fastify/busboy": "npm:^2.0.0"
+  checksum: fb4147129abc097a8c7098bb7a29e1026c09c281967efb044041d403985423d09d2b8241e8635b7860f05d8c75565946d8dcc839a3b42804509a3ee56d958716
   languageName: node
   linkType: hard
 
@@ -8110,15 +8117,15 @@ __metadata:
   linkType: hard
 
 "vercel@npm:^32.0.0":
-  version: 32.5.2
-  resolution: "vercel@npm:32.5.2"
+  version: 32.5.3
+  resolution: "vercel@npm:32.5.3"
   dependencies:
     "@vercel/build-utils": "npm:7.2.3"
     "@vercel/fun": "npm:1.1.0"
     "@vercel/go": "npm:3.0.3"
     "@vercel/hydrogen": "npm:1.0.1"
-    "@vercel/next": "npm:4.0.13"
-    "@vercel/node": "npm:3.0.8"
+    "@vercel/next": "npm:4.0.14"
+    "@vercel/node": "npm:3.0.9"
     "@vercel/python": "npm:4.1.0"
     "@vercel/redwood": "npm:2.0.5"
     "@vercel/remix-builder": "npm:2.0.11"
@@ -8128,7 +8135,7 @@ __metadata:
   bin:
     vc: dist/index.js
     vercel: dist/index.js
-  checksum: 6fd50d99f322ffd77dfe544ac568f754cce3926181cba58b6d70d7236779282cc8404de7262048f4af08a79bd06126f4f63002e71d27f0e1c1c6f8d18a7827c1
+  checksum: aa9bb46af0ed740aecb7953db6aec253f9a06ee86800910508c9c932dc865741f7b2c5b8e5fa1245bd6a75c94cd305fcdd74545ddd380ea8942a0f9c37eceee9
   languageName: node
   linkType: hard
 
