@@ -5849,7 +5849,7 @@ __metadata:
     typescript-plugin-toml: "npm:0.3.1"
     vercel: "npm:^32.0.0"
     zenn-content-css: "npm:0.1.149"
-    zenn-embed-elements: "npm:0.1.148"
+    zenn-embed-elements: "npm:0.1.149"
     zenn-markdown-html: "npm:0.1.148"
   languageName: unknown
   linkType: soft
@@ -8426,10 +8426,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zenn-embed-elements@npm:0.1.148":
-  version: 0.1.148
-  resolution: "zenn-embed-elements@npm:0.1.148"
-  checksum: 8/755a960142661a31c9da7306b20c9b1b9d7207a34b1e604facb7ec9d63389432ba2bdbd3fc169cd6c85a0965bf1365fe4c1bd4d4815c8a5ef4a3c91c780391ab
+"zenn-embed-elements@npm:0.1.149":
+  version: 0.1.149
+  resolution: "zenn-embed-elements@npm:0.1.149"
+  checksum: a39a039e7362a6757f9fca0d97f452960560f7f797a1d1227b2a6450f27f8118ac48974214051718bf681faec0a67b90a97097737c93f9c5e08c82b37f04caf3
   languageName: node
   linkType: hard
 
