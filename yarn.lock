@@ -5850,7 +5850,7 @@ __metadata:
     vercel: "npm:^32.0.0"
     zenn-content-css: "npm:0.1.149"
     zenn-embed-elements: "npm:0.1.149"
-    zenn-markdown-html: "npm:0.1.148"
+    zenn-markdown-html: "npm:0.1.149"
   languageName: unknown
   linkType: soft
 
@@ -8433,9 +8433,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zenn-markdown-html@npm:0.1.148":
-  version: 0.1.148
-  resolution: "zenn-markdown-html@npm:0.1.148"
+"zenn-markdown-html@npm:0.1.149":
+  version: 0.1.149
+  resolution: "zenn-markdown-html@npm:0.1.149"
   dependencies:
     "@steelydylan/markdown-it-imsize": "npm:^1.0.2"
     cheerio: "npm:1.0.0-rc.12"
@@ -8448,7 +8448,7 @@ __metadata:
     markdown-it-task-lists: "npm:^2.1.1"
     prismjs: "npm:^1.29.0"
     sanitize-html: "npm:^2.9.0"
-  checksum: 8/fb5a64957b77218b23a5d47e68f5018359db08cf4cbc27d4041b9a9fd4fed5c5c3936784ea632965f8c9670a151bcb02f9b8b37ebad0a615100fe592cec0f4de
+  checksum: ecbbd493ad83563bfbecaa06039e91b5e9bd81fec11ab29856d23300d3b26884c7d5185466e5eeaa6306414585f7536d21eccfcd055234d8da402239098bd5e8
   languageName: node
   linkType: hard
 
