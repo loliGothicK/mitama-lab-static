@@ -5837,7 +5837,7 @@ __metadata:
     react-dom: "npm:18.2.0"
     react-i18next: "npm:^13.0.0"
     react-intersection-observer: "npm:^9.4.3"
-    react-share: "npm:^4.4.1"
+    react-share: "npm:^5.0.0"
     react-sticky-box: "npm:^2.0.4"
     recoil: "npm:^0.7.7"
     rehype-parse: "npm:^8.0.4"
@@ -6694,15 +6694,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-share@npm:^4.4.1":
-  version: 4.4.1
-  resolution: "react-share@npm:4.4.1"
+"react-share@npm:^5.0.0":
+  version: 5.0.1
+  resolution: "react-share@npm:5.0.1"
   dependencies:
     classnames: "npm:^2.3.2"
     jsonp: "npm:^0.2.1"
   peerDependencies:
-    react: ^16.3.0 || ^17 || ^18
-  checksum: 8/f86bf7415f9fe98243b1ea58bf9df53503de7fb2235b1e633dd25c8cef68e59070b3cd20fab6ec5286eccbd30d27ce6c458ac532c4fdf7b6f12f4048bbea24d3
+    react: ^17 || ^18
+  checksum: cc575856700ed59aa6d09d9b730b86be931a4c41378772459ce2f6f954a00b0c49aea0dee856b6042962feef30dceb6270a928856684b3f202b13fb261ddf3a4
   languageName: node
   linkType: hard
 
