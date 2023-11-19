@@ -6,6 +6,16 @@ const nextConfig = {
   trailingSlash: true,
   reactStrictMode: true,
   swcMinify: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'raw.githubusercontent.com',
+        port: '',
+        pathname: '/LoliGothick/MitamatchOperations/main/MitamatichOperations/Assets/memoria/**',
+      },
+    ],
+  },
 };
 
 module.exports = nextConfig;
