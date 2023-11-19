@@ -1,6 +1,6 @@
 import { useSearchParams } from "next/navigation";
 import MitamaLab from "../layouts/MitamaLab";
-import {Card, CardContent, CardMedia, Container, Grid, Paper, Typography} from "@mui/material";
+import {Card, CardContent, CardMedia, Container, Grid, Typography} from "@mui/material";
 import { Buffer } from 'buffer';
 import { z } from "zod";
 import Link from "next/link";
