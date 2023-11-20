@@ -29,20 +29,20 @@ export default function Deck() {
     <MitamaLab>
       <Container maxWidth={'lg'}>
         <Grid container spacing={2}>
-          {validDeck.legendary.map((memoria, index) => {
+          {validDeck.legendary.map(({ name, link }, index) => {
             return (
               <Grid item xs={2.4} key={index}>
                 <Card>
-                  <Link href={`https://allb.game-db.tw/memoria/${memoria.link}`} target={"_blank"}>
+                  <Link href={`https://allb.game-db.tw/memoria/${link}`} target={"_blank"}>
                     <CardMedia
                       sx={{ height: 100, width: 100 }}
-                      image={`https://raw.githubusercontent.com/LoliGothick/MitamatchOperations/main/MitamatichOperations/Assets/memoria/${memoria.name}.jpg`}
-                      title={memoria.name}
+                      image={`https://raw.githubusercontent.com/LoliGothick/MitamatchOperations/main/MitamatichOperations/Assets/memoria/${name}.jpg`}
+                      title={name}
                     />
                   </Link>
                   <CardContent>
                     <Typography gutterBottom component="div" fontSize={12}>
-                      {decodeURI(memoria.name)}
+                      {decodeURI(name)}
                     </Typography>
                   </CardContent>
                 </Card>
@@ -53,23 +53,21 @@ export default function Deck() {
       </Container>
       <Container maxWidth={'lg'}>
         <Grid container spacing={2} marginTop={2}>
-          {validDeck.deck.map((memoria, index) => {
+          {validDeck.deck.map(({ name, link }, index) => {
             return (
-              <Grid item xs={2.4} key={index} sx={{ alignItems: 'stretch' }}>
+              <Grid item xs={2.4} key={index}>
                 <Card>
-                  <Link href={`https://allb.game-db.tw/memoria/${memoria.link}`} target={"_blank"}>
+                  <Link href={`https://allb.game-db.tw/memoria/${link}`} target={"_blank"}>
                     <CardMedia
                       sx={{ height: 100, width: 100 }}
-                      image={`https://raw.githubusercontent.com/LoliGothick/MitamatchOperations/main/MitamatichOperations/Assets/memoria/${memoria.name}.jpg`}
-                      title={memoria.name}
+                      image={`https://raw.githubusercontent.com/LoliGothick/MitamatchOperations/main/MitamatichOperations/Assets/memoria/${name}.jpg`}
+                      title={name}
                     />
                   </Link>
                   <CardContent>
                     <Typography gutterBottom component="div" fontSize={12}>
-                      {decodeURI(memoria.name)}
+                      {decodeURI(name)}
                     </Typography>
-                  </CardContent>
-                  <CardContent>
                   </CardContent>
                 </Card>
               </Grid>
