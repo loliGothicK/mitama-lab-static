@@ -1,5 +1,6 @@
 import MitamaLab from '../layouts/MitamaLab';
 import {
+  Box,
   Container,
   Card,
   CardActions,
@@ -8,7 +9,7 @@ import {
   Button,
   Typography,
   TableContainer,
-  Paper, Table, TableHead, TableRow, TableCell, TableBody
+  Paper, Table, TableHead, TableRow, TableCell, TableBody, Divider
 } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Autoplay } from 'swiper/modules'
@@ -54,7 +55,7 @@ const rows = [
   createData(2018, 9, 'キャディ株式会社 入社（アルゴリズムエンジニア/3D CAD）'),
   createData(2020, 2, 'キャディ株式会社 2D 図面 解析（画像認識）'),
   createData(2021, 3, 'キャディ株式会社 バックエンドエンジニア（Rust）'),
-  createData(2023, 4, 'キャディ株式会社 フロントエンド・シナリオテスト（playwright/TypeScript）'),
+  createData(2023, 4, 'キャディ株式会社 フロントエンド（シナリオテスト）'),
   createData(2023, 8, 'キャディ株式会社 退職'),
   createData(2023, 8, '株式会社 Arent 入社（アルゴリズムエンジニア）'),
   createData(2023, 11, '株式会社 Arent 退職（うつ病のため）'),
@@ -63,21 +64,19 @@ const rows = [
 export default function Portfolio() {
   return (
     <MitamaLab>
-      <Container maxWidth={'lg'}>
-        <Typography variant="h2" component="div" gutterBottom>
+      <Container maxWidth={'sm'}>
+        <Typography variant="h3" component="div" gutterBottom align={'center'}>
           {"Mitama's Portfolio"}
         </Typography>
         <Grid container spacing={2}>
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             slidesPerView={1} //一度に表示するスライドの数
-            pagination={{
-              clickable: true,
-            }} //何枚目のスライドかを示すアイコン、スライドの下の方にある
             navigation //スライドを前後させるためのボタン、スライドの左右にある
             loop={true}
+            centeredSlides={true}
             autoplay={{
-              delay: 2500,
+              delay: 5000,
               disableOnInteraction: false,
             }}
           >
@@ -108,14 +107,15 @@ export default function Portfolio() {
             })}
           </Swiper>
         </Grid>
-        <Grid container spacing={2} margin={10}>
+        <Divider sx={{ margin: 10 }} />
+        <Box sx={{ overflow: "auto", marginBottom: 10 }}>
+          <Box sx={{ width: "100%", display: "table", tableLayout: "fixed" }}>
           <TableContainer component={Paper}>
-            <Table sx={{ minWidth: 650 }} aria-label="simple table">
+            <Table sx={{ minWidth: 650 }} aria-label="simple table" align={'center'}>
               <TableHead>
                 <TableRow>
+                  <TableCell align="left">年/月</TableCell>
                   <TableCell>学歴/職歴</TableCell>
-                  <TableCell align="right">年</TableCell>
-                  <TableCell align="right">月</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -124,17 +124,17 @@ export default function Portfolio() {
                     key={row.content}
                     sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                   >
+                    <TableCell align="left">{`${row.year}/${row.month}`}</TableCell>
                     <TableCell component="th" scope="row">
                       {row.content}
                     </TableCell>
-                    <TableCell align="right">{row.year}</TableCell>
-                    <TableCell align="right">{row.month}</TableCell>
                   </TableRow>
                 ))}
               </TableBody>
             </Table>
           </TableContainer>
-        </Grid>
+          </Box>
+        </Box>
       </Container>
     </MitamaLab>
   );
