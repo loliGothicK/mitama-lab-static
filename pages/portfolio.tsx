@@ -64,7 +64,7 @@ const rows = [
 export default function Portfolio() {
   return (
     <MitamaLab>
-      <Container maxWidth={'sm'}>
+      <Container maxWidth={'xs'}>
         <Typography variant="h3" component="div" gutterBottom align={'center'}>
           {"Mitama's Portfolio"}
         </Typography>
