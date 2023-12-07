@@ -47,11 +47,6 @@ const libraries: Pin[] = [
     img: `DerivingVia.svg`,
   },
   {
-    repo: `sized_bitset`,
-    title: `A statically-sized bitset library.`,
-    img: `sized-bitset.svg`,
-  },
-  {
     repo: `mitama-result`,
     title: `A Library that provides result and maybe and monadic functions for them.`,
     img: `mitama-result.svg`,

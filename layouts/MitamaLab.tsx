@@ -204,7 +204,7 @@ const MitamaLabBase: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
             color: theme.palette.text.primary,
           }}
         >
-          {['blog'].map((text, index) => (
+          {['blog', 'portfolio'].map((text, index) => (
             <Link href={`/${text}`} key={index}>
               <ListItem disablePadding>
                 <ListItemButton>

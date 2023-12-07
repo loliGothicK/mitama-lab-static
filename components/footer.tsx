@@ -34,6 +34,10 @@ export default function Footer({ ...props }) {
         content: 'blog',
         href: '/blog',
       },
+      {
+        content: 'portfolio',
+        href: '/portfolio',
+      },
     ],
     ...props,
   };
