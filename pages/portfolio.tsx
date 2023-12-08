@@ -34,7 +34,7 @@ const JobList: Job[] = [
   {
     title: 'キャディ株式会社',
     span: '2018/9/1 ~ 2023/8/31',
-    stack: 'C++/Rust/Python/TypeScript/React/Next.js',
+    stack: 'C++/Rust/TypeScript',
     abstract: 'キャディ株式会社にて、ソフトウェアエンジニアとして勤務。'
   }
 ];
