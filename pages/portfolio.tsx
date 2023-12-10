@@ -9,13 +9,15 @@ import {
   Button,
   Typography,
   TableContainer,
-  Paper, Table, TableHead, TableRow, TableCell, TableBody, Divider
+  Paper, Table, TableHead, TableRow, TableCell, TableBody, Divider, CardHeader, CardMedia
 } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
+import Link from "next/link";
+import {GitHub} from "@mui/icons-material";
 
 interface Job {
   title: string;
@@ -37,6 +39,34 @@ const JobList: Job[] = [
     stack: 'C++/Rust/TypeScript',
     abstract: 'キャディ株式会社にて、ソフトウェアエンジニアとして勤務。'
   }
+];
+
+const Works = [
+  {
+    repo: `deriving_via`,
+    description: `Flexible deriving macro for newtype pattern.`,
+  },
+  {
+    repo: `mitama-result`,
+    description: `A Library that provides result and maybe and monadic functions for them.`,
+  },
+  {
+    repo: `mitama-dimensional`,
+    description: `C++17 Library for dimensional analysis based on variadic Phantom-Type.`,
+  },
+  {
+    repo: 'clippy-check',
+    description: 'GitHub Action for PR annotations with clippy checks.',
+  },
+  {
+    repo: 'rustfmt-check',
+    description: 'GitHub Action for PR annotations with rustfmt checks.',
+  },
+  {
+    repo: 'MitamatchOperations',
+    description:
+      'アサルトリリィ Last Bullet (ラスバレ) のレギオンマッチ支援ツール（Windows アプリ）',
+  },
 ];
 
 function createData(
@@ -67,7 +97,11 @@ function Content() {
       <Typography variant="h3" component="div" gutterBottom align={'center'} margin={10}>
         {"Mitama's Portfolio"}
       </Typography>
+      <Divider sx={{ margin: 10 }} />
       <Grid container spacing={2}>
+        <Typography variant="h4" component="div" gutterBottom align={'center'} margin={10}>
+          {"Mitama's Work Experience"}
+        </Typography>
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           slidesPerView={1} //一度に表示するスライドの数
@@ -100,6 +134,46 @@ function Content() {
                   <CardActions>
                     <Button size="small">Read More</Button>
                   </CardActions>
+                </Card>
+              </SwiperSlide>
+            )
+          })}
+        </Swiper>
+      </Grid>
+      <Divider sx={{ margin: 10 }} />
+      <Grid container spacing={2}>
+        <Typography variant="h4" component="div" gutterBottom align={'center'} margin={10}>
+          {"Mitama's Repository"}
+        </Typography>
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          slidesPerView={1} //一度に表示するスライドの数
+          navigation //スライドを前後させるためのボタン、スライドの左右にある
+          loop={true}
+          centeredSlides={true}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+        >
+          {Works.map(({ repo, description }, index) => {
+            return (
+              <SwiperSlide key={`${index}`}>
+                <Card sx={{ padding: 5, minHeight: 150 }}>
+                  <CardHeader
+                    avatar={
+                      <Link
+                        href={`https://github.com/LoliGothick/${repo}`}
+                        aria-label={repo}
+                      >
+                        <GitHub />
+                      </Link>
+                    }
+                    title={repo}
+                  />
+                  <CardMedia component="div">
+                    <Typography>{description}</Typography>
+                  </CardMedia>
                 </Card>
               </SwiperSlide>
             )
