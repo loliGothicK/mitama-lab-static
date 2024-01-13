@@ -1,5 +1,5 @@
 import MitamaLab from "../layouts/MitamaLab";
-import {Container} from "@mui/material";
+import {Card, Divider, Box, Stack, Typography, Grid} from "@mui/material";
 import {useCallback, useEffect, useRef, useState} from "react";
 
 interface TextToSpeechInput {
@@ -27,6 +27,13 @@ export const playTextToSpeech = (props: TextToSpeechInput) => {
         (voice) => voice.name === props.voiceName
       ) as SpeechSynthesisVoice
     }
+  } else {
+    for (const voice of speechSynthesis.getVoices()) {
+      if (voice.lang === props.lang) {
+        utterance.voice = voice;
+        break;
+      }
+    }
   }
   utterance.pitch = (props.pitch)? props.pitch: 1;
   utterance.volume = (props.volume)? props.volume: 1;
@@ -52,21 +59,21 @@ const useAnimationFrame = (isRunning: boolean, callback = () => {}) => {
   }, [isRunning, loop]);
 };
 
-const TimerComponent = () => {
-  const [counter, setCounter] = useState(40);
+const TimerComponent = ({ interval }: {interval: number}) => {
+  const [counter, setCounter] = useState(interval);
   const [isRunning, setIsRunning] = useState(false);
   
   const countDown = useCallback(() => {
     setCounter(prevCount => {
       if (prevCount-1 === 30) {
-        playTextToSpeech({ text: "30 seconds left.", lang: "en-US"} satisfies TextToSpeechInput);
+        playTextToSpeech({ text: "残り30秒です", lang: "ja-JP"} satisfies TextToSpeechInput);
       }
       if (prevCount-1 === 10) {
         playTextToSpeech({ text: "10 seconds left.", lang: "en-US" } satisfies TextToSpeechInput);
       }
       if (prevCount-1 === 0) {
         setIsRunning(false);
-        return 30;
+        return interval;
       }
       return --prevCount;
     });
@@ -74,19 +81,41 @@ const TimerComponent = () => {
   useAnimationFrame(isRunning, countDown);
   
   return (
-    <div>
-      <div>{counter}</div>
-      <button onClick={() => setIsRunning(true)}>START</button>
-      <button onClick={() => setIsRunning(false)}>STOP</button>
-    </div>
+    <Card variant="outlined" sx={{ maxWidth: 360 }}>
+      <Box sx={{ p: 2 }}>
+        <Typography variant={"h4"}>{counter}</Typography>
+      </Box>
+      <Divider light />
+      <Box sx={{ p: 2 }}>
+        <Stack direction="row" spacing={1}>
+          <button onClick={() => setIsRunning(true)}>START</button>
+          <button onClick={() => setIsRunning(false)}>STOP</button>
+          <button onClick={() => {
+            setCounter(interval);
+            setIsRunning(false);
+          }}>
+            RESET
+          </button>
+        </Stack>
+      </Box>
+    </Card>
   );
 };
 export default function Timer() {
   return (
     <MitamaLab>
-      <Container maxWidth={'lg'}>
-        <TimerComponent />
-      </Container>
+      <Grid container alignItems='center' justifyContent='center' direction="column">
+        <Divider textAlign="left">属性ロング</Divider>
+        <TimerComponent interval={120}/>
+        <Divider textAlign="left">盾</Divider>
+        <TimerComponent interval={100}/>
+        <Divider textAlign="left">鉄壁/覚醒/覚妨</Divider>
+        <TimerComponent interval={90}/>
+        <Divider textAlign="left">魔縮/祝福</Divider>
+        <TimerComponent interval={80}/>
+        <Divider textAlign="left">属性ショート</Divider>
+        <TimerComponent interval={60}/>
+      </Grid>
     </MitamaLab>
   );
 }
