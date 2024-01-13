@@ -5759,10 +5759,10 @@ zenn-content-css@0.1.150:
   resolved "https://registry.yarnpkg.com/zenn-content-css/-/zenn-content-css-0.1.150.tgz#86886a6059ebc5dec8e674addc231719e5df65df"
   integrity sha512-nPb811W8yyC7ZHLVicnUVjLcnfLGYrGCKNiQLlB5UUpy0KxPWSpao/bmgI1AsSnQmJ/yujgYJ6oyRGE8+98STQ==
 
-zenn-embed-elements@0.1.149:
-  version "0.1.149"
-  resolved "https://registry.yarnpkg.com/zenn-embed-elements/-/zenn-embed-elements-0.1.149.tgz#968a8f7c21354c0d8f1a42188f68e392dd88c8dd"
-  integrity sha512-1AhQcqplVprHjhggAGpcGcEya3VIE2oLOkwFjQ6iWQ+LdpYtU6mYsX5h0G9lqn7qzq8f+TSqb+kk492dGg6ImA==
+zenn-embed-elements@0.1.150:
+  version "0.1.150"
+  resolved "https://registry.yarnpkg.com/zenn-embed-elements/-/zenn-embed-elements-0.1.150.tgz#ec70e093f098a8a21205e6712d1ac59fca4960a7"
+  integrity sha512-RhRKtxVnAXol/waAtLcpN0D909oTEFkoFMcPAb9wJ/+aCyqQ8lDgwFl8SEFbBFVJjnjjAbm8RwMVJuk7AJ+/Tg==
 
 zenn-markdown-html@0.1.149:
   version "0.1.149"
