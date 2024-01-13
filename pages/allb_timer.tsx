@@ -9,13 +9,17 @@ const useAnimationFrame = (isRunning: boolean, callback = () => {}) => {
   }, [callback]);
   
   useEffect(() => {
-    setInterval(() => {
+    const id = setInterval(() => {
       console.log(`isRunning: ${isRunning}`);
       if (isRunning) {
         reqIdRef.current = requestAnimationFrame(loop);
       }
     }, 1000);
-    return () => cancelAnimationFrame(reqIdRef.current);
+
+    return () => {
+      clearInterval(id)
+      cancelAnimationFrame(reqIdRef.current)
+    };
   }, [isRunning, loop]);
 };
 
