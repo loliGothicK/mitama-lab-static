@@ -4,7 +4,7 @@ import {useCallback, useEffect, useRef, useState} from "react";
 
 interface TextToSpeechInput {
   text: string;
-  lang: "en-US" | "ja-JP"; // ISO 639-1コードの形式
+  lang: "en-US" | "en-UK" | "ja-JP"; // ISO 639-1コードの形式
   speed?: number; // 範囲: 0.1 ~ 10
   pitch?: number; // 範囲: 0.1 ~ 10
   volume?: number; // 範囲: 0 ~ 1
@@ -66,10 +66,10 @@ const TimerComponent = ({ interval }: {interval: number}) => {
   const countDown = useCallback(() => {
     setCounter(prevCount => {
       if (prevCount-1 === 30) {
-        playTextToSpeech({ text: "残り30秒です", lang: "ja-JP"} satisfies TextToSpeechInput);
+        playTextToSpeech({ text: "30 seconds left.", lang: "en-UK" } satisfies TextToSpeechInput);
       }
       if (prevCount-1 === 10) {
-        playTextToSpeech({ text: "10 seconds left.", lang: "en-US" } satisfies TextToSpeechInput);
+        playTextToSpeech({ text: "10 seconds left.", lang: "en-UK" } satisfies TextToSpeechInput);
       }
       if (prevCount-1 === 0) {
         setIsRunning(false);
@@ -83,7 +83,7 @@ const TimerComponent = ({ interval }: {interval: number}) => {
   return (
     <Card variant="outlined" sx={{ maxWidth: 360 }}>
       <Box sx={{ p: 2 }}>
-        <Typography variant={"h4"}>{counter}</Typography>
+        <Typography variant={"h6"}>{counter}</Typography>
       </Box>
       <Divider light />
       <Box sx={{ p: 2 }}>
@@ -104,7 +104,12 @@ const TimerComponent = ({ interval }: {interval: number}) => {
 export default function Timer() {
   return (
     <MitamaLab>
-      <Grid container alignItems='center' justifyContent='center' direction="column">
+      <Grid
+        container
+        alignItems='center'
+        justifyContent='center'
+        direction="column"
+      >
         <Divider textAlign="left">属性ロング</Divider>
         <TimerComponent interval={120}/>
         <Divider textAlign="left">盾</Divider>
