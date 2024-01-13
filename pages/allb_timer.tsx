@@ -77,7 +77,7 @@ const TimerComponent = ({ interval }: {interval: number}) => {
       }
       return --prevCount;
     });
-  }, []);
+  }, [interval]);
   useAnimationFrame(isRunning, countDown);
   
   return (
