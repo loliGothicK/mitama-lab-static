@@ -36,7 +36,7 @@ export default function Deck() {
                   <Link href={`https://allb.game-db.tw/memoria/${link}`} target={"_blank"}>
                     <CardMedia
                       sx={{ height: 100, width: 100 }}
-                      image={`https://raw.githubusercontent.com/LoliGothick/MitamatchOperations/main/MitamatichOperations/Assets/memoria/${name}.png`}
+                      image={`https://raw.githubusercontent.com/LoliGothick/MitamatchOperations/main/MitamatchOperations/Assets/memoria/${name}.png`}
                       title={name}
                     />
                   </Link>
