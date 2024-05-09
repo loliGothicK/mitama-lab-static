@@ -46,7 +46,7 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "13.5.6",
+    "@next/eslint-plugin-next": "14.2.3",
     "@trivago/prettier-plugin-sort-imports": "4.3.0",
     "@tsconfig/strictest": "^2.0.1",
     "@types/gtag.js": "0.0.19",
