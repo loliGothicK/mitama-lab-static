@@ -5487,10 +5487,10 @@ typed-array-length@^1.0.4:
     for-each "^0.3.3"
     is-typed-array "^1.1.9"
 
-typescript-plugin-toml@0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/typescript-plugin-toml/-/typescript-plugin-toml-0.3.1.tgz#1bd790f1cc526fbde6bac394812bf7feb373a2ef"
-  integrity sha512-pBRKcuidbQyGQZOejx3abJtjX2NRemYCIBImWAJ/Lek6byUJObw/j/jPwdlrOWEcIo37t4AHHeh9fXAgQ8FZzA==
+typescript-plugin-toml@0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/typescript-plugin-toml/-/typescript-plugin-toml-0.3.2.tgz#d89bf16457e780dda3830a5d39ec81826ce8a96a"
+  integrity sha512-9Wigxbp+R8ND9DXWcucxudjlqBVEt4uIGtsQqkrd2uWxw73Nsce9FqvUaAythfgr1lgXq3+GDKFDwuaSFMOPvQ==
   dependencies:
     toml "^3.0.0"
 
