@@ -58,7 +58,7 @@
     "eslint": "8.57.0",
     "eslint-config-next": "latest",
     "eslint-config-prettier": "9.1.0",
-    "prettier": "3.3.0",
+    "prettier": "3.3.1",
     "remove-markdown": "^0.5.0",
     "typescript": "5.4.5",
     "typescript-plugin-toml": "0.3.2",
