@@ -4830,9 +4830,9 @@ remark@15.0.1:
     unified "^11.0.0"
 
 remove-markdown@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/remove-markdown/-/remove-markdown-0.5.0.tgz#a596264bbd60b9ceab2e2ae86e5789eee91aee32"
-  integrity sha512-x917M80K97K5IN1L8lUvFehsfhR8cYjGQ/yAMRI9E7JIKivtl5Emo5iD13DhMr+VojzMCiYk8V2byNPwT/oapg==
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/remove-markdown/-/remove-markdown-0.5.2.tgz#1e52602260cc1e65e6f0c4f9e9662141ef3bd302"
+  integrity sha512-/VOt3snBKnK66TIiomtmCptc8V0aSVDBHtihWrL1ZVrVoCtvQx7Chs4yfP37JaxZTxE3SEmJTIN8pzrO/+XPlg==
 
 require-from-string@^2.0.2:
   version "2.0.2"
