@@ -17,7 +17,7 @@
     "@emotion/react": "11.11.4",
     "@emotion/server": "11.11.0",
     "@emotion/styled": "11.11.5",
-    "@fontsource/roboto": "5.0.13",
+    "@fontsource/roboto": "5.0.14",
     "@mui/icons-material": "5.16.6",
     "@mui/material": "5.16.6",
     "@splidejs/react-splide": "0.7.12",
