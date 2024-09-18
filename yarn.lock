@@ -5975,10 +5975,10 @@ yocto-queue@^0.1.0:
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 
-zenn-content-css@0.1.155:
-  version "0.1.155"
-  resolved "https://registry.yarnpkg.com/zenn-content-css/-/zenn-content-css-0.1.155.tgz#1b817e965fa2f2541636b74963518d68b24e1809"
-  integrity sha512-YR22ASOK/R86zPBr7fGSmuAO4urPSaAIzo0n1ZXt9MTsv5XRQuXMKWoqgvpTxE+kTrMnAREORH6IBKoy9ZOgUQ==
+zenn-content-css@0.1.156:
+  version "0.1.156"
+  resolved "https://registry.yarnpkg.com/zenn-content-css/-/zenn-content-css-0.1.156.tgz#86710935c073565928f6e737a011344ab0cc484a"
+  integrity sha512-eH9B6zYqtH6dnGpnF5H1pfSw4l+4P8VYrCHaYWOcnPcsrXZ4Jp3jAe2CgTLZjXlz8ODBJGAvdt/15MfZus0h+g==
 
 zenn-embed-elements@0.1.155:
   version "0.1.155"
