@@ -5985,10 +5985,10 @@ zenn-embed-elements@0.1.156:
   resolved "https://registry.yarnpkg.com/zenn-embed-elements/-/zenn-embed-elements-0.1.156.tgz#8189f811ce64b441f6b397e3717f88034b21e6ee"
   integrity sha512-7bhF+T8EyulMEocs++MgEOMQxbBLAGkA4M5Y8oy2XE0DFqxuRaCUm57NH7UYeZmJWHF4N22Y4fAQb2eBaBr+8Q==
 
-zenn-markdown-html@0.1.155:
-  version "0.1.155"
-  resolved "https://registry.yarnpkg.com/zenn-markdown-html/-/zenn-markdown-html-0.1.155.tgz#177c5c034c805fdeef20b540a6d5cb42f7600276"
-  integrity sha512-VfGsyvks9fiV4SIun5bfyBtaiIC6/5wrsPMTSkVnxF6BAbcnAUF4KnwBuR+kBbYv2YXr6Q7HP4OxvWLjHmbT7g==
+zenn-markdown-html@0.1.156:
+  version "0.1.156"
+  resolved "https://registry.yarnpkg.com/zenn-markdown-html/-/zenn-markdown-html-0.1.156.tgz#a958e982919d9411f69f5343c08c2ffd8944fcd6"
+  integrity sha512-+/ZrjHPwsWNy9cyw0uTas8uxckZAPb2LtIJTjZXLWHkuVJHA1xUbm9nn2J9TpD2Zw6iG8Q4Ptb3grhQzUNL0CA==
   dependencies:
     "@steelydylan/markdown-it-imsize" "^1.0.2"
     cheerio "1.0.0-rc.12"
