@@ -1179,10 +1179,10 @@
     typescript "4.9.5"
     undici "5.28.4"
 
-"@vercel/python@4.4.0":
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/@vercel/python/-/python-4.4.0.tgz#f37f1c4a74429fb7b0aa58ed9f8642731be9a710"
-  integrity sha512-wL6OCDk0NIgSLsoTTqbzmRXGtdu3Ilyc5WxMTt24cAK5IhLMebdZ9BgP5eD45YDIkAv79SaENcqnC9gORtlk/g==
+"@vercel/python@4.4.1":
+  version "4.4.1"
+  resolved "https://registry.yarnpkg.com/@vercel/python/-/python-4.4.1.tgz#43cbb891a13c72516f7086e1069d0a2088289548"
+  integrity sha512-q319z8xUoEujGGFSCpmXPBOQqgWTNy0Wlk6sa2NPtuwiWM1CO5uW8EXtNMLVfMEKsvzQCRhKTix5Hvtx1JJ4pw==
 
 "@vercel/redwood@2.1.8":
   version "2.1.8"
@@ -1872,7 +1872,16 @@ create-require@^1.1.0:
   resolved "https://registry.yarnpkg.com/create-require/-/create-require-1.1.1.tgz#c1d7e8f1e5f6cfc9ff65f9cd352d37348756c333"
   integrity sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==
 
-cross-spawn@^7.0.0, cross-spawn@^7.0.2:
+cross-spawn@^7.0.0:
+  version "7.0.5"
+  resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-7.0.5.tgz#910aac880ff5243da96b728bc6521a5f6c2f2f82"
+  integrity sha512-ZVJrKKYunU38/76t0RMOulHOnUcbU9GbpWKAOZ0mhjr7CX6FVrH+4FrAapSOekrgFQ3f/8gwMEuIft0aKq6Hug==
+  dependencies:
+    path-key "^3.1.0"
+    shebang-command "^2.0.0"
+    which "^2.0.1"
+
+cross-spawn@^7.0.2:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-7.0.3.tgz#f73a85b9d5d41d045551c177e2882d4ac85728a6"
   integrity sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==
@@ -4279,9 +4288,9 @@ node-fetch@^2.6.7:
     whatwg-url "^5.0.0"
 
 node-gyp-build@^4.2.2:
-  version "4.8.2"
-  resolved "https://registry.yarnpkg.com/node-gyp-build/-/node-gyp-build-4.8.2.tgz#4f802b71c1ab2ca16af830e6c1ea7dd1ad9496fa"
-  integrity sha512-IRUxE4BVsHWXkV/SFOut4qTlagw2aM8T5/vnTsmrHJvVoKueJHRc/JaFND7QDDc61kLYUJ6qlZM3sqTSyx2dTw==
+  version "4.8.3"
+  resolved "https://registry.yarnpkg.com/node-gyp-build/-/node-gyp-build-4.8.3.tgz#9187216d24dbee29e44eb20d2ebf62a296bbea1a"
+  integrity sha512-EMS95CMJzdoSKoIiXo8pxKoL8DYxwIZXYlLmgPb8KUv794abpnLK6ynsCAWNliOjREKruYKdzbh76HHYUHX7nw==
 
 nopt@^5.0.0:
   version "5.0.0"
@@ -5729,9 +5738,9 @@ v8-compile-cache-lib@^3.0.1:
   integrity sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==
 
 vercel@^39.0.0:
-  version "39.0.0"
-  resolved "https://registry.yarnpkg.com/vercel/-/vercel-39.0.0.tgz#16163f3bf66cd4f52af9ffd3376c35c52f98e072"
-  integrity sha512-V1TB0mk8eA+cVneTJYaV5KJobzuQFlet923ixgrT660NReWaxc0pk2RVwmoLfGqv2JXDJBSpZhLq0YeYt4VPmA==
+  version "39.0.1"
+  resolved "https://registry.yarnpkg.com/vercel/-/vercel-39.0.1.tgz#626e558006d92dabbd8e78c7b5d1e9d97e301daa"
+  integrity sha512-SBNiyl/ngaEOlKEkaNFTHSGRYFWYqCavK6TQx+XdbMfLDXG6U7GJodxFBa+j15senEzhGN27NPdKqRYpDFzqyQ==
   dependencies:
     "@vercel/build-utils" "8.4.12"
     "@vercel/fun" "1.1.0"
@@ -5739,7 +5748,7 @@ vercel@^39.0.0:
     "@vercel/hydrogen" "1.0.9"
     "@vercel/next" "4.3.19"
     "@vercel/node" "3.2.24"
-    "@vercel/python" "4.4.0"
+    "@vercel/python" "4.4.1"
     "@vercel/redwood" "2.1.8"
     "@vercel/remix-builder" "2.2.13"
     "@vercel/ruby" "2.1.0"
