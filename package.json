@@ -13,10 +13,10 @@
     "format:check": "prettier --check --ignore-path .gitignore ./**/*.{ts,tsx,css}"
   },
   "dependencies": {
-    "@emotion/cache": "11.11.0",
-    "@emotion/react": "11.11.4",
+    "@emotion/cache": "11.13.5",
+    "@emotion/react": "11.13.5",
     "@emotion/server": "11.11.0",
-    "@emotion/styled": "11.11.5",
+    "@emotion/styled": "11.13.5",
     "@fontsource/roboto": "5.1.0",
     "@mui/icons-material": "5.16.9",
     "@mui/material": "5.16.9",
