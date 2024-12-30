@@ -4680,9 +4680,9 @@ react-is@^19.0.0:
   integrity sha512-H91OHcwjZsbq3ClIDHMzBShc1rotbfACdWENsmEf0IFvZ3FgGPtdHMcsv45bQ1hAbgdfiA8SnxTKfDS+x/8m2g==
 
 react-share@^5.0.0:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/react-share/-/react-share-5.1.1.tgz#7b29920795e72d6c4f2e4268b2fb6806343cb7e1"
-  integrity sha512-9rX6X4FiLwKi/eygTx6TWEKv0EuL15AdP6vnFMw5sA4UwTja0mgV4N3gAbkE9+5n3ry7BsBBeOnhaXbJ+jn9kQ==
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/react-share/-/react-share-5.1.2.tgz#eccce92ab3f01d8d07a39ce6057e3c3e82ab6711"
+  integrity sha512-qwMT72LrGvDsg3E5lKlvUcXH4YWqjLcqlinxIomGaey2SoS/1/DBkTpan3TyzX9gDr0dcp1bl+z5LbdOOE4bmA==
   dependencies:
     classnames "^2.3.2"
     jsonp "^0.2.1"
