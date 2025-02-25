@@ -1175,10 +1175,10 @@
     "@vercel/static-config" "3.0.0"
     ts-morph "12.0.0"
 
-"@vercel/next@4.7.0":
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/@vercel/next/-/next-4.7.0.tgz#22e33607a70dac5c5e546a75582fdf10095fa101"
-  integrity sha512-cpyfTg0B+eZrUfHjZ3y0XywFJZQdUjOyQEnDf9xQp2YB1pW8HFIn4OJvLYKJCpzM3/JY/yqxQcllpkvQPRY6oQ==
+"@vercel/next@4.7.1":
+  version "4.7.1"
+  resolved "https://registry.yarnpkg.com/@vercel/next/-/next-4.7.1.tgz#f2dcca54bce81c697451c6b68b050c5a72cef26d"
+  integrity sha512-Q8GxgDpn5m3uhHhzyOYWO26yypN5Ztr36U+5YzT3fIwhCiUPYfIWm1LMnAj23S9qV5WMAbIHYgdURTz4EBV+xA==
   dependencies:
     "@vercel/nft" "0.27.10"
 
@@ -1871,19 +1871,19 @@ create-require@^1.1.0:
   resolved "https://registry.yarnpkg.com/create-require/-/create-require-1.1.1.tgz#c1d7e8f1e5f6cfc9ff65f9cd352d37348756c333"
   integrity sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==
 
-cross-spawn@^7.0.0:
-  version "7.0.6"
-  resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-7.0.6.tgz#8a58fe78f00dcd70c370451759dfbfaf03e8ee9f"
-  integrity sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==
+cross-spawn@^7.0.2:
+  version "7.0.3"
+  resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-7.0.3.tgz#f73a85b9d5d41d045551c177e2882d4ac85728a6"
+  integrity sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==
   dependencies:
     path-key "^3.1.0"
     shebang-command "^2.0.0"
     which "^2.0.1"
 
-cross-spawn@^7.0.2:
-  version "7.0.3"
-  resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-7.0.3.tgz#f73a85b9d5d41d045551c177e2882d4ac85728a6"
-  integrity sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==
+cross-spawn@^7.0.6:
+  version "7.0.6"
+  resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-7.0.6.tgz#8a58fe78f00dcd70c370451759dfbfaf03e8ee9f"
+  integrity sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==
   dependencies:
     path-key "^3.1.0"
     shebang-command "^2.0.0"
@@ -2739,11 +2739,11 @@ for-each@^0.3.3:
     is-callable "^1.1.3"
 
 foreground-child@^3.1.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/foreground-child/-/foreground-child-3.3.0.tgz#0ac8644c06e431439f8561db8ecf29a7b5519c77"
-  integrity sha512-Ld2g8rrAyMYFXBhEqMz8ZAHBi4J4uS1i/CxGMDnjyFWddMXLVcDp051DZfu+t7+ab7Wv6SMqpWmyFIj5UbfFvg==
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/foreground-child/-/foreground-child-3.3.1.tgz#32e8e9ed1b68a3497befb9ac2b6adf92a638576f"
+  integrity sha512-gIXjKqtFuWEgzFRJA9WCQeSJLZDjgJUOMCMzxtvFq/37KojM1BFGufqsCy0r4qSQmYLsZYMeyRqzIWOMup03sw==
   dependencies:
-    cross-spawn "^7.0.0"
+    cross-spawn "^7.0.6"
     signal-exit "^4.0.1"
 
 fs-extra@11.1.0:
@@ -5592,15 +5592,15 @@ v8-compile-cache-lib@^3.0.1:
   integrity sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==
 
 vercel@^41.0.0:
-  version "41.2.0"
-  resolved "https://registry.yarnpkg.com/vercel/-/vercel-41.2.0.tgz#5eaaac40cb4676605c6290c6fdf6419a8bf0d08d"
-  integrity sha512-km7XW3gETrtCtoUMu48D0NmGYLU2zMgQXTSzEq6HbO/OQkOwtIRaGM9FC5a/5M+jYWVq8+bXGDr2ktMRR5Jv6A==
+  version "41.2.1"
+  resolved "https://registry.yarnpkg.com/vercel/-/vercel-41.2.1.tgz#cc8d7b4078caf4ece34c46b0e1afa660d4bb31d2"
+  integrity sha512-PNYkkVkQVeGd7xFIOzVmnMMrBfWZRbdfeZn7YSJ4FqLufQcWmI5T+nn4oHKyYPDRDWus46tQ7ONXpA3vH6tkvQ==
   dependencies:
     "@vercel/build-utils" "10.2.0"
     "@vercel/fun" "1.1.5"
     "@vercel/go" "3.2.1"
     "@vercel/hydrogen" "1.2.0"
-    "@vercel/next" "4.7.0"
+    "@vercel/next" "4.7.1"
     "@vercel/node" "5.1.8"
     "@vercel/python" "4.7.1"
     "@vercel/redwood" "2.3.0"
