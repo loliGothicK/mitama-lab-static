@@ -5543,9 +5543,9 @@ v8-compile-cache-lib@^3.0.1:
   integrity sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==
 
 vercel@^41.0.0:
-  version "41.6.0"
-  resolved "https://registry.yarnpkg.com/vercel/-/vercel-41.6.0.tgz#9e81a577ec3c8cd5e7e7ba9ebd8909ce2fed997d"
-  integrity sha512-wig7fUZqU6Xb5/CdW49NUrwssA5GuG18WUP5vxl84KZigUcmQM5CKySyxgeFcugBtqelQSlg1+4ytfjcfQxQuw==
+  version "41.6.1"
+  resolved "https://registry.yarnpkg.com/vercel/-/vercel-41.6.1.tgz#29aaf0f83135b515646bf292c051479f884e9076"
+  integrity sha512-Xly6uozzOHm6VT2nB6l0IydEyhRNGvxU7aBnIA5CD2rt+HjLq+Dz9qIYC6XmcpBbR1EWkG2uCyM11k7pt+uHXA==
   dependencies:
     "@vercel/build-utils" "10.5.1"
     "@vercel/fun" "1.1.5"
