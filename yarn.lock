@@ -1182,10 +1182,10 @@
     "@vercel/static-config" "3.0.0"
     ts-morph "12.0.0"
 
-"@vercel/next@4.7.7":
-  version "4.7.7"
-  resolved "https://registry.yarnpkg.com/@vercel/next/-/next-4.7.7.tgz#7a7febe54106e8c36d03dc04aee76f8eaa60c13a"
-  integrity sha512-PMLk2d7dha41ciXwJ9v2UsgoNl7ThaBOnb0vqtLoEzpnzNYiz71V7c31vLcI3us0LE/bSazPKNg0Ok9lgo5nJA==
+"@vercel/next@4.7.8":
+  version "4.7.8"
+  resolved "https://registry.yarnpkg.com/@vercel/next/-/next-4.7.8.tgz#fd0398ba5ba938c0a2ce2048c087d9e7c7ce44a5"
+  integrity sha512-JdKMQkgH9ifBAtG85pzi7MZlnpRCaZH7qPLbw4lSkwy8bLy/6t7Jk5Zw7qcvjLD8ZL/fO3YbMhm43dDxABX8NA==
   dependencies:
     "@vercel/nft" "0.27.10"
 
@@ -2002,9 +2002,9 @@ dequal@^2.0.0, dequal@^2.0.3:
   integrity sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA==
 
 detect-libc@^2.0.0:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/detect-libc/-/detect-libc-2.0.3.tgz#f0cd503b40f9939b894697d19ad50895e30cf700"
-  integrity sha512-bwy0MGW55bG41VqxxypOsdSdGqLwXPI/focwgTYCFMbdUiBAxLg9CFzG08sz2aqzknwiX7Hkl0bQENjg8iLByw==
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/detect-libc/-/detect-libc-2.0.4.tgz#f04715b8ba815e53b4d8109655b6508a6865a7e8"
+  integrity sha512-3UDv+G9CsCKO1WKMGw9fwq/SWJYbI0c5Y7LU1AXYoDdbhE2AHQ6N6Nb34sG8Fj7T5APy8qXDCKuuIHd1BR0tVA==
 
 devlop@^1.0.0:
   version "1.1.0"
@@ -5550,15 +5550,15 @@ v8-compile-cache-lib@^3.0.1:
   integrity sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==
 
 vercel@^41.0.0:
-  version "41.6.1"
-  resolved "https://registry.yarnpkg.com/vercel/-/vercel-41.6.1.tgz#29aaf0f83135b515646bf292c051479f884e9076"
-  integrity sha512-Xly6uozzOHm6VT2nB6l0IydEyhRNGvxU7aBnIA5CD2rt+HjLq+Dz9qIYC6XmcpBbR1EWkG2uCyM11k7pt+uHXA==
+  version "41.6.2"
+  resolved "https://registry.yarnpkg.com/vercel/-/vercel-41.6.2.tgz#6a19800e1dc6b99a30d55a547d42f72c6dd96eaf"
+  integrity sha512-NcC6+1HF/gc/uVpfRM4aFoOcyN/622pDdaXYSDvc5egavPXLoLzdFd3DUSDKAvy2jNcD1quStUKwmoU8xdKIcA==
   dependencies:
     "@vercel/build-utils" "10.5.1"
     "@vercel/fun" "1.1.5"
     "@vercel/go" "3.2.1"
     "@vercel/hydrogen" "1.2.0"
-    "@vercel/next" "4.7.7"
+    "@vercel/next" "4.7.8"
     "@vercel/node" "5.1.14"
     "@vercel/python" "4.7.2"
     "@vercel/redwood" "2.3.0"
