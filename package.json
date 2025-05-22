@@ -38,7 +38,7 @@
     "rehype-parse": "^8.0.4",
     "rehype-react": "^7.2.0",
     "remark": "15.0.1",
-    "remark-html": "15.0.2",
+    "remark-html": "16.0.1",
     "swiper": "^11.0.5",
     "zenn-content-css": "0.1.159",
     "zenn-embed-elements": "0.1.159",
