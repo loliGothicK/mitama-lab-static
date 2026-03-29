@@ -41,7 +41,7 @@
     "remark-html": "15.0.2",
     "swiper": "^11.0.5",
     "zenn-content-css": "0.4.7",
-    "zenn-embed-elements": "0.1.159",
+    "zenn-embed-elements": "0.4.7",
     "zenn-markdown-html": "0.1.159",
     "zod": "^3.22.4"
   },
