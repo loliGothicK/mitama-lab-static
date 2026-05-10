@@ -4746,10 +4746,10 @@ remark@15.0.1:
     remark-stringify "^11.0.0"
     unified "^11.0.0"
 
-remove-markdown@^0.5.0:
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/remove-markdown/-/remove-markdown-0.5.2.tgz#1e52602260cc1e65e6f0c4f9e9662141ef3bd302"
-  integrity sha512-/VOt3snBKnK66TIiomtmCptc8V0aSVDBHtihWrL1ZVrVoCtvQx7Chs4yfP37JaxZTxE3SEmJTIN8pzrO/+XPlg==
+remove-markdown@^0.6.0:
+  version "0.6.4"
+  resolved "https://registry.yarnpkg.com/remove-markdown/-/remove-markdown-0.6.4.tgz#d973e4d2e3d09eb14c2261446e1173e444d5d3df"
+  integrity sha512-BompiLClzjfh46irZmzv+1Q61jZYlKN3iq/hzae9EOUwf7ctr/5wpD4qwgn/FWDAYE18RORO7z/yr+HXZJCY8Q==
 
 require-from-string@^2.0.2:
   version "2.0.2"
