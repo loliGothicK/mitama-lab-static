@@ -16,7 +16,7 @@ jobs:
 
       - name: Restore cached Primes
         id: cache-node_modules-restore
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@v6
         with:
           path: |
             node_modules
@@ -27,7 +27,7 @@ jobs:
 
       - name: cache node_modules
         id: cache-node_modules-save
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@v6
         with:
           path: |
             node_modules
