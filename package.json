@@ -36,7 +36,7 @@
     "react-sticky-box": "^2.0.4",
     "recoil": "^0.7.7",
     "rehype-parse": "^8.0.4",
-    "rehype-react": "^7.2.0",
+    "rehype-react": "^8.0.0",
     "remark": "15.0.1",
     "remark-html": "15.0.2",
     "swiper": "^11.0.5",
